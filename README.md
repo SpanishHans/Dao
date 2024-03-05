@@ -10,3 +10,6 @@ La app para la elocuencia en chino
 
 ## Construcción de prototipo (Miro)
 <a href='https://miro.com/welcomeonboard/UkwxRmUwcGtNdTU3RzlSUGlUSzZQdkU0aUR6cUtnVnRGVWI2eXpudXkwTkhlYVZHcGJmWHpZQ0ZiN1RNTGpuU3wzNDU4NzY0NTQ4NzA5OTMwODEzfDI=?share_link_id=668356837041'><img src='https://asset.brandfetch.io/idAnDTFapY/idkwvxShC9.jpeg' height="50"></a>
+
+## Storyboarding (LaTeX - Overleaf)
+<a href='https://www.overleaf.com/read/wshxdmdcfspf#e8c83d'><img src='https://images.ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/overleaf_wide_colour_light_bg.png' height="50"></a>
