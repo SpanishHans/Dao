@@ -1,4 +1,5 @@
-# ScribeCheck
+# DAO
+La app para la elocuencia en chino
 
 ## Diseño UX/UI del aplicativo (Figma)
 
