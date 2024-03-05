@@ -8,4 +8,4 @@
 <a href='https://www.overleaf.com/read/jkggrzqzkrzp#812582'><img src='https://images.ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/overleaf_wide_colour_light_bg.png' height="50"></a>
 
 ## Construcción de prototipo (Miro)
-<a href='https://miro.com/welcomeonboard/UkwxRmUwcGtNdTU3RzlSUGlUSzZQdkU0aUR6cUtnVnRGVWI2eXpudXkwTkhlYVZHcGJmWHpZQ0ZiN1RNTGpuU3wzNDU4NzY0NTQ4NzA5OTMwODEzfDI=?share_link_id=668356837041'><img src='https://w7.pngwing.com/pngs/613/411/png-transparent-miro-app-logo-tech-companies-thumbnail.png' height="50"></a>
+<a href='https://miro.com/welcomeonboard/UkwxRmUwcGtNdTU3RzlSUGlUSzZQdkU0aUR6cUtnVnRGVWI2eXpudXkwTkhlYVZHcGJmWHpZQ0ZiN1RNTGpuU3wzNDU4NzY0NTQ4NzA5OTMwODEzfDI=?share_link_id=668356837041'><img src='https://www.qbssoftware.de/wp-content/uploads/2022/07/MIRO-logo.png' height="50"></a>
