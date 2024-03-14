@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="button_dark">
-        <item name="android:textColor">@color/darkOnPrimary</item>
-        <item name="android:backgroundTint">@color/darkPrimary</item>
+    <style name="button_dark_primary">
+        <item name="android:textColor">@color/on_dark</item>
+        <item name="android:backgroundTint">@color/primary_dark</item>
+        <item name="android:layout_marginLeft">@dimen/dim_30dp</item>
+        <item name="android:layout_marginRight">@dimen/dim_30dp</item>
+        <!-- Add more style attributes as needed -->
+    </style>
+    <style name="button_dark_secondary">
+        <item name="android:textColor">@color/on_dark</item>
+        <item name="android:backgroundTint">@color/secondary_dark</item>
         <item name="android:layout_marginLeft">@dimen/dim_30dp</item>
         <item name="android:layout_marginRight">@dimen/dim_30dp</item>
         <!-- Add more style attributes as needed -->
     </style>
 
-    <style name="button_dark_contrast">
-        <item name="android:textColor">@color/darkOnPrimary</item>
-        <item name="android:backgroundTint">@color/darkPrimary</item>
+    <style name="button_light_primary">
+        <item name="android:textColor">@color/on_light</item>
+        <item name="android:backgroundTint">@color/primary_light</item>
         <item name="android:layout_marginLeft">@dimen/dim_30dp</item>
         <item name="android:layout_marginRight">@dimen/dim_30dp</item>
         <!-- Add more style attributes as needed -->
     </style>
-
-    <style name="button_light">
-        <item name="android:textColor">@color/lightOnPrimary</item>
-        <item name="android:backgroundTint">@color/lightVariant</item>
+    <style name="button_light_secondary">
+        <item name="android:textColor">@color/on_light</item>
+        <item name="android:backgroundTint">@color/secondary_light</item>
         <item name="android:layout_marginLeft">@dimen/dim_30dp</item>
         <item name="android:layout_marginRight">@dimen/dim_30dp</item>
         <!-- Add more style attributes as needed -->

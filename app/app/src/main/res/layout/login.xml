@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_landing"
         android:text="@string/button_login"
-        style="@style/button_dark"
+        style="@style/button_light_primary"
 
         />
 
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonLogin"
         android:text="@string/button_register"
-        style="@style/button_light"
+        style="@style/button_light_secondary"
 
 
         />

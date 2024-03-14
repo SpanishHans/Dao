@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Dark Mode Colors -->
-    <color name="darkPrimary">#512DA8</color> <!-- Deep Purple -->
-    <color name="darkVariant">#9575CD</color> <!-- Light Purple -->
-    <color name="darkAccent">#FF5722</color> <!-- Deep Orange -->
-    <color name="darkOnPrimary">#FFFFFF</color> <!-- White -->
-    <color name="darkOnAccent">#FFFFFF</color> <!-- White -->
+    <!-- Light Mode -->
+    <color name="primary_light">#2196F3</color>
+    <color name="secondary_light">#FFC107</color>
+    <color name="accent_light">#4CAF50</color>
+    <color name="on_light">#FFFFFF</color>
 
-    <!-- Dark Variant -->
-    <!-- Light Mode Colors -->
-    <color name="lightPrimary">#FF5722</color> <!-- Deep Orange -->
-    <color name="lightVariant">#FFCCBC</color> <!-- Light Orange -->
-    <color name="lightAccent">#03A9F4</color> <!-- Light Blue -->
-    <color name="lightOnPrimary">#212121</color> <!-- Dark Grey -->
-    <color name="lightOnAccent">#757575</color> <!-- Grey -->
+    <!-- Dark Mode -->
+    <color name="primary_dark">#90CAF9</color>
+    <color name="secondary_dark">#FFECB3</color>
+    <color name="accent_dark">#A5D6A7</color>
+    <color name="on_dark">#FFFFFF</color>
 
     <!-- Black & White -->
-    <color name="black">#000000</color> <!-- Grey -->
-    <color name="white">#ffffff</color> <!-- Grey -->
+    <color name="black">#000000</color> <!-- Black color -->
+    <color name="white">#FFFFFF</color> <!-- White color -->
 </resources>
