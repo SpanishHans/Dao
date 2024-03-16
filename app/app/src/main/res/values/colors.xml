@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Light Mode -->
-    <color name="primary_light">#2196F3</color>
-    <color name="secondary_light">#FFC107</color>
-    <color name="accent_light">#4CAF50</color>
-    <color name="on_light">#FFFFFF</color>
 
-    <!-- Dark Mode -->
-    <color name="primary_dark">#90CAF9</color>
-    <color name="secondary_dark">#FFECB3</color>
-    <color name="accent_dark">#A5D6A7</color>
-    <color name="on_dark">#FFFFFF</color>
+    <color name="amarillo">#FFD700</color>
+    <color name="rojo">#d93033</color>
 
     <!-- Black & White -->
-    <color name="black">#000000</color> <!-- Black color -->
-    <color name="white">#FFFFFF</color> <!-- White color -->
+    <color name="negro">#000000</color> <!-- Black color -->
+    <color name="gris_oscuro">#333333</color> <!-- Black color -->
+    <color name="gris_claro">#757575</color>
+    <color name="blanco">#FFFFFF</color> <!-- White color -->
 </resources>

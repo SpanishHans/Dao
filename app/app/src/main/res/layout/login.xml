@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".MainActivity"
+    android:background="@color/blanco"
     >
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:contentDescription="@string/descriptivo_logo"
+        android:src="@drawable/fu"
 
+
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        app:layout_constraintLeft_toLeftOf="@+id/main"
+        app:layout_constraintRight_toRightOf="@+id/main"
+        app:layout_constraintTop_toTopOf="@+id/main"
         />
 
     <TextView
         android:id="@+id/text_landing"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:text="@string/text_welcome"
         android:textSize="20sp"
-        android:textColor="@color/black"
+        android:textColor="@color/negro"
         />
-
 
     <Button
         android:id="@+id/buttonLogin"
+        style="@style/button_primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_landing"
         android:text="@string/button_login"
-        style="@style/button_light_primary"
-
+        app:layout_constraintBottom_toTopOf="@id/buttonRegister"
         />
 
     <Button
         android:id="@+id/buttonRegister"
+        style="@style/button_secondary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonLogin"
+        android:layout_marginBottom="@dimen/dim_40dp"
         android:text="@string/button_register"
-        style="@style/button_light_secondary"
 
 
-        />
-</RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        tools:layout_editor_absoluteX="30dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
