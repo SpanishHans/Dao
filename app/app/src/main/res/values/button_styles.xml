@@ -4,12 +4,11 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/textsize20sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textColor">@color/rojo</item>
 
 
         <item name="android:background">@drawable/button_primary</item>
-        <item name="android:layout_marginLeft">@dimen/dim_30dp</item>
-        <item name="android:layout_marginRight">@dimen/dim_30dp</item>
+        <item name="android:layout_marginHorizontal">@dimen/dim_40dp</item>
         <!-- Add more style attributes as needed -->
     </style>
     <style name="button_secondary">
@@ -19,8 +18,7 @@
         <item name="android:textColor">@color/gris_oscuro</item>
 
         <item name="android:background">@drawable/button_secondary</item>
-        <item name="android:layout_marginLeft">@dimen/dim_30dp</item>
-        <item name="android:layout_marginRight">@dimen/dim_30dp</item>
+        <item name="android:layout_marginHorizontal">@dimen/dim_40dp</item>
         <!-- Add more style attributes as needed -->
     </style>
 
