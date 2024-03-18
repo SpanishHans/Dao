@@ -13,3 +13,6 @@ La app para la elocuencia en chino
 
 ## Storyboarding (LaTeX - Overleaf)
 <a href='https://www.overleaf.com/read/wshxdmdcfspf#e8c83d'><img src='https://images.ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/overleaf_wide_colour_light_bg.png' height="50"></a>
+
+## Presentación (Canva)
+<a href='https://www.canva.com/design/DAF_yS9chbA/7_VDtAfJWx8XuPMo-PZ4fA/view?utm_content=DAF_yS9chbA&utm_campaign=designshare&utm_medium=link&utm_source=editor'><img src='https://images.ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/overleaf_wide_colour_light_bg.png' height="50"></a
