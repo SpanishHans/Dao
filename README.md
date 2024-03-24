@@ -33,4 +33,8 @@ Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es i
 <a href='https://www.canva.com/design/DAF_yS9chbA/7_VDtAfJWx8XuPMo-PZ4fA/view?utm_content=DAF_yS9chbA&utm_campaign=designshare&utm_medium=link&utm_source=editor'><img src='https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' height="50"></a>
 
 
-Esto lo estoy escribiendo borracho, estoy desde Emacs, mientras tengo 2 six packs encima, necesito ayuda mental qué hago escribiendo esto con varias cervezas encima, estoy mal. Pero al menos estoy vivo, voy a sacar este proyecto, voy a estudiar bastante para poder tener este proyecto porque si se va a realizar, entonces voy a trabajar en estas cosas, aguante Emacs, aguante Richard Stallman. Él es mí pastor y voy a hacer commit en este proyecto de Github, de hechoo, lo estoy editanto desde Emacs, puedo manejarlo completamente. Aunque quiero seguir aprendiendo Emacs y poder manejarlo mucho mejor, necesito ayuda, qué hago haciendo esto a las 8 de la noche mientras estoy jarto, qué hago???? Encima, estoy en un proyecto para Aplicaciones móviles. Primero qu9e nada, voy a hacer commit.
+
+## Voy a hacer cosas que no debo hacer
+
+
+Esto lo estoy escribiendo borracho, estoy desde Emacs, mientras tengo 2 six packs encima, necesito ayuda mental qué hago escribiendo esto con varias cervezas encima, estoy mal. Pero al menos estoy vivo, voy a sacar este proyecto, voy a estudiar bastante para poder tener este proyecto porque si se va a realizar, entonces voy a trabajar en estas cosas, aguante Emacs, aguante Richard Stallman. Él es mí pastor y voy a hacer commit en este proyecto de Github, de hechoo, lo estoy editanto desde Emacs, puedo manejarlo completamente. Aunque quiero seguir aprendiendo Emacs y poder manejarlo mucho mejor, necesito ayuda, qué hago haciendo esto a las 8 de la noche mientras estoy jarto, qué hago???? Encima, estoy en un proyecto para Aplicaciones móviles. Primero qu9e nada, voy a hacer commit.cd 
