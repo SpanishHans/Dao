@@ -1,5 +1,6 @@
 # DAO
-La app para la elocuencia en chino. Esta aplicación ofrece mediante diferentes modulos una inmersión a la cultura China y al aprendizaje del idioma.
+La app para la elocuencia en chino. Esta aplicación ofrece mediante diferentes modulos una inmersión 
+a la cultura China y al aprendizaje del idioma.
 
 ## Diseño UX/UI del aplicativo (Figma)
 
