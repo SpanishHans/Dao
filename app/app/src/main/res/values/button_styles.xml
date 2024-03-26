@@ -15,7 +15,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/textsize16sp</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textColor">@color/gris_oscuro</item>
+        <item name="android:textColor">@color/blanco</item>
 
         <item name="android:background">@drawable/button_secondary</item>
         <item name="android:layout_marginHorizontal">@dimen/dim_40dp</item>
