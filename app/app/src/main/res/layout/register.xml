@@ -9,21 +9,19 @@
 
     android:background="@color/fondo"
     android:paddingHorizontal="@dimen/dim_40dp"
-    android:paddingVertical="@dimen/dim_40dp"
+    android:paddingVertical="33dp"
     >
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
         android:contentDescription="@string/logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/nombre"
         android:background="@drawable/circle_image_crop"
-        android:src="@drawable/fg_large"
+        android:src="@drawable/ic_launcher_logo"
 
         />
 
@@ -71,12 +69,10 @@
         android:inputType="textPassword"
 
         android:layout_marginBottom="@dimen/dim_40dp"
-
         app:layout_constraintBottom_toTopOf="@id/button_registrarse"
         />
     <Button
         android:id="@+id/button_registrarse"
-        style="@style/button_primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_register"

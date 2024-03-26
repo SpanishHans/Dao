@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/welcome"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
     android:background="@color/fondo"
     android:paddingHorizontal="@dimen/dim_40dp"
-    android:paddingVertical="@dimen/dim_40dp"
-    >
-
+    android:paddingVertical="33dp">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
         android:contentDescription="@string/descriptivo_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/text_landing"
         android:background="@drawable/circle_image_crop"
-        android:src="@drawable/fg_large"
+        android:src="@drawable/ic_launcher_logo"
         />
 
     <TextView
@@ -33,25 +29,24 @@
         android:text="@string/text_welcome"
         android:fontFamily="@font/helvetica_neue_light"
         android:textSize="30sp"
-        android:textColor="@color/rojo"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/buttonLogin"
+        android:textColor="@color/gris_oscuro"
+        app:layout_constraintBottom_toTopOf="@id/button_welcome_Login"
         android:layout_marginBottom="@dimen/dim_40dp"
         />
 
     <Button
-        android:id="@+id/buttonLogin"
-        style="@style/button_primary"
+        android:id="@+id/button_welcome_Login"
+        style="@style/boton_primario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dim_10dp"
         android:text="@string/button_login"
-        app:layout_constraintBottom_toTopOf="@id/buttonRegister"
+
+        app:layout_constraintBottom_toTopOf="@id/button_welcome_Register"
         />
 
     <Button
-        android:id="@+id/buttonRegister"
-        style="@style/button_secondary"
+        android:id="@+id/button_welcome_Register"
+        style="@style/boton_secundario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_register"
@@ -59,4 +54,3 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
