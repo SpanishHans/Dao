@@ -3,10 +3,10 @@
     <style name="button_primary">
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/textsize20sp</item>
-        <item name="android:fontFamily">@font/HelveticaNeueMedium</item>
+        <item name="android:fontFamily">@font/helvetica_neue_bold</item>
         <item name="android:textColor">@color/rojo</item>
 
-        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:background">@drawable/boton_amarillo</item>
         <item name="android:paddingHorizontal">@dimen/dim_15dp</item>
         <item name="android:paddingVertical">@dimen/dim_10dp</item>
     </style>
@@ -14,20 +14,20 @@
     <style name="button_secondary">
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/textsize16sp</item>
-        <item name="android:fontFamily">@font/HelveticaNeueLight</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
         <item name="android:textColor">@color/blanco</item>
 
-        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:background">@drawable/boton_rojo</item>
         <item name="android:paddingHorizontal">@dimen/dim_15dp</item>
         <item name="android:paddingVertical">@dimen/dim_10dp</item>
     </style>
 
     <style name="input_field">
         <item name="android:textSize">@dimen/textsize16sp</item>
-        <item name="android:fontFamily">@font/HelveticaNeueLight</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
         <item name="android:textColor">@color/gris_oscuro</item>
 
-        <item name="android:background">@drawable/text_field</item>
+        <item name="android:background">@drawable/campo_texto</item>
         <item name="android:layout_marginBottom">@dimen/dim_10dp</item>
         <item name="android:paddingHorizontal">@dimen/dim_15dp</item>
         <item name="android:paddingVertical">@dimen/dim_15dp</item>
