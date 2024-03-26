@@ -7,8 +7,8 @@
         <item name="android:textColor">@color/rojo</item>
 
         <item name="android:background">@drawable/button_primary</item>
-        <!-- Add more style attributes as needed -->
     </style>
+
     <style name="button_secondary">
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/textsize16sp</item>
@@ -16,7 +16,6 @@
         <item name="android:textColor">@color/blanco</item>
 
         <item name="android:background">@drawable/button_secondary</item>
-        <!-- Add more style attributes as needed -->
     </style>
 
     <style name="input_field">
