@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/register_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/fondo"
+    android:paddingHorizontal="40dp"
+    android:paddingVertical="@dimen/dim_30dp"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:contentDescription="@string/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nombre"
+        android:background="@drawable/circle_image_crop"
+        android:src="@drawable/fg_large"
+
+        />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/field_nombre"
+        android:autofillHints="name"
+        android:inputType="text"
+        style="@style/input_field"
+        app:layout_constraintBottom_toTopOf="@id/usuario"
+
+        />
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/field_username"
+        android:autofillHints="name"
+        android:inputType="text"
+        style="@style/input_field"
+        app:layout_constraintBottom_toTopOf="@id/email"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/field_email"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress"
+        style="@style/input_field"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/field_contraseña"
+        android:autofillHints="emailAddress"
+        android:inputType="textPassword"
+        style="@style/input_field"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/aaa"
+        style="@style/button_primary"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="@dimen/dim_40dp"
+        android:text="@string/button_register"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
