@@ -31,22 +31,22 @@
         android:fontFamily="@font/helvetica_neue_light"
         android:textSize="30sp"
         android:textColor="@color/gris_oscuro"
-        app:layout_constraintBottom_toTopOf="@id/button_welcome_login"
+        app:layout_constraintBottom_toTopOf="@id/welcome_button_login"
         android:layout_marginBottom="@dimen/dim_40dp"
         />
 
     <Button
-        android:id="@+id/button_welcome_login"
+        android:id="@+id/welcome_button_login"
         style="@style/boton_primario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_login"
 
-        app:layout_constraintBottom_toTopOf="@id/button_welcome_register"
+        app:layout_constraintBottom_toTopOf="@id/welcome_button_register"
         />
 
     <Button
-        android:id="@+id/button_welcome_register"
+        android:id="@+id/welcome_button_register"
         style="@style/boton_secundario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
