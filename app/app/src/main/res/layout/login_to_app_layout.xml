@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:hint="@string/field_username"
-        android:autofillHints="name"
+        android:autofillHints="username"
         android:inputType="text"
         style="@style/input_field"
         app:layout_constraintBottom_toTopOf="@id/login_password"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:hint="@string/field_contraseña"
-        android:autofillHints="emailAddress"
+        android:autofillHints="password"
         android:inputType="textPassword"
 
         android:layout_marginBottom="@dimen/dim_40dp"
