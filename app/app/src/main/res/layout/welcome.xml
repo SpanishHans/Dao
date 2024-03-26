@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo"
-    android:paddingHorizontal="40dp"
+    android:paddingHorizontal="@dimen/dim_40dp"
     android:paddingVertical="@dimen/dim_40dp"
     >
 
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/text_welcome"
-        android:fontFamily="@font/HelveticaNeueLight"
+        android:fontFamily="@font/helvetica_neue_light"
         android:textSize="30sp"
         android:textColor="@color/rojo"
         android:textStyle="bold"
