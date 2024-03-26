@@ -13,55 +13,31 @@
     >
 
     <ImageView
-        android:id="@+id/register_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/register_nombre"
+        app:layout_constraintBottom_toTopOf="@id/login_usuario"
         android:background="@drawable/circle_image_crop"
         android:src="@drawable/ic_launcher_logo"
 
         />
 
     <EditText
-        android:id="@+id/register_nombre"
-        style="@style/input_field"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/field_nombre"
-        android:autofillHints="name"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@id/register_usuario"
-
-        />
-
-    <EditText
-        android:id="@+id/register_usuario"
+        android:id="@+id/login_usuario"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:hint="@string/field_username"
         android:autofillHints="name"
         android:inputType="text"
         style="@style/input_field"
-        app:layout_constraintBottom_toTopOf="@id/register_email"
+        app:layout_constraintBottom_toTopOf="@id/login_password"
         />
 
     <EditText
-        android:id="@+id/register_email"
-        style="@style/input_field"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/field_email"
-        android:autofillHints="emailAddress"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@id/register_password"
-        />
-
-    <EditText
-        android:id="@+id/register_password"
+        android:id="@+id/login_password"
         style="@style/input_field"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -70,13 +46,13 @@
         android:inputType="textPassword"
 
         android:layout_marginBottom="@dimen/dim_40dp"
-        app:layout_constraintBottom_toTopOf="@id/register_button_registrarse"
+        app:layout_constraintBottom_toTopOf="@id/login_button_login"
         />
     <Button
-        android:id="@+id/register_button_registrarse"
+        android:id="@+id/login_button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_register"
+        android:text="@string/button_login"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
