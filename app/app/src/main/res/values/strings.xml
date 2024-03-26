@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Dao</string>
+    <string name="button_login">Iniciar sesión</string>
+    <string name="button_register">Registrarse</string>
+    <string name="field_nombre">Nombre completo</string>
+    <string name="field_username">Nombre de usuario</string>
+    <string name="field_email">Correo electrónico</string>
+    <string name="field_contraseña">Contraseña</string>
+    <string name="text_welcome">Aquí inicia tu ruta de aprendizaje en el chino</string>
+    <string name="logo">道</string>
+    <string name="text_logo">Dao</string>
+    <string name="descriptivo_logo">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
+</resources>
