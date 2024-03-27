@@ -4,13 +4,23 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import edu.app.dao.databinding.LoginToAppLayoutBinding
 
 class LoginToApp : AppCompatActivity() {
+    /*
+        Declaración del binding con el layout welcome_to_app_layout
+        El nombre WelcomeToAppLayoutBinding sale del archivo .xml
+        mencionado anteriormente y se genera automáticamente.
+     */
+    private lateinit var binding: LoginToAppLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_to_app_layout)
+        // Se utiliza el binding para inflar la vista y meterse como raiz
+        binding = LoginToAppLayoutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val botonRegistro = findViewById<Button>(R.id.login_button_login)
+        // Se accede al id del botón de inicio del  login
+        val botonRegistro =  binding.loginButtonLogin
         botonRegistro.setOnClickListener {
             val intent = Intent(this, BrowserActivity::class.java)
             startActivity(intent)
