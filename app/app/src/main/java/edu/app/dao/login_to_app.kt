@@ -18,7 +18,6 @@ class LoginToApp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginToAppLayoutBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         // Se accede al id del botón de inicio del  login
         val botonRegistro =  binding.loginButtonLogin
         botonRegistro.setOnClickListener {
