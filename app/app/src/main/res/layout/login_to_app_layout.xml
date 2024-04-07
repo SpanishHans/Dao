@@ -50,6 +50,7 @@
         />
     <Button
         android:id="@+id/login_button_login"
+        style="@style/boton_primario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_login"

@@ -17,6 +17,7 @@
         <item name="android:textSize">@dimen/textsize16sp</item>
         <item name="android:fontFamily">@font/helvetica_neue_bold</item>
         <item name="android:textColor">@color/gris_oscuro</item>
+        <!-- backgroundTint permite modificar el fondo del botón-->
         <item name="backgroundTint">@color/amarillo_light</item>
 
     </style>
@@ -32,8 +33,11 @@
     <style name="input_field">
         <item name="android:textSize">@dimen/textsize16sp</item>
         <item name="android:fontFamily">@font/helvetica_neue_light</item>
-        <item name="android:textColor">@color/gris_oscuro</item>
-
+        <!-- textColorHint permite cambiar el color de la letra
+        cosa toda rara, wtf???? La gente de Google me cae mal
+        No les basta con robar mis datos, sino que ahora también
+        no saber programar cosas con consistencia???-->
+        <item name="android:textColorHint">@color/gris_oscuro</item>
         <item name="android:background">@drawable/campo_texto</item>
         <item name="android:layout_marginBottom">@dimen/dim_10dp</item>
         <item name="android:paddingHorizontal">@dimen/dim_15dp</item>

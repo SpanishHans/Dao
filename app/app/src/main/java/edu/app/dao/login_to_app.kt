@@ -1,6 +1,7 @@
 package edu.app.dao
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,6 @@ class LoginToApp : AppCompatActivity() {
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginToAppLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         // Se accede al id del botón de inicio del  login
         val botonRegistro =  binding.loginButtonLogin
         botonRegistro.setOnClickListener {
