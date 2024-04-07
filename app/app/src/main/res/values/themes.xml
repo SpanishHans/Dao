@@ -17,6 +17,7 @@
         <item name="android:textSize">@dimen/textsize16sp</item>
         <item name="android:fontFamily">@font/helvetica_neue_bold</item>
         <item name="android:textColor">@color/gris_oscuro</item>
+        <item name="backgroundTint">@color/amarillo_light</item>
 
     </style>
 
@@ -25,7 +26,7 @@
         <item name="android:textSize">@dimen/textsize16sp</item>
         <item name="android:fontFamily">@font/helvetica_neue_light</item>
         <item name="android:textColor">@color/gris_oscuro</item>
-
+        <item name="backgroundTint">@color/amarillo_light</item>
     </style>
 
     <style name="input_field">
