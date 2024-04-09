@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dim_100dp"
+    android:orientation="horizontal"
+    android:background="@color/amarillo_light"
+    >
+
+    <ImageButton
+        style="@style/boton_invisible"
+        android:src="@drawable/dojo"
+        android:contentDescription="@string/descriptivo_dojo"
+        />
+    <ImageButton
+        style="@style/boton_invisible"
+        android:src="@drawable/tao"
+        android:contentDescription="@string/descriptivo_tao"
+        />
+    <ImageButton
+        style="@style/boton_invisible"
+        android:src="@drawable/muralla"
+        android:contentDescription="@string/descriptivo_muralla"
+        />
+    <ImageButton
+        style="@style/boton_invisible"
+        android:src="@drawable/yop"
+        android:contentDescription="@string/descriptivo_yop"
+        />
+</LinearLayout>

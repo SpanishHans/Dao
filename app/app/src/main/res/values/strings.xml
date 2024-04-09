@@ -8,4 +8,10 @@
     <string name="field_contraseña">Contraseña</string>
     <string name="text_welcome">Aquí inicia tu ruta de aprendizaje en el chino</string>
     <string name="descriptivo_logo">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
+    <string name="descriptivo_dojo">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
+    <string name="descriptivo_tao">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
+    <string name="descriptivo_muralla">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
+    <string name="descriptivo_yop">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
+
+
 </resources>
