@@ -12,6 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
+
+
     <style name="boton_primario" parent="Widget.MaterialComponents.Button">
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/textsize16sp</item>
