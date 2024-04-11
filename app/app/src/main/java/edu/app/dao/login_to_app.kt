@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import edu.app.dao.databinding.LoginToAppLayoutBinding
+import edu.app.dao.databinding.WelcomeToAppLayoutBinding
 
 class LoginToApp : AppCompatActivity() {
     /*
@@ -21,7 +22,7 @@ class LoginToApp : AppCompatActivity() {
         // Se accede al id del botón de inicio del  login
         val botonRegistro =  binding.loginButtonLogin
         botonRegistro.setOnClickListener {
-            val intent = Intent(this, BrowserActivity::class.java)
+            val intent = Intent(this, WelcomeToAppLayoutBinding::class.java)
             startActivity(intent)
         }
     }
