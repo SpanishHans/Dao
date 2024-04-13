@@ -36,17 +36,25 @@ class RegisterToApp : AppCompatActivity() {
         // Se inicializan las variables para guardarse en la base de datos
         firebaseDataBase = FirebaseDatabase.getInstance()
         /*
-            Usuarios es el nombre de una base de datos, entonces cuando se quiera llamar la
+            Usuarios es el nombre de tabla en la base de datos, entonces cuando se quiera llamar la
             base de datos, toca tener en cuenta el nombre Usuarios
          */
         databaseReference = firebaseDataBase.reference.child("Usuarios")
 
+        /*
+            Las siguientes líneas guardan en diferentes variables los datos del usuario al momento
+            que se le da clic al botón de registrarse dentro de la aplicación.
+            También se encargan de verificar que todos los campos estén llenos.
+            En este caso se tienen cuatro variables; signupFullname, signupUsername, signupCorreo y
+            signupPassword
+         */
         binding.registerButtonRegistrarse.setOnClickListener {
             val signupFullname = binding.registerNombre.text.toString()
             val signupUsername = binding.registerUsuario.text.toString()
             val signupCorreo = binding.registerEmail.text.toString()
             val signupPassword = binding.registerPassword.text.toString()
 
+            // Si no están vacíos manda los valores a la función registrarUsuario, si no, salta un aviso.
             if (signupFullname.isNotEmpty() && signupUsername.isNotEmpty()
                 && signupCorreo.isNotEmpty() && signupPassword.isNotEmpty()){
                 registrarUsuario(signupFullname, signupUsername, signupCorreo, signupPassword)
@@ -55,6 +63,7 @@ class RegisterToApp : AppCompatActivity() {
             }
         }
 
+        // Se dirige a la actividad de Login al momento de clickear en el botón correspondiente
         binding.buttonLoginVolver.setOnClickListener {
             startActivity(Intent(this@RegisterToApp, LoginToApp::class.java))
             finish()
@@ -62,13 +71,23 @@ class RegisterToApp : AppCompatActivity() {
     }
 
 
-    // Se va a crear la función registrar usuario
+    // Función para registrar el usuario en la base de datos
     private fun registrarUsuario(nameFull: String, username: String, correo: String, password: String){
         /*
         Argumentos:
             nameFull: type -> String
+            username: type -> String
+            correo: type -> String
             password: type -> String
+        ¿Qué hace?:
+            1. Registra los datos de los usuarios que se pasaron como argumento y los registra dentro
+                del firebase en la base de datos local. Después devuelve al usuario al WelcomeToApp
+                y sale un mensaje en la pantalla de "Registro Exitoso!"
+            2. Si los datos de los usuarios ya se encuentran registrados en la base de datos
+                entonces va a salir un anuncio de "El usuario ya existe" en la pantalla del usuario.
+            3. En caso de que ocurra algún error en la base de datos, este va a imprimir el error
          */
+
         databaseReference.orderByChild("nameFull").equalTo(nameFull).addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (!dataSnapshot.exists()){
