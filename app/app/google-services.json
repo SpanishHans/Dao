@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "769560559359",
+    "project_id": "dao-utadeo",
+    "storage_bucket": "dao-utadeo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769560559359:android:475e67b4142eee37bc56ca",
+        "android_client_info": {
+          "package_name": "edu.app.dao"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUQ9O8_OiKRnymfwtttCqzW_qHyEAZHGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
