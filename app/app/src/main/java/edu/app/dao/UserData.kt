@@ -15,5 +15,7 @@ data class UserData(
     val nameFull: String? = null,
     val username: String? = null,
     val correo: String? = null,
-    val password: String? = null
+    val password: String? = null,
+    var victoriasKong: Int = 0,
+    var aciertosKong: Int = 0
 )
