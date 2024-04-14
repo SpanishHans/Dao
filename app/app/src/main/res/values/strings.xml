@@ -2,8 +2,8 @@
     <string name="app_name">Dao</string>
     <string name="button_login">Iniciar sesión</string>
     <string name="button_register">Registrarse</string>
-    <string name="field_nombre">Nombre completo</string>
-    <string name="field_username">Nombre de usuario</string>
+    <string name="field_nombre">Nombre</string>
+    <string name="field_username">Usuario</string>
     <string name="field_email">Correo electrónico</string>
     <string name="field_contraseña">Contraseña</string>
     <string name="text_welcome">Aquí inicia tu ruta de aprendizaje en el chino</string>
@@ -13,6 +13,8 @@
     <string name="descriptivo_muralla">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
     <string name="descriptivo_yop">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
     <string name="volverLogin">Volver a iniciar sesión</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

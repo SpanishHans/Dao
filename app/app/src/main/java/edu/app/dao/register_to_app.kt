@@ -15,7 +15,7 @@ import edu.app.dao.databinding.RegisterToAppLayoutBinding
 class RegisterToApp : AppCompatActivity() {
 
     /*
-        Declaración del binding con el layout register_to_app_layout
+        Declaración del binding con el layout register
         El nombre RegisterToAppLayoutBinding sale del archivo .xml
         mencionado anteriormente y se genera automáticamente.
      */

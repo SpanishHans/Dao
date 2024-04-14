@@ -9,7 +9,7 @@ import edu.app.dao.databinding.WelcomeToAppLayoutBinding
 class WelcomeToApp : AppCompatActivity() {
 
     /*
-        Declaración del binding con el layout welcome_to_app_layout
+        Declaración del binding con el layout welcome
         El nombre WelcomeToAppLayoutBinding sale del archivo .xml
         mencionado anteriormente y se genera automáticamente.
      */

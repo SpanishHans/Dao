@@ -3,29 +3,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dim_100dp"
+    android:layout_height="?attr/actionBarSize"
     android:orientation="horizontal"
     android:background="@color/amarillo_light"
     >
 
     <ImageButton
         style="@style/boton_invisible"
+        android:layout_weight="1"
         android:src="@drawable/dojo"
-        android:contentDescription="@string/descriptivo_dojo"
+        android:tint="@color/white"
+        tools:ignore="UseAppTint"
         />
     <ImageButton
         style="@style/boton_invisible"
+        android:layout_weight="1"
         android:src="@drawable/tao"
-        android:contentDescription="@string/descriptivo_tao"
+        android:tint="@color/white"
+        tools:ignore="UseAppTint"
         />
     <ImageButton
         style="@style/boton_invisible"
+        android:layout_weight="1"
         android:src="@drawable/muralla"
-        android:contentDescription="@string/descriptivo_muralla"
+        android:tint="@color/white"
+        tools:ignore="UseAppTint"
         />
     <ImageButton
         style="@style/boton_invisible"
+        android:layout_weight="1"
         android:src="@drawable/yop"
-        android:contentDescription="@string/descriptivo_yop"
+        android:tint="@color/white"
+        tools:ignore="UseAppTint"
         />
 </LinearLayout>
