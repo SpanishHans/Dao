@@ -40,6 +40,7 @@ class LoginToApp : AppCompatActivity() {
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val yopFragment = yop()
 
         // Obtener NavHostFragment
 
@@ -81,6 +82,13 @@ class LoginToApp : AppCompatActivity() {
             startActivity(intent)
         }
     }
+//
+//    private fun makeCurrentFragment(fragment: Fragment){
+//        supportFragmentManager.beginTransaction().apply {
+//            replace(R.id.login_constrait_layout, fragment)
+//            commit()
+//        }
+//    }
 
 
     // Creación de la función para hacer el login
@@ -116,8 +124,11 @@ class LoginToApp : AppCompatActivity() {
                                 conflictos y que funcione el botón de iniciar sesión.
                                 ----------------------------------------------------
                              */
-
-                            startActivity(Intent(this@LoginToApp, WelcomeToApp::class.java))
+                            supportFragmentManager.beginTransaction().apply {
+                                replace(R.id.login_constrait_layout, R.id.principal_fragment)
+                                commit()
+                            }
+//                            startActivity(Intent(this@LoginToApp, WelcomeToApp::class.java))
                             finish()
                             return
                         }
