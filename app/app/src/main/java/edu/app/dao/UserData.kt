@@ -13,9 +13,10 @@ package edu.app.dao
 data class UserData(
     val id: String? = null,
     val nameFull: String? = null,
-    val username: String? = null,
+    var username: String? = null,
     val correo: String? = null,
     val password: String? = null,
     var victoriasKong: Int = 0,
-    var aciertosKong: Int = 0
+    var aciertosKong: Int = 0,
+    var description: String? = ""
 )

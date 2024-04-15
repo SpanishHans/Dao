@@ -23,6 +23,7 @@
         >
         <ImageButton
             style="@style/boton_invisible"
+            android:id="@+id/boton_devolver"
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_back"
             android:tint="@color/black"
