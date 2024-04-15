@@ -23,9 +23,9 @@ class Principal : Fragment() {
 
         val btnYop = root.findViewById<ImageButton>(R.id.Wo)
 
-        btnYop.setOnClickListener {
-            findNavController().navigate(R.id.action_principal_to_yop2)
-        }
+//        btnYop.setOnClickListener {
+//            findNavController().navigate(R.id.action_principal_to_yop2)
+//        }
 
         return root
     }

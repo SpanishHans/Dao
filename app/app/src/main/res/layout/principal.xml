@@ -23,8 +23,7 @@
             app:layout_constraintTop_toBottomOf="@id/barra_superior"
             app:layout_constraintBottom_toTopOf="@id/barra_inferior"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:name="com.edu" />
+            app:layout_constraintEnd_toEndOf="parent" />
         <include
             android:id="@+id/barra_inferior"
             layout="@layout/fragment_menu_inferior"

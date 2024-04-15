@@ -33,14 +33,13 @@ class LoginToApp : AppCompatActivity() {
      */
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val yopFragment = yop()
+
 
         // Obtener NavHostFragment
 
@@ -124,11 +123,12 @@ class LoginToApp : AppCompatActivity() {
                                 conflictos y que funcione el botón de iniciar sesión.
                                 ----------------------------------------------------
                              */
-                            supportFragmentManager.beginTransaction().apply {
-                                replace(R.id.login_constrait_layout, R.id.principal_fragment)
-                                commit()
-                            }
-//                            startActivity(Intent(this@LoginToApp, WelcomeToApp::class.java))
+//                            supportFragmentManager.beginTransaction().apply {
+//                                add(R.id.login_constrait_layout, yopFragment)
+//                                addToBackStack(null)
+//                                commit()
+//                            }
+                            startActivity(Intent(this@LoginToApp, InicioPrincipal::class.java))
                             finish()
                             return
                         }
