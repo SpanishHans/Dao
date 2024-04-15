@@ -23,7 +23,7 @@
             android:id="@+id/boton_devolver"
             style="@style/boton_invisible"
             android:layout_weight="1"
-            android:src="@drawable/yop"
+            android:src="@drawable/ic_action_arrow_back"
             android:tint="@color/black"
             tools:ignore="UseAppTint" />
     </LinearLayout>

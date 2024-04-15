@@ -2,6 +2,7 @@ package edu.app.dao
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Window
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import edu.app.dao.databinding.WelcomeBinding
@@ -17,6 +18,7 @@ class WelcomeToApp : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = WelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)

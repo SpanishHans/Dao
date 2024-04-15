@@ -32,7 +32,7 @@ class LoginToApp : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        supportActionBar?.hide()
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
