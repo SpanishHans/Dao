@@ -1,12 +1,9 @@
 package edu.app.dao
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import edu.app.dao.databinding.FragmentPrincipalBinding
-import edu.app.dao.databinding.PrincipalBinding
-import edu.app.dao.ui.theme.kong
 
 class InicioPrincipal : AppCompatActivity() {
 
@@ -19,6 +16,8 @@ class InicioPrincipal : AppCompatActivity() {
 
         val kongFragment = kong()
         val yopFragment = yop()
+        val taoFragment = Tao()
+        val murallaFragment = Muralla()
 
 
         makeCurrentFragment(kongFragment)
@@ -27,6 +26,8 @@ class InicioPrincipal : AppCompatActivity() {
             when (it.itemId){
                 R.id.ic_Kong -> makeCurrentFragment(kongFragment)
                 R.id.ic_wo -> makeCurrentFragment(yopFragment)
+                R.id.ic_tao -> makeCurrentFragment(taoFragment)
+                R.id.ic_muralla -> makeCurrentFragment(murallaFragment)
             }
             true
         }
