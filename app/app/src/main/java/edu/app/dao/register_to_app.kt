@@ -66,7 +66,7 @@ class RegisterToApp : AppCompatActivity() {
 
         // Se dirige a la actividad de Login al momento de clickear en el botón correspondiente
         binding.botonDevolver.setOnClickListener {
-            startActivity(Intent(this@RegisterToApp, LoginToApp::class.java))
+            startActivity(Intent(this@RegisterToApp, WelcomeToApp::class.java))
             finish()
         }
     }

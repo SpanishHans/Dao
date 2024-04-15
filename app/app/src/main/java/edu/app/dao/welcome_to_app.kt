@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import edu.app.dao.databinding.WelcomeToAppLayoutBinding
+import edu.app.dao.databinding.WelcomeBinding
 
 class WelcomeToApp : AppCompatActivity() {
 
@@ -13,12 +13,12 @@ class WelcomeToApp : AppCompatActivity() {
         El nombre WelcomeToAppLayoutBinding sale del archivo .xml
         mencionado anteriormente y se genera automáticamente.
      */
-    private lateinit var binding: WelcomeToAppLayoutBinding
+    private lateinit var binding: WelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Se utiliza el binding para inflar la vista y meterse como raiz
-        binding = WelcomeToAppLayoutBinding.inflate(layoutInflater)
+        binding = WelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val botonLogin = binding.welcomeButtonLogin

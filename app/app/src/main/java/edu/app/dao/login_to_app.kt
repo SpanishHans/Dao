@@ -12,8 +12,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import edu.app.dao.databinding.LoginToAppLayoutBinding
-import edu.app.dao.databinding.WelcomeToAppLayoutBinding
+import edu.app.dao.databinding.LoginBinding
+
 
 class LoginToApp : AppCompatActivity() {
     /*
@@ -21,7 +21,7 @@ class LoginToApp : AppCompatActivity() {
         El nombre WelcomeToAppLayoutBinding sale del archivo .xml
         mencionado anteriormente y se genera automáticamente.
      */
-    private lateinit var binding: LoginToAppLayoutBinding
+    private lateinit var binding: LoginBinding
 
     /*
     Aquí se declara las bases de datos, esto luego toca hacer un sync en el gradle para que se
@@ -34,7 +34,7 @@ class LoginToApp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Se utiliza el binding para inflar la vista y meterse como raiz
-        binding = LoginToAppLayoutBinding.inflate(layoutInflater)
+        binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Se inicializan las variables para guardarse en la base de datos
@@ -67,6 +67,11 @@ class LoginToApp : AppCompatActivity() {
         // Se accede al id del botón de inicio del  login y al presionar se dirige a la vista WelcomeToApp
         val botonRegistro =  binding.loginButtonLogin
         botonRegistro.setOnClickListener {
+            val intent = Intent(this, WelcomeToApp::class.java)
+            startActivity(intent)
+        }
+
+        binding.botonDevolverLogin.setOnClickListener {
             val intent = Intent(this, WelcomeToApp::class.java)
             startActivity(intent)
         }

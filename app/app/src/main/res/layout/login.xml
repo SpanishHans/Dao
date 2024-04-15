@@ -1,78 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_constrait_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterToApp"
     android:background="@color/fondo"
     android:paddingHorizontal="@dimen/dim_40dp"
     android:paddingVertical="33dp"
-    >
+    tools:context=".RegisterToApp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="280dp"
         android:backgroundTint="@color/black"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageButton
+            android:id="@+id/boton_devolver_login"
             style="@style/boton_invisible"
             android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_back"
+            android:src="@drawable/dojo"
             android:tint="@color/black"
-            tools:ignore="UseAppTint"
-            />
+            tools:ignore="UseAppTint" />
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/descriptivo_logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/login_usuario"
         android:background="@drawable/circle_image_crop"
+        android:contentDescription="@string/descriptivo_logo"
         android:src="@drawable/ic_launcher_logo"
+        app:layout_constraintBottom_toTopOf="@id/login_usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
         />
 
     <EditText
         android:id="@+id/login_usuario"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/field_username"
-        android:autofillHints="username"
-        android:inputType="text"
         style="@style/input_field"
-        app:layout_constraintBottom_toTopOf="@id/login_password"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="username"
+        android:hint="@string/field_username"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/login_password" />
 
     <EditText
         android:id="@+id/login_password"
         style="@style/input_field"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="@string/field_contraseña"
-        android:autofillHints="password"
-        android:inputType="textPassword"
-
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dim_30dp"
-        app:layout_constraintBottom_toTopOf="@id/login_button_login"
-        />
+        android:autofillHints="password"
+        android:hint="@string/field_contraseña"
+
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/login_button_login" />
+
     <Button
         android:id="@+id/login_button_login"
         style="@style/boton_primario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

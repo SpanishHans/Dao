@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/register_constrait_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterToApp"
     android:background="@color/fondo"
     android:paddingHorizontal="@dimen/dim_40dp"
     android:paddingVertical="33dp"
-    >
+    tools:context=".RegisterToApp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="280dp"
         android:backgroundTint="@color/black"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageButton
-            style="@style/boton_invisible"
             android:id="@+id/boton_devolver"
+            style="@style/boton_invisible"
             android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_back"
+            android:src="@drawable/yop"
             android:tint="@color/black"
-            tools:ignore="UseAppTint"
-            />
+            tools:ignore="UseAppTint" />
     </LinearLayout>
 
 
@@ -48,10 +45,10 @@
     <EditText
         android:id="@+id/register_nombre"
         style="@style/input_field"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="@string/field_nombre"
+        android:layout_height="wrap_content"
         android:autofillHints="name"
+        android:hint="@string/field_nombre"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@id/register_usuario"
 
@@ -59,38 +56,35 @@
 
     <EditText
         android:id="@+id/register_usuario"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/field_username"
-        android:autofillHints="username"
-        android:inputType="text"
         style="@style/input_field"
-        app:layout_constraintBottom_toTopOf="@id/register_email"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="username"
+        android:hint="@string/field_username"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/register_email" />
 
     <EditText
         android:id="@+id/register_email"
         style="@style/input_field"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="@string/field_email"
+        android:layout_height="wrap_content"
         android:autofillHints="emailAddress"
+        android:hint="@string/field_email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@id/register_password"
-        />
+        app:layout_constraintBottom_toTopOf="@id/register_password" />
 
     <EditText
         android:id="@+id/register_password"
         style="@style/input_field"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="@string/field_contraseña"
-        android:autofillHints="password"
-        android:inputType="textPassword"
-
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dim_30dp"
-        app:layout_constraintBottom_toTopOf="@id/register_button_registrarse"
-        />
+        android:autofillHints="password"
+        android:hint="@string/field_contraseña"
+
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/register_button_registrarse" />
 
     <Button
         android:id="@+id/register_button_registrarse"
@@ -99,7 +93,6 @@
         android:layout_height="wrap_content"
 
         android:text="@string/button_register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
