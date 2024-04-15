@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/welcomeToApp">
+
+    <activity
+        android:id="@+id/welcomeToApp"
+        android:name="edu.app.dao.WelcomeToApp"
+        android:label="welcome"
+        tools:layout="@layout/welcome" />
+    <activity
+        android:id="@+id/registerToApp"
+        android:name="edu.app.dao.RegisterToApp"
+        android:label="register"
+        tools:layout="@layout/register" />
+    <fragment
+        android:id="@+id/principal"
+        android:name="edu.app.dao.Principal"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_graph"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal">
+        <action
+            android:id="@+id/action_principal_to_yop2"
+            app:destination="@id/yop" />
+    </fragment>
+    <activity
+        android:id="@+id/loginToApp"
+        android:name="edu.app.dao.LoginToApp"
+        android:label="LoginToApp"
+        tools:layout="@layout/login" />
+    <fragment
+        android:id="@+id/yop"
+        android:name="edu.app.dao.yop"
+        android:label="fragment_yop"
+        tools:layout="@layout/fragment_yop" />
+</navigation>

@@ -13,7 +13,7 @@
     <ImageButton
         style="@style/boton_invisible"
         android:layout_weight="1"
-        android:src="@android:drawable/btn_default"
+        android:src="@drawable/ic_action_arrow_back"
         android:tint="@color/white"
         tools:ignore="UseAppTint"
         />

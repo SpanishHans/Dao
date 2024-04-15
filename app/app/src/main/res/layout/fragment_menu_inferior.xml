@@ -9,6 +9,7 @@
     >
 
     <ImageButton
+        android:id="@+id/Kong"
         style="@style/boton_invisible"
         android:layout_weight="1"
         android:src="@drawable/dojo"
@@ -16,6 +17,7 @@
         tools:ignore="UseAppTint"
         />
     <ImageButton
+        android:id="@+id/Tao"
         style="@style/boton_invisible"
         android:layout_weight="1"
         android:src="@drawable/tao"
@@ -23,6 +25,7 @@
         tools:ignore="UseAppTint"
         />
     <ImageButton
+        android:id="@+id/Muralla"
         style="@style/boton_invisible"
         android:layout_weight="1"
         android:src="@drawable/muralla"
@@ -30,6 +33,7 @@
         tools:ignore="UseAppTint"
         />
     <ImageButton
+        android:id="@+id/Wo"
         style="@style/boton_invisible"
         android:layout_weight="1"
         android:src="@drawable/yop"

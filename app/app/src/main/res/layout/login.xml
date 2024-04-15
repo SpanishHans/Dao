@@ -10,6 +10,7 @@
     android:paddingVertical="33dp"
     tools:context=".RegisterToApp">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_50dp"
@@ -70,5 +71,6 @@
         android:layout_height="wrap_content"
         android:text="@string/button_login"
         app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

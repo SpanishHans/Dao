@@ -10,6 +10,9 @@
     android:background="@color/fondo"
     android:paddingHorizontal="@dimen/dim_40dp"
     android:paddingVertical="33dp">
+
+
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

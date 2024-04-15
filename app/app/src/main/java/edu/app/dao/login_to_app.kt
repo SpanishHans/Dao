@@ -6,13 +6,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.FirebaseApp
+import androidx.fragment.app.Fragment
+
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import edu.app.dao.databinding.LoginBinding
+
 
 
 class LoginToApp : AppCompatActivity() {
@@ -22,6 +24,8 @@ class LoginToApp : AppCompatActivity() {
         mencionado anteriormente y se genera automáticamente.
      */
     private lateinit var binding: LoginBinding
+
+
 
     /*
     Aquí se declara las bases de datos, esto luego toca hacer un sync en el gradle para que se
@@ -36,6 +40,12 @@ class LoginToApp : AppCompatActivity() {
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Obtener NavHostFragment
+
+
+        // Obtiene el NavController asociado al NavHostFragment
+
 
         // Se inicializan las variables para guardarse en la base de datos
         firebaseDatabase = FirebaseDatabase.getInstance()
@@ -64,18 +74,14 @@ class LoginToApp : AppCompatActivity() {
             }
         }
 
-        // Se accede al id del botón de inicio del  login y al presionar se dirige a la vista WelcomeToApp
-        val botonRegistro =  binding.loginButtonLogin
-        botonRegistro.setOnClickListener {
-            val intent = Intent(this, WelcomeToApp::class.java)
-            startActivity(intent)
-        }
 
+        // Se accede al id del botón de inicio del  login y al presionar se dirige a la vista WelcomeToApp
         binding.botonDevolverLogin.setOnClickListener {
             val intent = Intent(this, WelcomeToApp::class.java)
             startActivity(intent)
         }
     }
+
 
     // Creación de la función para hacer el login
     private fun loginUser(username: String, password: String){
@@ -110,13 +116,14 @@ class LoginToApp : AppCompatActivity() {
                                 conflictos y que funcione el botón de iniciar sesión.
                                 ----------------------------------------------------
                              */
+
                             startActivity(Intent(this@LoginToApp, WelcomeToApp::class.java))
                             finish()
                             return
                         }
                     }
                 }
-                Toast.makeText(this@LoginToApp, "Inicio fallido!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@LoginToApp, "Credenciales incorrectas!", Toast.LENGTH_SHORT).show()
 
             }
 
