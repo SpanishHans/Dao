@@ -5,6 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import edu.app.dao.databinding.FragmentPrincipalBinding
 
+
+/*
+----------------------------------------------
+|Recordar:                                   |
+|    Corregir Muchas cosas jfdslkajkld       |
+----------------------------------------------
+ */
 class InicioPrincipal : AppCompatActivity() {
 
     private lateinit var binding: FragmentPrincipalBinding
