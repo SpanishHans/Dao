@@ -41,6 +41,15 @@
         <item name="android:importantForAccessibility">no</item>
     </style>
 
+    <style name="lvl">
+        <item name="android:gravity">center</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:layout_width">@dimen/dim_50dp</item>
+        <item name="android:layout_height">@dimen/dim_50dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
     <style name="input_field">
         <item name="android:textSize">@dimen/textsize16sp</item>
         <item name="android:fontFamily">@font/helvetica_neue_light</item>
