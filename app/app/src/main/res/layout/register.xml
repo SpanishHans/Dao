@@ -12,8 +12,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_50dp"
-        android:layout_marginEnd="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="270dp"
         android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

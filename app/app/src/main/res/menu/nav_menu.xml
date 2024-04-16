@@ -3,20 +3,24 @@
     <item
         android:id="@+id/ic_Kong"
         android:icon="@drawable/dojo"
+        android:title="Kong"
         />
 
     <item
         android:id="@+id/ic_tao"
         android:icon="@drawable/tao"
+        android:title="Tao"
         />
 
     <item
         android:id="@+id/ic_muralla"
         android:icon="@drawable/muralla"
+        android:title="Muralla"
         />
 
     <item
         android:id="@+id/ic_wo"
         android:icon="@drawable/yop"
+        android:title="Yop"
         />
 </menu>

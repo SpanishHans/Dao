@@ -3,7 +3,8 @@ package edu.app.dao
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import edu.app.dao.databinding.FragmentPrincipalBinding
+
+import edu.app.dao.databinding.PrincipalBinding
 
 
 /*
@@ -14,18 +15,17 @@ import edu.app.dao.databinding.FragmentPrincipalBinding
  */
 class InicioPrincipal : AppCompatActivity() {
 
-    private lateinit var binding: FragmentPrincipalBinding
+    private lateinit var binding: PrincipalBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        binding = FragmentPrincipalBinding.inflate(layoutInflater)
+        binding = PrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val kongFragment = kong()
         val yopFragment = yop()
         val taoFragment = Tao()
         val murallaFragment = Muralla()
-
 
         makeCurrentFragment(kongFragment)
 
