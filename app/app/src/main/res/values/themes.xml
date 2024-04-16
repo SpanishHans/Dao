@@ -31,7 +31,7 @@
         <item name="backgroundTint">@color/amarillo_light</item>
     </style>
 
-    <style name="boton_invisible">
+    <style name="invisible">
         <item name="android:gravity">center</item>
         <item name="backgroundTint">@android:color/transparent</item>
         <item name="android:layout_width">0dp</item>

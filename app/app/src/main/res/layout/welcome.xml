@@ -11,10 +11,8 @@
     android:paddingHorizontal="@dimen/dim_40dp"
     android:paddingVertical="33dp">
 
-
-
     <ImageView
-        android:layout_width="wrap_content"
+        style="@style/invisible"
         android:layout_height="wrap_content"
         android:contentDescription="@string/descriptivo_logo"
         app:layout_constraintTop_toTopOf="parent"

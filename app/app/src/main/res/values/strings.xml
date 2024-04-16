@@ -7,15 +7,14 @@
     <string name="field_email">Correo electrónico</string>
     <string name="field_contraseña">Contraseña</string>
     <string name="text_welcome">Aquí inicia tu ruta de aprendizaje en el chino</string>
-    <string name="descriptivo_logo">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
-    <string name="descriptivo_dojo">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
-    <string name="descriptivo_tao">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
-    <string name="descriptivo_muralla">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
-    <string name="descriptivo_yop">La palabra Dao significa XXX y viene del Taoismo Mongol</string>
+    <string name="descriptivo_logo">El icono de la app es la palabra Dao del chino tradicional</string>
+    <string name="descriptivo_dojo">Esta sección está destinada a que compitas con otras personas</string>
+    <string name="descriptivo_tao">Nuestro crecimiento depende de nosotros. Aquí aprendes cosas nuevas</string>
+    <string name="descriptivo_muralla">Mi ruta de aprendizaje.</string>
+    <string name="descriptivo_yop">Para ver hacia donde vamos, hemos de mirar en retrospectiva.</string>
     <string name="volverLogin">Volver a iniciar sesión</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_inicio_principal">InicioPrincipal</string>
+
+    <string name="title_activity_inicio_principal">Inicio</string>
 
 
 </resources>

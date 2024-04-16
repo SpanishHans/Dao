@@ -6,19 +6,22 @@
     android:layout_height="match_parent"
     >
 
-    <FrameLayout
-        android:id="@+id/test"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/dim_80dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fl_wrapper"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/amarillo_light"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
-    <FrameLayout
+    <ScrollView
         android:id="@+id/fl_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toTopOf="@id/navigation_bar_buttom"
         />
 
@@ -31,7 +34,7 @@
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/amarillo_light"
         app:itemIconTint="@color/black"
-        app:menu="@menu/nav_menu"
+        app:menu="@menu/menu_inferior"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 

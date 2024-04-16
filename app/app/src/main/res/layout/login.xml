@@ -22,7 +22,7 @@
 
         <ImageButton
             android:id="@+id/boton_devolver_login"
-            style="@style/boton_invisible"
+            style="@style/invisible"
             android:layout_weight="1"
             android:src="@drawable/ic_action_arrow_back"
             android:tint="@color/black"
@@ -30,7 +30,7 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
+        style="@style/invisible"
         android:layout_height="wrap_content"
         android:background="@drawable/circle_image_crop"
         android:contentDescription="@string/descriptivo_logo"
