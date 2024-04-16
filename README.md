@@ -1,6 +1,6 @@
 # DAO
 La app para la elocuencia en chino. Esta aplicación ofrece mediante diferentes modulos una inmersión 
-a la cultura China y al aprendizaje del idioma.
+a la cultura China y al aprendizaje del idioma. Utilizamos libros fuentes para la introducción de contenidos y también reforzar el aprendizaje por medio de actividad donde se fomente la cooperación entre usuarios y la interacción de elementos culturales chinos.
 
 ## Diseño UX/UI del aplicativo (Figma)
 
@@ -32,4 +32,4 @@ Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es i
 
 
 <a href='https://www.canva.com/design/DAF_yS9chbA/7_VDtAfJWx8XuPMo-PZ4fA/view?utm_content=DAF_yS9chbA&utm_campaign=designshare&utm_medium=link&utm_source=editor'><img src='https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' height="50"></a>
-
+	
