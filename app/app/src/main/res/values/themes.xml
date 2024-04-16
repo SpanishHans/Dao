@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Dao" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
+        <item name="android:windowFullscreen">true</item>
         <item name="colorPrimary">@color/amarillo_light</item>
         <item name="colorPrimaryVariant">@color/amarillo_dark</item>
         <item name="colorOnPrimary">@color/white</item>

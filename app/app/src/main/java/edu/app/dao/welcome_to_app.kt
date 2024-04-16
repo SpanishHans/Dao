@@ -2,9 +2,12 @@ package edu.app.dao
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.graphics.Color
+import androidx.core.content.ContextCompat
 import edu.app.dao.databinding.WelcomeBinding
 
 class WelcomeToApp : AppCompatActivity() {
@@ -37,5 +40,7 @@ class WelcomeToApp : AppCompatActivity() {
             val intent = Intent(this, RegisterToApp::class.java)
             startActivity(intent)
         }
+
+
     }
 }
