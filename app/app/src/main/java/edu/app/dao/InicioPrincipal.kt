@@ -22,6 +22,7 @@ class InicioPrincipal : AppCompatActivity() {
         binding = PrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Instancias de los fragmentos para luego ser utilizados
         val kongFragment = kong()
         val yopFragment = yop()
         val taoFragment = Tao()
