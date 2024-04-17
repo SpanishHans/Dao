@@ -24,7 +24,7 @@ class Muralla : Fragment() {
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
 
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        toolbarText.text = "Tú Camino"
+        toolbarText.text = "你的道"
 
         return binding.root
     }

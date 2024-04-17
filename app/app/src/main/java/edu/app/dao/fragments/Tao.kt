@@ -24,7 +24,7 @@ class Tao : Fragment() {
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
 
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        toolbarText.text = "Entrenar"
+        toolbarText.text = "培养"
 
         return binding.root
     }

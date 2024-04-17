@@ -23,9 +23,10 @@
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Título de la Toolbar"
+            android:text="Hola"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="50sp"
+            android:fontFamily="@font/ma_shan_zheng"
             android:textStyle="bold"
             android:layout_gravity="center"/>
     </androidx.appcompat.widget.Toolbar>

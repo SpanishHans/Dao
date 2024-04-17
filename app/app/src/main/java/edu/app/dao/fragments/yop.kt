@@ -24,7 +24,7 @@ class yop : Fragment() {
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
 
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        toolbarText.text = "Editar perfil"
+        toolbarText.text = "编辑个人资料"
 
         return binding.root
     }
