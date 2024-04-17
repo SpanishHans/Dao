@@ -23,10 +23,10 @@
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hola"
+            android:text="Esto es texto :D"
             android:textColor="@android:color/black"
-            android:textSize="50sp"
-            android:fontFamily="@font/mirza_bold"
+            android:textSize="40sp"
+            android:fontFamily="@font/helvetica_neue_bold"
             android:textStyle="bold"
             android:layout_gravity="center"/>
     </androidx.appcompat.widget.Toolbar>
@@ -47,6 +47,7 @@
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/amarillo_light"
         app:itemIconTint="@color/black"
+        app:itemTextAppearanceActive="@font/helvetic_neuse_cond_black"
         app:menu="@menu/menu_inferior"
         app:layout_constraintBottom_toBottomOf="parent"
         />

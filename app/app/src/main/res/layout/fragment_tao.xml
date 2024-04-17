@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Estoy en Tao!"
+        android:fontFamily="@font/helvetica_neue_bold"
         android:gravity="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,13 @@
 package edu.app.dao
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -142,4 +146,11 @@ class LoginToApp : AppCompatActivity() {
         })
     }
 
+    fun conecccionInternet(context: Context): Boolean{
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){
+//            val network = connectivityManager.acti
+        }
+    }
 }
