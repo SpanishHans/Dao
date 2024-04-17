@@ -1,4 +1,4 @@
-package edu.app.dao
+package edu.app.dao.fragments
 /*
     Esta es la tabla UserData para la base de datos, pasos para correr la base de datos:
     1. En la pestaña de Tools en android studio, dar clic en la parte de Firebase

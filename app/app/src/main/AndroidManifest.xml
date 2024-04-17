@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Dao"
         tools:targetApi="31">
         <activity
-            android:name=".InicioPrincipal"
+            android:name=".fragments.InicioPrincipal"
             android:exported="false"
             android:label="@string/title_activity_inicio_principal"
             android:theme="@style/Theme.Dao" />

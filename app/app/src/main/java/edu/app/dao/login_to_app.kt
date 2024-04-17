@@ -1,13 +1,9 @@
 package edu.app.dao
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -15,7 +11,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import edu.app.dao.databinding.LoginBinding
-
+import edu.app.dao.fragments.InicioPrincipal
+import edu.app.dao.fragments.UserData
 
 
 class LoginToApp : AppCompatActivity() {
