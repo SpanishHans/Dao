@@ -8,26 +8,25 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
-import edu.app.dao.databinding.FragmentMurallaBinding
+import edu.app.dao.databinding.FragmentKongBinding
 
 
-class Muralla : Fragment() {
+class kong : Fragment() {
 
-    private lateinit var binding: FragmentMurallaBinding
+    private lateinit var binding: FragmentKongBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentMurallaBinding.inflate(inflater, container, false)
+        binding = FragmentKongBinding.inflate(inflater, container, false)
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
 
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        toolbarText.text = "Tú Camino"
+        toolbarText.text = "Templo"
 
         return binding.root
     }
-
 
 }

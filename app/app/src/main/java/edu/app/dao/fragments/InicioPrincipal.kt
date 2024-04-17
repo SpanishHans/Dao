@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import edu.app.dao.R
 
 import edu.app.dao.databinding.PrincipalBinding
-import edu.app.dao.kong
 
 
 /*
@@ -16,6 +15,7 @@ import edu.app.dao.kong
 ----------------------------------------------
  */
 class InicioPrincipal : AppCompatActivity() {
+
 
     private lateinit var binding: PrincipalBinding
     override fun onCreate(savedInstanceState: Bundle?) {

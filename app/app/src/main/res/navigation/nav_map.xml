@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_map"
+    app:startDestination="@id/inicioPrincipal">
+
+    <activity
+        android:id="@+id/welcomeToApp"
+        android:name="edu.app.dao.WelcomeToApp"
+        android:label="welcome"
+        tools:layout="@layout/welcome" />
+    <activity
+        android:id="@+id/loginToApp"
+        android:name="edu.app.dao.LoginToApp"
+        android:label="LoginToApp"
+        tools:layout="@layout/login"/>
+    <activity
+        android:id="@+id/inicioPrincipal"
+        android:name="edu.app.dao.fragments.InicioPrincipal"
+        android:label="InicioPrincipal"
+        tools:layout="@layout/principal"/>
+    <fragment
+        android:id="@+id/kong"
+        android:name="edu.app.dao.fragments.kong"
+        android:label="fragment_kong"
+        tools:layout="@layout/fragment_kong" />
+    <fragment
+        android:id="@+id/muralla"
+        android:name="edu.app.dao.fragments.Muralla"
+        android:label="fragment_muralla"
+        tools:layout="@layout/fragment_muralla" />
+    <fragment
+        android:id="@+id/tao"
+        android:name="edu.app.dao.fragments.Tao"
+        android:label="fragment_tao"
+        tools:layout="@layout/fragment_tao" />
+    <fragment
+        android:id="@+id/yop"
+        android:name="edu.app.dao.fragments.yop"
+        android:label="fragment_yop"
+        tools:layout="@layout/fragment_yop" />
+    <activity
+        android:id="@+id/registerToApp"
+        android:name="edu.app.dao.RegisterToApp"
+        android:label="register"
+        tools:layout="@layout/register" />
+</navigation>
