@@ -142,15 +142,17 @@ class LoginToApp : AppCompatActivity() {
 
             override fun onCancelled(databaseError: DatabaseError) {
                 Toast.makeText(this@LoginToApp, "Error en la base de datos ${databaseError.message}", Toast.LENGTH_SHORT).show()
+
             }
         })
     }
 
-    fun conecccionInternet(context: Context): Boolean{
-        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){
-//            val network = connectivityManager.acti
-        }
-    }
+
+
+
+
+
+
+
 }

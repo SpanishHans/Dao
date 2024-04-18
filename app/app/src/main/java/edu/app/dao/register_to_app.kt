@@ -43,6 +43,7 @@ class RegisterToApp : AppCompatActivity() {
          */
         databaseReference = firebaseDataBase.reference.child("Usuarios")
 
+
         /*
             Las siguientes líneas guardan en diferentes variables los datos del usuario al momento
             que se le da clic al botón de registrarse dentro de la aplicación.
