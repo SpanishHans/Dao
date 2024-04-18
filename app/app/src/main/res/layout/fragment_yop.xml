@@ -15,4 +15,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/profile_photo_user"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-75dp"
+        android:background="@drawable/mao_zedong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background_profile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
