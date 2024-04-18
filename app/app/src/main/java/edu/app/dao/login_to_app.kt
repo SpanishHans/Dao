@@ -67,7 +67,6 @@ class LoginToApp : AppCompatActivity() {
         binding.loginButtonLogin.setOnClickListener {
             val loginUsername = binding.loginUsuario.text.toString()
             val loginPassword = binding.loginPassword.text.toString()
-
             // Si no están vacíos manda los valores a la función loginUser, si no, salta un aviso.
             if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()){
                 loginUser(loginUsername, loginPassword)

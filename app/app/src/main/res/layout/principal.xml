@@ -23,7 +23,6 @@
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Esto es texto :D"
             android:textColor="@android:color/black"
             android:textSize="40sp"
             android:fontFamily="@font/helvetica_neue_bold"
