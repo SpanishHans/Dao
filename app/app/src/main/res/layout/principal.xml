@@ -39,6 +39,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_bar_buttom"
+        android:theme="@style/BottomNavigationTextStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_80dp"
         app:itemTextColor="@color/black"
@@ -46,7 +47,7 @@
         android:background="?android:attr/windowBackground"
         app:itemBackground="@color/amarillo_light"
         app:itemIconTint="@color/black"
-        app:itemTextAppearanceActive="@font/helvetic_neuse_cond_black"
+        app:itemTextAppearanceActive="@font/ma_shan_zheng"
         app:menu="@menu/menu_inferior"
         app:layout_constraintBottom_toBottomOf="parent"
         />

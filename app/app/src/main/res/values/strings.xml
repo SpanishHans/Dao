@@ -15,6 +15,10 @@
     <string name="volverLogin">Volver a iniciar sesión</string>
 
     <string name="title_activity_inicio_principal">Inicio</string>
+    <string name="Dojo">寺庙</string>
+    <string name="Entrenar">培养</string>
+    <string name="Camino">长城</string>
+    <string name="Yo">我</string>
 
 
 </resources>

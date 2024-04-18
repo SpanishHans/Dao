@@ -27,8 +27,6 @@ class LoginToApp : AppCompatActivity() {
      */
     private lateinit var binding: LoginBinding
 
-
-
     /*
     Aquí se declara las bases de datos, esto luego toca hacer un sync en el gradle para que se
     pueda utilizar la FirebaseDatabase junto con la otra variable
@@ -41,13 +39,6 @@ class LoginToApp : AppCompatActivity() {
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
-        // Obtener NavHostFragment
-
-
-        // Obtiene el NavController asociado al NavHostFragment
-
 
         // Se inicializan las variables para guardarse en la base de datos
         firebaseDatabase = FirebaseDatabase.getInstance()
