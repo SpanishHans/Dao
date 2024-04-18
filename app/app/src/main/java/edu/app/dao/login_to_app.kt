@@ -83,13 +83,6 @@ class LoginToApp : AppCompatActivity() {
             startActivity(intent)
         }
     }
-//
-//    private fun makeCurrentFragment(fragment: Fragment){
-//        supportFragmentManager.beginTransaction().apply {
-//            replace(R.id.login_constrait_layout, fragment)
-//            commit()
-//        }
-//    }
 
 
     // Creación de la función para hacer el login
@@ -116,20 +109,6 @@ class LoginToApp : AppCompatActivity() {
 
                         if (userData != null && userData.password == password){
                             Toast.makeText(this@LoginToApp, "Inicio exitoso!", Toast.LENGTH_SHORT).show()
-
-                            /*
-                                -------------------- IMPORTANTE --------------------
-                                Recodar cambiar la vista WelcomeToApp a las que se tengan en el inicio
-                                para después de hacer el login, aquí después de presionar el login se
-                                redirige a la vista WelcomeToApp, se deja así de momento para evitar
-                                conflictos y que funcione el botón de iniciar sesión.
-                                ----------------------------------------------------
-                             */
-//                            supportFragmentManager.beginTransaction().apply {
-//                                add(R.id.login_constrait_layout, yopFragment)
-//                                addToBackStack(null)
-//                                commit()
-//                            }
                             startActivity(Intent(this@LoginToApp, InicioPrincipal::class.java))
                             finish()
                             return
