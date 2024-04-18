@@ -5,12 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.yop">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Estoy en 我!"
-        android:fontFamily="@font/helvetica_neue_bold"
-        android:gravity="center"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
