@@ -14,13 +14,13 @@ import edu.app.dao.fragments.UserData
 
 
 class RegisterToApp : AppCompatActivity() {
-
     /*
         Declaración del binding con el layout register
         El nombre RegisterToAppLayoutBinding sale del archivo .xml
         mencionado anteriormente y se genera automáticamente.
      */
     private lateinit var binding: RegisterBinding
+
     /*
     Aquí se declara las bases de datos, esto luego toca hacer un sync en el gradle para que se
     pueda utilizar la FirebaseDatabase junto con la otra variable
@@ -30,13 +30,17 @@ class RegisterToApp : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Oculta la barra de arriba que se ve feísima
         supportActionBar?.hide()
+
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = RegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Se inicializan las variables para guardarse en la base de datos
         firebaseDataBase = FirebaseDatabase.getInstance()
+
         /*
             Usuarios es el nombre de tabla en la base de datos, entonces cuando se quiera llamar la
             base de datos, toca tener en cuenta el nombre Usuarios

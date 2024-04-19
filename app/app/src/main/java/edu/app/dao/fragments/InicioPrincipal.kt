@@ -20,7 +20,10 @@ class InicioPrincipal : AppCompatActivity() {
     private lateinit var binding: PrincipalBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Oculta la barra de acción
         supportActionBar?.hide()
+
+        // Se coloca el Layout: principal.xml como raíz
         binding = PrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -30,8 +33,10 @@ class InicioPrincipal : AppCompatActivity() {
         val taoFragment = Tao()
         val murallaFragment = Muralla()
 
+        // Hacer que cuando se inicie esta actividad, que el fragmento que diriga sea el de Kong (Dojo)
         makeCurrentFragment(kongFragment)
 
+        // Controla la navegación a las diferentes secciones de la aplicación.
         binding.navigationBarButtom.setOnItemSelectedListener{
             when (it.itemId){
                 R.id.ic_Kong -> makeCurrentFragment(kongFragment)
@@ -44,6 +49,7 @@ class InicioPrincipal : AppCompatActivity() {
 
     }
 
+    // Función para hacer que se ponga el fragmento
     private fun makeCurrentFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fl_wrapper, fragment)

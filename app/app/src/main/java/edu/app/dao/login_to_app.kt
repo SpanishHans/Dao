@@ -35,7 +35,10 @@ class LoginToApp : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Oculta la parte de arriba que se vía feísima
         supportActionBar?.hide()
+
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -90,13 +93,11 @@ class LoginToApp : AppCompatActivity() {
                 un "Inicio fallido!"
             3. En caso de que ocurra algún error en la base de datos, este va a imprimir el error
          */
-
         databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()){
                     for (userSnapshot in dataSnapshot.children){
                         val userData = userSnapshot.getValue(UserData::class.java)
-
                         if (userData != null && userData.password == password){
                             Toast.makeText(this@LoginToApp, "Inicio exitoso!", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@LoginToApp, InicioPrincipal::class.java))

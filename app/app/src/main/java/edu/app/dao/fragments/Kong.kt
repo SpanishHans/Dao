@@ -19,10 +19,11 @@ class kong : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Infla el layour: fragment_kong.xml y lo infla
         binding = FragmentKongBinding.inflate(inflater, container, false)
-        val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
 
+        // Realiza el setup para la barra de tareas superior y le coloca como título "Templo"
+        val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Templo"
 

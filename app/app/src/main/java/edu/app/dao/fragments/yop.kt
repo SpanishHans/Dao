@@ -21,17 +21,20 @@ class yop : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Infla el layout: fragment_yop.xml para el fragmento
         binding = FragmentYopBinding.inflate(inflater, container, false)
-        val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
 
+        // Define la barra de tareas superior y hace que el título cambie a "Editar Perfil"
+        val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Editar Perfil"
 
+        // Cuando se haga clic en la imagen de fondo (Cover) esta imprima un mensaje en la pantalla del usuario en forma de Toast
         binding.backgroundProfile.setOnClickListener {
             Toast.makeText(requireContext(), "Has dado click en la imagen!", Toast.LENGTH_SHORT).show()
         }
 
+        // Cuando se hace clic en la barra de tareas superior, esta imprime un mensaje en la pantalla del usuario en forma de Toast
         toolbar.setOnClickListener {
             Toast.makeText(requireContext(), "Has dado click en Editar Perfil!", Toast.LENGTH_SHORT).show()
         }

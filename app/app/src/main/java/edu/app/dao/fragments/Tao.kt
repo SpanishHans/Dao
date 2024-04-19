@@ -19,10 +19,11 @@ class Tao : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Infla el layout: fragment_tao.xml para el fragmento
         binding = FragmentTaoBinding.inflate(inflater, container, false)
-        val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
 
+        // Define la barra de tareas superior y hace que el título cambie a "Entrenar"
+        val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Entrenar"
 
