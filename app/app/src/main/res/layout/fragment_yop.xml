@@ -5,77 +5,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.yop">
-        <RelativeLayout
-            android:id="@+id/background_profile"
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:background="@drawable/the_great_wall_of_china"
-            android:clickable="true"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
 
-        </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/background_profile"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/the_great_wall_of_china"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/profile_photo_user"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="-75dp"
-            android:background="@drawable/border_background"
-            android:src="@drawable/mao_zedong"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/background_profile" />
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="27dp"
-            android:layout_marginTop="25dp"
-            android:fontFamily="@font/helvetica_neue_bold"
-            android:hint="@string/cargando"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/profile_photo_user"
-            app:layout_constraintTop_toBottomOf="@+id/background_profile" />
+            <ImageView
+                android:id="@+id/profile_photo_user"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="-75dp"
+                android:background="@drawable/border_background"
+                android:src="@drawable/mao_zedong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/background_profile" />
 
-        <TextView
-            android:id="@+id/descripcion_perfil"
-            android:hint="@string/descripci_n"
-            style="@style/titulos"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_photo_user" />
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="Cargando..."
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/profile_photo_user"
+                app:layout_constraintTop_toBottomOf="@+id/background_profile" />
 
-        <TextView
-            android:id="@+id/descripcion_perfil_usuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/helvetica_neue_bold"
-            android:text="@string/default_description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil" />
+            <TextView
+                android:id="@+id/descripcion_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/descripci_n"
+                style="@style/titulos"
+                app:layout_constraintTop_toBottomOf="@+id/profile_photo_user"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <View
-            android:id="@+id/linea_divide"
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/amarillo_light"
-            app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil_usuario" />
+            <TextView
+                android:id="@+id/descripcion_perfil_usuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="@string/default_description"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/estadisticas"
-            style="@style/titulos"
-            android:text="@string/estad_sticas"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linea_divide" />
+            <View
+                android:id="@+id/linea_divide"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/amarillo_light"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil_usuario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/estadisticas"
+                style="@style/titulos"
+                android:textColor="@color/black"
+                android:text="@string/estad_sticas"
+                app:layout_constraintTop_toBottomOf="@+id/linea_divide"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/logros"
+                style="@style/titulos"
+                android:textColor="@color/black"
+                android:layout_marginTop="64dp"
+                android:text="Logros"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estadisticas" />
 
 
 
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

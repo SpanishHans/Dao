@@ -2,6 +2,7 @@ package edu.app.dao.fragments
 
 import android.os.Bundle
 import android.content.Context
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentYopBinding
 import edu.app.dao.databinding.PrincipalBinding
+import edu.app.dao.funciones.GlobalData
 
 
 class yop : Fragment() {
@@ -46,6 +48,8 @@ class yop : Fragment() {
             Toast.makeText(requireContext(), "Has dado clic en 毛泽东!", Toast.LENGTH_SHORT).show()
         }
 
+        Toast.makeText(requireContext(), "${GlobalData.usernameCurrent}", Toast.LENGTH_SHORT).show()
+        Log.wtf("GlobalData", "idCurrent: ${GlobalData.idCurrent}")
         return binding.root
     }
 
