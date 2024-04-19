@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.graphics.Color
 import androidx.core.content.ContextCompat
 import edu.app.dao.databinding.WelcomeBinding
+// La función isOnline se llama desde el paquete de Funciones.kt y ahí se encuentra, la pongo para simplificar código
+import edu.app.dao.funciones.isOnline
 
 class WelcomeToApp : AppCompatActivity() {
 
@@ -36,37 +38,6 @@ class WelcomeToApp : AppCompatActivity() {
         // Inicializa como variable el botón de iniciar sesión
         val botonLogin = binding.welcomeButtonLogin
 
-
-        fun isOnline(context: Context): Boolean {
-            /*
-            Argumentos:
-                context:  type -> Context
-            Retorna:
-                Booleano: Verdadero/Falso
-            ¿Qué hace?:
-                Verifica que el dispositivo esté conectado a internet y entonces retorna
-                verdadero o falso dependiendo de si está conectado o no.
-             */
-            val connectivityManager =
-                context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-            if (connectivityManager != null) {
-                val capabilities =
-                    connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
-                if (capabilities != null) {
-                    if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
-                        Log.i("Internet", "NetworkCapabilities.TRANSPORT_CELLULAR")
-                        return true
-                    } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
-                        Log.i("Internet", "NetworkCapabilities.TRANSPORT_WIFI")
-                        return true
-                    } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
-                        Log.i("Internet", "NetworkCapabilities.TRANSPORT_ETHERNET")
-                        return true
-                    }
-                }
-            }
-            return false
-        }
 
         // Si está conectado a internet entonces pasa al Login, si no, imprime un aviso
         botonLogin.setOnClickListener {

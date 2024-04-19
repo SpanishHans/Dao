@@ -11,6 +11,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import edu.app.dao.databinding.RegisterBinding
 import edu.app.dao.fragments.UserData
+import edu.app.dao.funciones.isOnline
 
 
 class RegisterToApp : AppCompatActivity() {
@@ -60,6 +61,11 @@ class RegisterToApp : AppCompatActivity() {
             val signupUsername = binding.registerUsuario.text.toString()
             val signupCorreo = binding.registerEmail.text.toString()
             val signupPassword = binding.registerPassword.text.toString()
+
+            // Verifica la conección a internet del usuario e imprime un aviso en cano de que no esté conectado.
+            if (!isOnline(this)){
+                Toast.makeText(this, "No estás conectado a internet!", Toast.LENGTH_SHORT).show()
+            }
 
             // Si no están vacíos manda los valores a la función registrarUsuario, si no, salta un aviso.
             if (signupFullname.isNotEmpty() && signupUsername.isNotEmpty()

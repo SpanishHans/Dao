@@ -17,6 +17,7 @@ import com.google.firebase.database.ValueEventListener
 import edu.app.dao.databinding.LoginBinding
 import edu.app.dao.fragments.InicioPrincipal
 import edu.app.dao.fragments.UserData
+import edu.app.dao.funciones.isOnline
 
 
 class LoginToApp : AppCompatActivity() {
@@ -61,6 +62,11 @@ class LoginToApp : AppCompatActivity() {
         binding.loginButtonLogin.setOnClickListener {
             val loginUsername = binding.loginUsuario.text.toString()
             val loginPassword = binding.loginPassword.text.toString()
+
+            // Verifica la conección a internet del usuario e imprime un aviso en cano de que no esté conectado.
+            if (!isOnline(this)){
+                Toast.makeText(this, "No estás conectado a internet!", Toast.LENGTH_SHORT).show()
+            }
             // Si no están vacíos manda los valores a la función loginUser, si no, salta un aviso.
             if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()){
                 loginUser(loginUsername, loginPassword)
