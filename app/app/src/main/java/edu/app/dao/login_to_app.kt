@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.renderscript.Sampler.Value
 import android.util.Log
 
 import com.google.firebase.database.DataSnapshot
@@ -15,6 +16,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.getValue
 import edu.app.dao.databinding.LoginBinding
 import edu.app.dao.fragments.InicioPrincipal
 import edu.app.dao.fragments.UserData
@@ -71,7 +73,13 @@ class LoginToApp : AppCompatActivity() {
             }
             // Si no están vacíos manda los valores a la función loginUser, si no, salta un aviso.
             if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()){
-                readData(loginUsername)
+                /*
+                -------------------------------IMPORTANTE-------------------------------
+                Toca hacer que esta vaina se registre es en la base de datos y que no sea tan cutre,
+                porque así como está, está horrible
+                 */
+                GlobalData.usernameCurrent = loginUsername
+                GlobalData.passwordCurrent = loginPassword
                 loginUser(loginUsername, loginPassword)
             } else {
                 Toast.makeText(this@LoginToApp, "Todos los campos deben ser llenados", Toast.LENGTH_SHORT).show()
@@ -126,24 +134,8 @@ class LoginToApp : AppCompatActivity() {
         })
     }
 
-    private fun readData(username: String) {
-        databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios")
-        databaseReference.child(username).get().addOnSuccessListener { dataSnapshot ->
-            dataSnapshot?.let {
-                GlobalData.aciertosKongCurrent = it.child("aciertosKong").value as? Int ?: 0
-                GlobalData.correoCurrent = it.child("correo").value?.toString() ?: ""
-                GlobalData.descriptionCurrent = it.child("description").value?.toString() ?: ""
-                GlobalData.idCurrent = it.child("id").value?.toString() ?: ""
-                GlobalData.nameFullCurrent = it.child("nameFull").value?.toString() ?: ""
-                GlobalData.passwordCurrent = it.child("password").value?.toString() ?: ""
-                GlobalData.usernameCurrent = it.child("username").value?.toString() ?: ""
-                GlobalData.victoriasKongCurrent = it.child("victoriasKong").value as? Int ?: 0
-                Log.wtf("GlobalData", "Accedió?")
-            }
-        }.addOnFailureListener {
-            Toast.makeText(this, "Falló :(", Toast.LENGTH_SHORT).show()
-        }
-    }
+
+
 
 
 
