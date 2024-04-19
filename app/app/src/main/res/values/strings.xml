@@ -19,6 +19,13 @@
     <string name="Entrenar">培养</string>
     <string name="Camino">长城</string>
     <string name="Yo">我</string>
+    <string name="cargando">Cargando...</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="default_description">Esta es la descripción de defecto que presenta la
+    aplicación, aquí se deberá colocar la información del usuario que quiera para su
+    presentación. Sus hobbies, quién es y un poco de su vida. Va a tener un máximo de 260
+    carácteres para escribir aquí.</string>
+    <string name="estad_sticas">Estadísticas</string>
 
 
 </resources>

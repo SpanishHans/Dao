@@ -69,4 +69,14 @@
     <style name="BottomNavigationTextStyle">
         <item name="android:fontFamily">@font/ma_shan_zheng</item>
     </style>
+
+    <style name="titulos">
+        <item name="android:fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:textSize">@dimen/dim_20dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gris_claro</item>
+    </style>
 </resources>
