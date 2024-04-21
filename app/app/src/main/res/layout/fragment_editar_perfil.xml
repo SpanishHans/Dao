@@ -184,9 +184,9 @@
                 android:ems="10"
                 android:hint="@string/default_description_editar"
                 android:inputType="textMultiLine"
+                android:maxLength="260"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:maxLength="260"
                 app:layout_constraintTop_toBottomOf="@id/presentacion" />
 
 
