@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -23,11 +22,11 @@
             android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/helvetica_neue_bold"
             android:textColor="@android:color/black"
             android:textSize="40sp"
-            android:fontFamily="@font/helvetica_neue_bold"
-            android:textStyle="bold"
-            android:layout_gravity="center"/>
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
@@ -39,17 +38,16 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_bar_buttom"
-        android:theme="@style/BottomNavigationTextStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_80dp"
-        app:itemTextColor="@color/black"
-        app:itemIconSize="@dimen/dim_50dp"
         android:background="?android:attr/windowBackground"
+        android:theme="@style/BottomNavigationTextStyle"
         app:itemBackground="@color/amarillo_light"
+        app:itemIconSize="@dimen/dim_50dp"
         app:itemIconTint="@color/black"
         app:itemTextAppearanceActive="@font/ma_shan_zheng"
-        app:menu="@menu/menu_inferior"
+        app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:menu="@menu/menu_inferior" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
