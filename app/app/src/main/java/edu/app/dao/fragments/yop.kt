@@ -42,19 +42,16 @@ class yop : Fragment() {
 
         // Cuando se haga clic en la imagen de fondo (Cover) esta imprima un mensaje en la pantalla del usuario en forma de Toast
         binding.backgroundProfile.setOnClickListener {
-            Toast.makeText(requireContext(), "Has dado click en la imagen!", Toast.LENGTH_SHORT).show()
         }
 
         // Cuando se hace clic en la barra de tareas superior cambia al fragmento de EditarPerfil.kt
         toolbar.setOnClickListener {
-            Toast.makeText(requireContext(), "Has dado click en Editar Perfil!", Toast.LENGTH_SHORT).show()
             val editarPerfil = EditarPerfil()
             navegarEditarPerfil(editarPerfil)
         }
 
         // Cuando se hace clic en la foto de perfil, esta muestra un aviso
         binding.profilePhotoUser.setOnClickListener {
-            Toast.makeText(requireContext(), "Has dado clic en 毛泽东!", Toast.LENGTH_SHORT).show()
         }
         /*
            Basicamente, lo que hace es que coloca en el fragment_yop.xml los campos de:
