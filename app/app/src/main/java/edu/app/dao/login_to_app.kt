@@ -73,13 +73,6 @@ class LoginToApp : AppCompatActivity() {
             }
             // Si no están vacíos manda los valores a la función loginUser, si no, salta un aviso.
             if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()){
-                /*
-                -------------------------------IMPORTANTE-------------------------------
-                Toca hacer que esta vaina se registre es en la base de datos y que no sea tan cutre,
-                porque así como está, está horrible
-                 */
-                GlobalData.usernameCurrent = loginUsername
-                GlobalData.passwordCurrent = loginPassword
                 loginUser(loginUsername, loginPassword)
             } else {
                 Toast.makeText(this@LoginToApp, "Todos los campos deben ser llenados", Toast.LENGTH_SHORT).show()
@@ -116,6 +109,7 @@ class LoginToApp : AppCompatActivity() {
                     for (userSnapshot in dataSnapshot.children){
                         val userData = userSnapshot.getValue(UserData::class.java)
                         if (userData != null && userData.password == password){
+                            GlobalData.idCurrent = userData.id.toString()
                             Toast.makeText(this@LoginToApp, "Inicio exitoso!", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@LoginToApp, InicioPrincipal::class.java))
                             finish()

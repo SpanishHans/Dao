@@ -44,25 +44,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="27dp"
                 android:layout_marginTop="25dp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/helvetica_neue_bold"
                 android:text="Cargando..."
+                android:textColor="@color/black"
                 android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@+id/profile_photo_user"
                 app:layout_constraintTop_toBottomOf="@+id/background_profile" />
 
             <TextView
                 android:id="@+id/descripcion_perfil"
+                style="@style/titulos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:hint="@string/descripci_n"
-                style="@style/titulos"
-                app:layout_constraintTop_toBottomOf="@+id/profile_photo_user"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/profile_photo_user" />
 
             <TextView
                 android:id="@+id/descripcion_perfil_usuario"
@@ -71,12 +71,12 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/helvetica_neue_bold"
                 android:text="@string/default_description"
-                app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil" />
 
             <View
                 android:id="@+id/linea_divide"
@@ -84,27 +84,59 @@
                 android:layout_height="5dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/amarillo_light"
-                app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil_usuario"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/descripcion_perfil_usuario" />
 
             <TextView
                 android:id="@+id/estadisticas"
                 style="@style/titulos"
-                android:textColor="@color/black"
                 android:text="@string/estad_sticas"
-                app:layout_constraintTop_toBottomOf="@+id/linea_divide"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linea_divide" />
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="180dp"
+                android:layout_height="@dimen/dim_50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                android:drawableEnd="@drawable/dojo"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/estadisticas" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="180dp"
+                android:layout_height="@dimen/dim_50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="0"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:drawableEnd="@drawable/tao"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:background="@drawable/button_border"
+                app:layout_constraintStart_toEndOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/estadisticas" />
 
             <TextView
                 android:id="@+id/logros"
                 style="@style/titulos"
-                android:textColor="@color/black"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="16dp"
                 android:text="Logros"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/estadisticas" />
-
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

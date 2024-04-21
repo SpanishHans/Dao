@@ -10,6 +10,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentYopBinding
 import edu.app.dao.databinding.PrincipalBinding
@@ -26,10 +31,14 @@ class yop : Fragment() {
         // Infla el layout: fragment_yop.xml para el fragmento
         binding = FragmentYopBinding.inflate(inflater, container, false)
 
+        val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+        val refUsuarios: DatabaseReference = database.getReference("Usuarios")
+
         // Define la barra de tareas superior y hace que el título cambie a "Editar Perfil"
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Editar Perfil"
+
 
         // Cuando se haga clic en la imagen de fondo (Cover) esta imprima un mensaje en la pantalla del usuario en forma de Toast
         binding.backgroundProfile.setOnClickListener {
@@ -48,8 +57,17 @@ class yop : Fragment() {
             Toast.makeText(requireContext(), "Has dado clic en 毛泽东!", Toast.LENGTH_SHORT).show()
         }
 
-        Toast.makeText(requireContext(), "${GlobalData.usernameCurrent}", Toast.LENGTH_SHORT).show()
-        Log.wtf("GlobalData", "idCurrent: ${GlobalData.idCurrent}")
+        refUsuarios.child(GlobalData.idCurrent).addListenerForSingleValueEvent(object : ValueEventListener{
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val usuario = dataSnapshot.getValue(UserData::class.java)
+                binding.username.text = usuario?.username
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(requireContext(), "Error :(", Toast.LENGTH_SHORT).show()
+            }
+        })
+
         return binding.root
     }
 
