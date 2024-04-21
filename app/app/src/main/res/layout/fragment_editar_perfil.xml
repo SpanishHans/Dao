@@ -88,7 +88,7 @@
             <EditText
                 android:id="@+id/nombre_usuario_editar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
@@ -100,18 +100,110 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nombre_usuario" />
 
+
+            <TextView
+                android:id="@+id/contrasena_usuario"
+                style="@style/titulos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Contraseña"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_usuario_editar" />
+
+            <EditText
+                android:id="@+id/contrasena_usuario_editar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:hint="Nueva contraseña"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contrasena_usuario" />
+
+            <TextView
+                android:id="@+id/nombre_completo"
+                style="@style/titulos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Nombre completo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contrasena_usuario_editar" />
+
+            <EditText
+                android:id="@+id/nombre_completo_editar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:hint="Nuevo nombre completo"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_completo" />
+
+
+            <TextView
+                android:id="@+id/presentacion"
+                style="@style/titulos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Presentación (max. 260 caracteres)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_completo_editar" />
+
+
+            <EditText
+                android:id="@+id/presentacion_editar"
+                style="@style/input_field"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#D1D1D1"
+                android:ems="10"
+                android:hint="@string/default_description_editar"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:maxLength="260"
+                app:layout_constraintTop_toBottomOf="@id/presentacion" />
+
+
             <Button
                 android:id="@+id/button_guardar"
                 style="@style/boton_primario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/button_border"
                 android:backgroundTint="@color/amarillo_light"
                 android:text="Guardar"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nombre_usuario_editar" />
+                app:layout_constraintTop_toBottomOf="@+id/presentacion_editar" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

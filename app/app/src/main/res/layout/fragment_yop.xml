@@ -144,6 +144,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_estadistica_kong" />
 
+            <TextView
+                android:id="@+id/name_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="Cargando..."
+                app:layout_constraintStart_toEndOf="@+id/username"
+                app:layout_constraintTop_toBottomOf="@+id/background_profile" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

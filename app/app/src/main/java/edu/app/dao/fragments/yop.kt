@@ -65,6 +65,7 @@ class yop : Fragment() {
                 binding.descripcionPerfilUsuario.text = usuario?.description
                 binding.buttonEstadisticaKong.text = usuario?.victoriasKong.toString()
                 binding.buttonEstadisticaTao.text = usuario?.aciertosTao.toString()
+                binding.nameUser.text = "(${usuario?.nameFull.toString()})"
             }
 
             override fun onCancelled(error: DatabaseError) {

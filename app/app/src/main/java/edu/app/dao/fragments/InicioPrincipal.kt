@@ -51,10 +51,10 @@ class InicioPrincipal : AppCompatActivity() {
     }
 
     // Función para hacer que se ponga el fragmento
-    private fun makeCurrentFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_wrapper, fragment)
-            commit()
-        }
+    fun makeCurrentFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fl_wrapper, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

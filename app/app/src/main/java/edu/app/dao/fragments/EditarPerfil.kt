@@ -33,20 +33,34 @@ class EditarPerfil : Fragment() {
         // Referencia a la base de datos con los datos de la ID que se capturó en la clase GlobalData
         val refUsuarios: DatabaseReference = database.getReference("Usuarios").child(GlobalData.idCurrent)
 
+        // Instancia del fragmento anterior (yop.kt)
+        val yop = yop()
+
         // Permite cambiar el título de la barra de texto y también el tamaño de la letra de este
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Información personal"
         toolbarText.textSize = 30F
 
+        // Cuando se le da clic a la toolbar superior se devuelve al fragmento de yop.kt
+        toolbar.setOnClickListener {
+            (activity as InicioPrincipal).makeCurrentFragment(yop)
+        }
+
         // Cambia los datos en la base de datos con los que se tengan en los campos llenados de
-        // esta parte de editar perfil. De momento sólo puede cambiar el username
+        // esta parte de editar perfil. Se cambian todos los campos en la base de datos
         binding.buttonGuardar.setOnClickListener {
             val newUserName = binding.nombreUsuarioEditar.text.toString()
+            val newPassword = binding.contrasenaUsuarioEditar.text.toString()
+            val newNombre = binding.nombreCompletoEditar.text.toString()
+            val newDescription = binding.presentacionEditar.text.toString()
             val nuevosDatos = hashMapOf<String, Any>(
-                "username" to newUserName
+                "username" to newUserName,
+                "password" to newPassword,
+                "nameFull" to newNombre,
+                "description" to newDescription
             )
-
+            (activity as InicioPrincipal).makeCurrentFragment(yop)
             refUsuarios.updateChildren(nuevosDatos).addOnSuccessListener {
                 Toast.makeText(requireContext(), "Datos actualizados con éxito!", Toast.LENGTH_SHORT).show()
             }
@@ -55,10 +69,8 @@ class EditarPerfil : Fragment() {
             }
         }
 
-
-
-
         return binding.root
     }
+
 
 }
