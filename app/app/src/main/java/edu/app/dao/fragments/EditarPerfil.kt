@@ -42,6 +42,8 @@ class EditarPerfil : Fragment() {
         toolbarText.text = "Información personal"
         toolbarText.textSize = 30F
 
+
+
         // Cuando se le da clic a la toolbar superior se devuelve al fragmento de yop.kt
         toolbar.setOnClickListener {
             (activity as InicioPrincipal).makeCurrentFragment(yop)
@@ -54,20 +56,32 @@ class EditarPerfil : Fragment() {
             val newPassword = binding.contrasenaUsuarioEditar.text.toString()
             val newNombre = binding.nombreCompletoEditar.text.toString()
             val newDescription = binding.presentacionEditar.text.toString()
-            val nuevosDatos = hashMapOf<String, Any>(
-                "username" to newUserName,
-                "password" to newPassword,
-                "nameFull" to newNombre,
-                "description" to newDescription
-            )
+
+            // Verifica si los campos están vacíos y asigna valores solo si no están vacíos
+            val nuevosDatos = hashMapOf<String, Any>()
+            if (newUserName.isNotEmpty()) nuevosDatos["username"] = newUserName
+            if (newPassword.isNotEmpty()) nuevosDatos["password"] = newPassword
+            if (newNombre.isNotEmpty()) nuevosDatos["nameFull"] = newNombre
+            if (newDescription.isNotEmpty()) nuevosDatos["description"] = newDescription
+
+            // Llama al método makeCurrentFragment() de la actividad principal para cambiar de fragmento
             (activity as InicioPrincipal).makeCurrentFragment(yop)
-            refUsuarios.updateChildren(nuevosDatos).addOnSuccessListener {
-                Toast.makeText(requireContext(), "Datos actualizados con éxito!", Toast.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener { error ->
-                Toast.makeText(requireContext(), "Error: $error", Toast.LENGTH_SHORT).show()
+
+            // Actualiza los datos en la base de datos solo si hay campos no vacíos
+            if (nuevosDatos.isNotEmpty()) {
+                refUsuarios.updateChildren(nuevosDatos)
+                    .addOnSuccessListener {
+                        Toast.makeText(requireContext(), "Datos actualizados con éxito!", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnFailureListener { error ->
+                        Toast.makeText(requireContext(), "Error: $error", Toast.LENGTH_SHORT).show()
+                    }
+            } else {
+                // No hay campos para actualizar
+                Toast.makeText(requireContext(), "No hay cambios para guardar", Toast.LENGTH_SHORT).show()
             }
         }
+
 
         return binding.root
     }
