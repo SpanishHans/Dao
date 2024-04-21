@@ -109,6 +109,8 @@ class LoginToApp : AppCompatActivity() {
                     for (userSnapshot in dataSnapshot.children){
                         val userData = userSnapshot.getValue(UserData::class.java)
                         if (userData != null && userData.password == password){
+                            // Aquí guarda la id del usuario actual en la variable idCurrent de
+                            // la clase GlobalData, esto es re IMPORTANTE
                             GlobalData.idCurrent = userData.id.toString()
                             Toast.makeText(this@LoginToApp, "Inicio exitoso!", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@LoginToApp, InicioPrincipal::class.java))
