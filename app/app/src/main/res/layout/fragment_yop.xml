@@ -7,6 +7,7 @@
     tools:context=".fragments.yop">
 
     <ScrollView
+        android:id="@+id/yop_fragmento"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,6 +25,8 @@
                 android:layout_height="280dp"
                 android:background="@drawable/the_great_wall_of_china"
                 android:clickable="true"
+                android:contentDescription="Nada"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
             </RelativeLayout>
@@ -98,27 +101,29 @@
 
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/button_estadistica_kong"
+                style="@style/boton_primario"
                 android:layout_width="180dp"
                 android:layout_height="@dimen/dim_50dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="0"
-                android:fontFamily="@font/helvetica_neue_bold"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toStartOf="@+id/button3"
-                android:drawableEnd="@drawable/dojo"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
                 android:background="@drawable/button_border"
+                android:backgroundTint="@color/amarillo_light"
+                android:drawableEnd="@drawable/dojo"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/button_estadistica_tao"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/estadisticas" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/button_estadistica_tao"
                 android:layout_width="180dp"
                 android:layout_height="@dimen/dim_50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                style="@style/boton_primario"
                 android:text="0"
                 android:fontFamily="@font/helvetica_neue_bold"
                 android:textColor="@color/black"
@@ -126,7 +131,8 @@
                 android:drawableEnd="@drawable/tao"
                 app:layout_constraintHorizontal_bias="0.5"
                 android:background="@drawable/button_border"
-                app:layout_constraintStart_toEndOf="@+id/button2"
+                android:backgroundTint="@color/amarillo_light"
+                app:layout_constraintStart_toEndOf="@+id/button_estadistica_kong"
                 app:layout_constraintTop_toBottomOf="@+id/estadisticas" />
 
             <TextView
@@ -136,7 +142,7 @@
                 android:text="Logros"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2" />
+                app:layout_constraintTop_toBottomOf="@+id/button_estadistica_kong" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

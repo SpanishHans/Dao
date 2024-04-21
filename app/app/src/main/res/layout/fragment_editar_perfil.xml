@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.yop">
+
+    <ScrollView
+        android:id="@+id/yop_fragmento"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/background_profile"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/the_great_wall_of_china"
+                android:clickable="true"
+                android:contentDescription="Nada"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/bitcoin_icons_edit_filled"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/profile_photo_user"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="-75dp"
+                android:background="@drawable/border_background"
+                android:src="@drawable/mao_zedong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/background_profile" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="125dp"
+                android:layout_height="130dp"
+                android:background="#80000000"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_photo_user"
+                app:layout_constraintEnd_toEndOf="@+id/profile_photo_user"
+                app:layout_constraintStart_toStartOf="@+id/profile_photo_user"
+                app:layout_constraintTop_toTopOf="@+id/profile_photo_user" />
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/bitcoin_icons_edit_filled"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/nombre_usuario"
+                style="@style/titulos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_photo_user" />
+
+            <EditText
+                android:id="@+id/nombre_usuario_editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Nuevo nombre de usuario"
+                android:backgroundTint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_usuario" />
+
+            <Button
+                android:id="@+id/button_guardar"
+                android:layout_width="wrap_content"
+                style="@style/boton_primario"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                android:backgroundTint="@color/amarillo_light"
+                android:text="Guardar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_usuario_editar" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

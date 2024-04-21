@@ -1,8 +1,6 @@
 package edu.app.dao.fragments
 
 import android.os.Bundle
-import android.content.Context
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +15,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentYopBinding
-import edu.app.dao.databinding.PrincipalBinding
 import edu.app.dao.funciones.GlobalData
 
 
@@ -48,7 +45,8 @@ class yop : Fragment() {
         // Cuando se hace clic en la barra de tareas superior, esta imprime un mensaje en la pantalla del usuario en forma de Toast
         toolbar.setOnClickListener {
             Toast.makeText(requireContext(), "Has dado click en Editar Perfil!", Toast.LENGTH_SHORT).show()
-
+            val editarPerfil = EditarPerfil()
+            navegarEditarPerfil(editarPerfil)
 
         }
 
@@ -61,6 +59,9 @@ class yop : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val usuario = dataSnapshot.getValue(UserData::class.java)
                 binding.username.text = usuario?.username
+                binding.descripcionPerfilUsuario.text = usuario?.description
+                binding.buttonEstadisticaKong.text = usuario?.victoriasKong.toString()
+                binding.buttonEstadisticaTao.text = usuario?.aciertosTao.toString()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -68,7 +69,16 @@ class yop : Fragment() {
             }
         })
 
+
+
         return binding.root
+    }
+
+    private fun navegarEditarPerfil(fragment: Fragment) {
+        requireActivity().supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_wrapper, fragment)
+            commit()
+        }
     }
 
 }

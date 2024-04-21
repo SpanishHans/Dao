@@ -17,6 +17,6 @@ data class UserData(
     val correo: String? = null,
     val password: String? = null,
     var victoriasKong: Int = 0,
-    var aciertosKong: Int = 0,
+    var aciertosTao: Int = 0,
     var description: String? = ""
 )

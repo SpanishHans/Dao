@@ -26,6 +26,9 @@
     presentación. Sus hobbies, quién es y un poco de su vida. Va a tener un máximo de 260
     carácteres para escribir aquí.</string>
     <string name="estad_sticas">Estadísticas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Nombre de usuario</string>
 
 
 </resources>
