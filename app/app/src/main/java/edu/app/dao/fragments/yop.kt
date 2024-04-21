@@ -28,7 +28,10 @@ class yop : Fragment() {
         // Infla el layout: fragment_yop.xml para el fragmento
         binding = FragmentYopBinding.inflate(inflater, container, false)
 
+        // Instancia la base de datos
         val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+
+        // Hace que hagarre la referencia de "Usuarios"
         val refUsuarios: DatabaseReference = database.getReference("Usuarios")
 
         // Define la barra de tareas superior y hace que el título cambie a "Editar Perfil"
@@ -42,19 +45,22 @@ class yop : Fragment() {
             Toast.makeText(requireContext(), "Has dado click en la imagen!", Toast.LENGTH_SHORT).show()
         }
 
-        // Cuando se hace clic en la barra de tareas superior, esta imprime un mensaje en la pantalla del usuario en forma de Toast
+        // Cuando se hace clic en la barra de tareas superior cambia al fragmento de EditarPerfil.kt
         toolbar.setOnClickListener {
             Toast.makeText(requireContext(), "Has dado click en Editar Perfil!", Toast.LENGTH_SHORT).show()
             val editarPerfil = EditarPerfil()
             navegarEditarPerfil(editarPerfil)
-
         }
 
         // Cuando se hace clic en la foto de perfil, esta muestra un aviso
         binding.profilePhotoUser.setOnClickListener {
             Toast.makeText(requireContext(), "Has dado clic en 毛泽东!", Toast.LENGTH_SHORT).show()
         }
-
+        /*
+           Basicamente, lo que hace es que coloca en el fragment_yop.xml los campos de:
+           username, descripción, victorias en Kong, aciertos en tao. Esos datos son los que están
+           asociados al usuario a través de su ID, la ID está guardada en una clase global de datos
+         */
         refUsuarios.child(GlobalData.idCurrent).addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val usuario = dataSnapshot.getValue(UserData::class.java)
@@ -74,6 +80,8 @@ class yop : Fragment() {
         return binding.root
     }
 
+    // Función que permite cambiar el layout de la actividad por el de un nuevo fragmento
+    // Se va a utilizar para el fragmento de EditarPerfil.kt aunque se abre la posibilidad para otro
     private fun navegarEditarPerfil(fragment: Fragment) {
         requireActivity().supportFragmentManager.beginTransaction().apply {
             replace(R.id.fl_wrapper, fragment)

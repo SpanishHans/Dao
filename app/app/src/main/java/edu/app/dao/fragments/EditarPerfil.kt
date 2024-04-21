@@ -24,17 +24,23 @@ class EditarPerfil : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Binding para controlar los elementos del fragment_editar_perfil.xml
         binding = FragmentEditarPerfilBinding.inflate(inflater, container, false)
 
+        // Instancia de la base de datos
         val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+
+        // Referencia a la base de datos con los datos de la ID que se capturó en la clase GlobalData
         val refUsuarios: DatabaseReference = database.getReference("Usuarios").child(GlobalData.idCurrent)
 
+        // Permite cambiar el título de la barra de texto y también el tamaño de la letra de este
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Información personal"
         toolbarText.textSize = 30F
 
+        // Cambia los datos en la base de datos con los que se tengan en los campos llenados de
+        // esta parte de editar perfil. De momento sólo puede cambiar el username
         binding.buttonGuardar.setOnClickListener {
             val newUserName = binding.nombreUsuarioEditar.text.toString()
             val nuevosDatos = hashMapOf<String, Any>(
