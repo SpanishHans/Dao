@@ -10,10 +10,10 @@
         android:id="@+id/yop_fragmento"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -119,19 +119,19 @@
 
             <Button
                 android:id="@+id/button_estadistica_tao"
+                style="@style/boton_primario"
                 android:layout_width="180dp"
                 android:layout_height="@dimen/dim_50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                style="@style/boton_primario"
-                android:text="0"
-                android:fontFamily="@font/helvetica_neue_bold"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:drawableEnd="@drawable/tao"
-                app:layout_constraintHorizontal_bias="0.5"
                 android:background="@drawable/button_border"
                 android:backgroundTint="@color/amarillo_light"
+                android:drawableEnd="@drawable/tao"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="0"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/button_estadistica_kong"
                 app:layout_constraintTop_toBottomOf="@+id/estadisticas" />
 
