@@ -10,16 +10,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.bumptech.glide.Glide
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import edu.app.dao.PerfilPic
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentEditarPerfilBinding
-import edu.app.dao.databinding.PerfilPicBinding
 import edu.app.dao.funciones.GlobalData
 
 class EditarPerfil : Fragment() {
@@ -56,7 +52,7 @@ class EditarPerfil : Fragment() {
                 .into(binding.profilePhotoUser)
         }.addOnFailureListener {
             Glide.with(this@EditarPerfil)
-                .load(R.drawable.mao_zedong)
+                .load(R.drawable.pic_default)
                 .into(binding.profilePhotoUser)
         }
 

@@ -6,12 +6,10 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.google.firebase.storage.FirebaseStorage
 import edu.app.dao.databinding.PerfilPicBinding
 import edu.app.dao.funciones.GlobalData
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 class PerfilPic : AppCompatActivity(){
     private lateinit var binding: PerfilPicBinding
@@ -21,6 +19,18 @@ class PerfilPic : AppCompatActivity(){
         supportActionBar?.hide()
         binding = PerfilPicBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val storageReference = FirebaseStorage.getInstance().reference
+
+        storageReference.child("images/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
+            Glide.with(this@PerfilPic)
+                .load(uri)
+                .into(binding.imageUser)
+        }.addOnFailureListener {
+            Glide.with(this@PerfilPic)
+                .load(R.drawable.pic_default)
+                .into(binding.imageUser)
+        }
 
         // Hace que el botón de devolver se devuelva a EditarPerfil.kt
         binding.botonBack.setOnClickListener {

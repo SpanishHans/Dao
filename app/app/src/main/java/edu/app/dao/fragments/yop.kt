@@ -1,5 +1,6 @@
 package edu.app.dao.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
+import edu.app.dao.PerfilPic
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentYopBinding
 import edu.app.dao.funciones.GlobalData
@@ -50,7 +52,7 @@ class yop : Fragment() {
                 .into(binding.profilePhotoUser)
         }.addOnFailureListener {
             Glide.with(this@yop)
-                .load(R.drawable.mao_zedong)
+                .load(R.drawable.pic_default)
                 .into(binding.profilePhotoUser)
         }
 
@@ -67,7 +69,7 @@ class yop : Fragment() {
 
         // Cuando se hace clic en la foto de perfil, esta muestra un aviso
         binding.profilePhotoUser.setOnClickListener {
-
+            startActivity(Intent(activity, PerfilPic::class.java))
         }
         /*
            Basicamente, lo que hace es que coloca en el fragment_yop.xml los campos de:
