@@ -52,6 +52,7 @@ class yop : Fragment() {
 
         // Cuando se hace clic en la foto de perfil, esta muestra un aviso
         binding.profilePhotoUser.setOnClickListener {
+
         }
         /*
            Basicamente, lo que hace es que coloca en el fragment_yop.xml los campos de:

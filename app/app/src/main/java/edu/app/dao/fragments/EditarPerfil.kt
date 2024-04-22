@@ -1,5 +1,6 @@
 package edu.app.dao.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,8 +14,10 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import edu.app.dao.PerfilPic
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentEditarPerfilBinding
+import edu.app.dao.databinding.PerfilPicBinding
 import edu.app.dao.funciones.GlobalData
 
 class EditarPerfil : Fragment() {
@@ -80,6 +83,11 @@ class EditarPerfil : Fragment() {
                 // No hay campos para actualizar
                 Toast.makeText(requireContext(), "No hay cambios para guardar", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.profilePhotoUser.setOnClickListener {
+            val intent = Intent(activity, PerfilPic::class.java)
+            startActivity(intent)
         }
 
 

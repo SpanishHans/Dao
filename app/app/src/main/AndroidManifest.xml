@@ -16,6 +16,11 @@
         android:theme="@style/Theme.Dao"
         tools:targetApi="31">
         <activity
+            android:name=".PerfilPic"
+            android:exported="false"
+            android:label="@string/title_activity_profile_pic"
+            android:theme="@style/Theme.Dao" />
+        <activity
             android:name=".fragments.InicioPrincipal"
             android:exported="false"
             android:label="@string/title_activity_inicio_principal"
@@ -33,11 +38,11 @@
         <activity
             android:name=".RegisterToApp"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LoginToApp"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/boton_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_arrow_back" />
+
+    <ImageView
+        android:id="@+id/image_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mao_zedong" />
+
+    <Button
+        android:id="@+id/button_seleccionar"
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_border"
+        style="@style/boton_primario"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cargar imagen"
+        app:layout_constraintEnd_toStartOf="@+id/button_subir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_user" />
+
+    <Button
+        android:id="@+id/button_subir"
+        android:background="@drawable/button_border"
+        style="@style/boton_primario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Subir imagen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_seleccionar"
+        app:layout_constraintTop_toBottomOf="@+id/image_user" />
+</androidx.constraintlayout.widget.ConstraintLayout>

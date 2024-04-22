@@ -30,6 +30,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="username">Nombre de usuario</string>
     <string name="default_description_editar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat, sapien vitae ultricies laoreet, sapien dui maximus est, ac scelerisque orci nunc eget nisi. Aenean id lacus nec velit vehicula consectetur. Quisque in congue felis, ac facilisis ex amet.</string>
+    <string name="title_activity_profile_pic">ProfilePic</string>
 
 
 </resources>

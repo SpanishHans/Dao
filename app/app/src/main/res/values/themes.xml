@@ -12,7 +12,8 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView</item>
+        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView
+        </item>
     </style>
 
     <style name="boton_primario" parent="Widget.MaterialComponents.Button">
@@ -65,7 +66,7 @@
         <item name="android:paddingVertical">@dimen/dim_15dp</item>
         <!-- Add more style attributes as needed -->
     </style>
-    
+
     <style name="BottomNavigationTextStyle">
         <item name="android:fontFamily">@font/ma_shan_zheng</item>
     </style>
