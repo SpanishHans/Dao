@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.storage.FirebaseStorage
 import edu.app.dao.databinding.PerfilPicBinding
+import edu.app.dao.funciones.GlobalData
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -32,27 +33,24 @@ class PerfilPic : AppCompatActivity(){
         }
 
         // Botón para subir la imagen a la base de datos y que se actualice
-        binding.buttonSubir.setOnClickListener {
+        binding.buttonGuardar.setOnClickListener {
             uploadImage()
         }
     }
 
-    // Función para subir la imagen
     private fun uploadImage(){
         val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Subiendo imagen...")
         progressDialog.setCancelable(false)
         progressDialog.show()
 
-        val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
-        val now = Date()
-        val fileName = formatter.format(now)
+        val fileName = "${GlobalData.idCurrent}"
         val storageReference = FirebaseStorage.getInstance().getReference("images/$fileName")
 
         storageReference.putFile(imageUri).
                 addOnSuccessListener {
-                    binding.imageUser.setImageURI(null)
                     Toast.makeText(this@PerfilPic, "Imagen subida correctamente!", Toast.LENGTH_SHORT).show()
+                    finish()
                     if (progressDialog.isShowing) progressDialog.dismiss()
                 }.addOnFailureListener {error ->
                     if (progressDialog.isShowing) progressDialog.dismiss()

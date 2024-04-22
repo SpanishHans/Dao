@@ -9,11 +9,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import com.bumptech.glide.Glide
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import edu.app.dao.PerfilPic
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentEditarPerfilBinding
@@ -36,6 +38,9 @@ class EditarPerfil : Fragment() {
         // Referencia a la base de datos con los datos de la ID que se capturó en la clase GlobalData
         val refUsuarios: DatabaseReference = database.getReference("Usuarios").child(GlobalData.idCurrent)
 
+        // Referencia al almacenamiento de la base de atos
+        val storageReference = FirebaseStorage.getInstance().reference
+
         // Instancia del fragmento anterior (yop.kt)
         val yop = yop()
 
@@ -44,6 +49,16 @@ class EditarPerfil : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Información personal"
         toolbarText.textSize = 30F
+
+        storageReference.child("images/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
+            Glide.with(this@EditarPerfil)
+                .load(uri)
+                .into(binding.profilePhotoUser)
+        }.addOnFailureListener {
+            Glide.with(this@EditarPerfil)
+                .load(R.drawable.mao_zedong)
+                .into(binding.profilePhotoUser)
+        }
 
 
 

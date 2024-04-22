@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import com.bumptech.glide.Glide
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentYopBinding
 import edu.app.dao.funciones.GlobalData
@@ -34,10 +36,23 @@ class yop : Fragment() {
         // Hace que hagarre la referencia de "Usuarios"
         val refUsuarios: DatabaseReference = database.getReference("Usuarios")
 
+        // Referencia al almacenamiento de la base de datos
+        val storageReference = FirebaseStorage.getInstance().reference
+
         // Define la barra de tareas superior y hace que el título cambie a "Editar Perfil"
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Editar Perfil"
+
+        storageReference.child("images/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
+            Glide.with(this@yop)
+                .load(uri)
+                .into(binding.profilePhotoUser)
+        }.addOnFailureListener {
+            Glide.with(this@yop)
+                .load(R.drawable.mao_zedong)
+                .into(binding.profilePhotoUser)
+        }
 
 
         // Cuando se haga clic en la imagen de fondo (Cover) esta imprima un mensaje en la pantalla del usuario en forma de Toast
