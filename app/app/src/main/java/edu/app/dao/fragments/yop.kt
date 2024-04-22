@@ -50,6 +50,8 @@ class yop : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Editar Perfil"
 
+        // Carga la foto de perfil que se tiene en la base de datos, si no se tiene nada entonces
+        // carga la foto de perfil predeterminada (la gris)
         storageReference.child("images/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
             Glide.with(this@yop)
                 .load(uri)
@@ -60,6 +62,8 @@ class yop : Fragment() {
                 .into(binding.profilePhotoUser)
         }
 
+        // Carga el fondo que se tiene guardado en la base de datos, si no se ha subido nada
+        // entonces se carga el fondo predeterminado (Gran Muralla China)
         storageReference.child("fondos/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
             Glide.with(this@yop)
                 .load(uri)

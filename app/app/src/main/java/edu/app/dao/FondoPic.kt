@@ -21,13 +21,18 @@ class FondoPic : AppCompatActivity(){
         binding = FondoPicBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Referencia para la base de datos de almacenamiento
         val storageReference = FirebaseStorage.getInstance().reference
 
+        // Utiliza el ID global del usuario para poder guardar y cargar los datos
         storageReference.child("fondos/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
+            // Carga la foto de perfil que se tienen en la base de datos
             Glide.with(this@FondoPic)
                 .load(uri)
                 .into(binding.imageUser)
         }.addOnFailureListener {
+            // Carga la imagen que se tiene por defecto si no encuentra nada en la base de datos
+            // (muralla China)
             Glide.with(this@FondoPic)
                 .load(R.drawable.the_great_wall_of_china)
                 .into(binding.imageUser)
@@ -49,6 +54,8 @@ class FondoPic : AppCompatActivity(){
         }
     }
 
+    // Permite subir una imagen al firebase en el directorio de fondos y guarda la imagen seleccionada
+    // con el ID único del usuario.
     private fun uploadImage(){
         val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Subiendo imagen...")
@@ -70,6 +77,7 @@ class FondoPic : AppCompatActivity(){
         }
     }
 
+    // Permite acceder a la funcionalidad del sistema de seleccionar imagenes del almacenamiento interno
     private fun selectImage() {
         val intent = Intent()
         intent.type = "image/*"

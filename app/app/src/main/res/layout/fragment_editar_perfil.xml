@@ -19,27 +19,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-                <RelativeLayout
-                    android:id="@+id/background_profile"
+            <RelativeLayout
+                android:id="@+id/background_profile"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:clickable="true"
+                android:contentDescription="Nada"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:clickable="true"
-                    android:contentDescription="Nada"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_height="match_parent"
+                    android:background="#80000000" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#80000000" />
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bitcoin_icons_edit_filled" />
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/bitcoin_icons_edit_filled" />
-
-                </RelativeLayout>
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/profile_photo_user"

@@ -37,7 +37,8 @@ class EditarPerfil : Fragment() {
         val database: FirebaseDatabase = FirebaseDatabase.getInstance()
 
         // Referencia a la base de datos con los datos de la ID que se capturó en la clase GlobalData
-        val refUsuarios: DatabaseReference = database.getReference("Usuarios").child(GlobalData.idCurrent)
+        val refUsuarios: DatabaseReference =
+            database.getReference("Usuarios").child(GlobalData.idCurrent)
 
         // Referencia al almacenamiento de la base de atos
         val storageReference = FirebaseStorage.getInstance().reference
@@ -51,6 +52,8 @@ class EditarPerfil : Fragment() {
         toolbarText.text = "Información personal"
         toolbarText.textSize = 30F
 
+        // Carga la foto de perfil que se tienen guardada con el usuario. Si no se encuentra nada
+        // entonces carga una imagen por defecto (la gris toda fea)
         storageReference.child("images/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
             Glide.with(this@EditarPerfil)
                 .load(uri)
@@ -61,13 +64,19 @@ class EditarPerfil : Fragment() {
                 .into(binding.profilePhotoUser)
         }
 
+        // Carga el fondo de perfil que tiene guardado el usuario. Si no encuentra nada en Firebase
+        // entonces carga la imagen por defecto (gran muralla China)
         storageReference.child("fondos/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
             Glide.with(this@EditarPerfil)
                 .load(uri)
                 .into(object : CustomTarget<Drawable>() {
-                    override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
+                    override fun onResourceReady(
+                        resource: Drawable,
+                        transition: Transition<in Drawable>?
+                    ) {
                         binding.backgroundProfile.background = resource
                     }
+
                     override fun onLoadCleared(placeholder: Drawable?) {
                         // No hacer nada
                     }
@@ -76,7 +85,6 @@ class EditarPerfil : Fragment() {
             val defaultImageResId = R.drawable.the_great_wall_of_china
             binding.backgroundProfile.setBackgroundResource(defaultImageResId)
         }
-
 
 
         // Cuando se le da clic a la toolbar superior se devuelve al fragmento de yop.kt
@@ -106,22 +114,29 @@ class EditarPerfil : Fragment() {
             if (nuevosDatos.isNotEmpty()) {
                 refUsuarios.updateChildren(nuevosDatos)
                     .addOnSuccessListener {
-                        Toast.makeText(requireContext(), "Datos actualizados con éxito!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            requireContext(),
+                            "Datos actualizados con éxito!",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                     .addOnFailureListener { error ->
                         Toast.makeText(requireContext(), "Error: $error", Toast.LENGTH_SHORT).show()
                     }
             } else {
                 // No hay campos para actualizar
-                Toast.makeText(requireContext(), "No hay cambios para guardar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "No hay cambios para guardar", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
+        // Al hacer clic sobre la foto de perfil lo lleva a la actividad para cambiar la foto
         binding.profilePhotoUser.setOnClickListener {
             val intent = Intent(activity, PerfilPic::class.java)
             startActivity(intent)
         }
 
+        // Al hacer clic sobre el fondo lo lleva a la actividad para cambiar el fondo
         binding.backgroundProfile.setOnClickListener {
             startActivity(Intent(activity, FondoPic::class.java))
         }
