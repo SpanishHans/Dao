@@ -46,6 +46,7 @@
         android:id="@+id/register_nombre"
         style="@style/input_field"
         android:layout_width="match_parent"
+        android:maxLength="46"
         android:layout_height="wrap_content"
         android:autofillHints="name"
         android:hint="@string/field_nombre"
@@ -60,6 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="username"
+        android:maxLength="46"
         android:hint="@string/field_username"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@id/register_email" />
@@ -67,6 +69,7 @@
     <EditText
         android:id="@+id/register_email"
         style="@style/input_field"
+        android:maxLength="46"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="emailAddress"
@@ -77,6 +80,7 @@
     <EditText
         android:id="@+id/register_password"
         style="@style/input_field"
+        android:maxLength="46"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dim_30dp"
