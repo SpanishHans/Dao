@@ -37,6 +37,7 @@ class PerfilPic : AppCompatActivity(){
         }
     }
 
+    // Función para subir la imagen
     private fun uploadImage(){
         val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Subiendo imagen...")
