@@ -1,6 +1,7 @@
 package edu.app.dao.fragments
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,12 +11,15 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
+import edu.app.dao.FondoPic
 import edu.app.dao.PerfilPic
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentYopBinding
@@ -56,9 +60,26 @@ class yop : Fragment() {
                 .into(binding.profilePhotoUser)
         }
 
+        storageReference.child("fondos/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
+            Glide.with(this@yop)
+                .load(uri)
+                .into(object : CustomTarget<Drawable>() {
+                    override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
+                        binding.backgroundProfile.background = resource
+                    }
+                    override fun onLoadCleared(placeholder: Drawable?) {
+                        // No hacer nada
+                    }
+                })
+        }.addOnFailureListener {
+            val defaultImageResId = R.drawable.the_great_wall_of_china
+            binding.backgroundProfile.setBackgroundResource(defaultImageResId)
+        }
+
 
         // Cuando se haga clic en la imagen de fondo (Cover) esta imprima un mensaje en la pantalla del usuario en forma de Toast
         binding.backgroundProfile.setOnClickListener {
+            startActivity(Intent(activity, FondoPic::class.java))
         }
 
         // Cuando se hace clic en la barra de tareas superior cambia al fragmento de EditarPerfil.kt

@@ -24,6 +24,11 @@
             android:label="@string/title_activity_profile_pic"
             android:theme="@style/Theme.Dao" />
         <activity
+            android:name=".FondoPic"
+            android:exported="false"
+            android:label="FondoPic"
+            android:theme="@style/Theme.Dao" />
+        <activity
             android:name=".fragments.InicioPrincipal"
             android:exported="false"
             android:label="@string/title_activity_inicio_principal"

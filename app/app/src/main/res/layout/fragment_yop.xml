@@ -23,7 +23,6 @@
                 android:id="@+id/background_profile"
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
-                android:background="@drawable/the_great_wall_of_china"
                 android:clickable="true"
                 android:contentDescription="Nada"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +36,6 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="-75dp"
                 android:background="@drawable/border_background"
-                android:src="@drawable/pic_default"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/background_profile" />
 

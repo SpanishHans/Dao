@@ -1,6 +1,7 @@
 package edu.app.dao.fragments
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +10,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
+import edu.app.dao.FondoPic
 import edu.app.dao.PerfilPic
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentEditarPerfilBinding
@@ -54,6 +59,22 @@ class EditarPerfil : Fragment() {
             Glide.with(this@EditarPerfil)
                 .load(R.drawable.pic_default)
                 .into(binding.profilePhotoUser)
+        }
+
+        storageReference.child("fondos/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
+            Glide.with(this@EditarPerfil)
+                .load(uri)
+                .into(object : CustomTarget<Drawable>() {
+                    override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
+                        binding.backgroundProfile.background = resource
+                    }
+                    override fun onLoadCleared(placeholder: Drawable?) {
+                        // No hacer nada
+                    }
+                })
+        }.addOnFailureListener {
+            val defaultImageResId = R.drawable.the_great_wall_of_china
+            binding.backgroundProfile.setBackgroundResource(defaultImageResId)
         }
 
 
@@ -99,6 +120,10 @@ class EditarPerfil : Fragment() {
         binding.profilePhotoUser.setOnClickListener {
             val intent = Intent(activity, PerfilPic::class.java)
             startActivity(intent)
+        }
+
+        binding.backgroundProfile.setOnClickListener {
+            startActivity(Intent(activity, FondoPic::class.java))
         }
 
 
