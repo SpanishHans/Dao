@@ -32,14 +32,9 @@
 
                     <TextView
                         android:id="@+id/leccion_1_text"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        style="@style/texto_lecciones"
                         android:layout_marginTop="60dp"
-                        android:background="@color/amarillo_light"
-                        android:fontFamily="@font/ma_shan_zheng"
                         android:text="你好"
-                        android:textColor="@color/black"
-                        android:textSize="30dp"
                         app:layout_constraintEnd_toEndOf="@+id/leccion_1"
                         app:layout_constraintStart_toStartOf="@+id/leccion_1"
                         app:layout_constraintTop_toTopOf="parent" />
