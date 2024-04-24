@@ -128,6 +128,6 @@ class yop : Fragment() {
             replace(R.id.fl_wrapper, fragment)
             commit()
         }
-    }
+        }
 
 }
