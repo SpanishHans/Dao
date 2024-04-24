@@ -34,51 +34,24 @@
                         android:id="@+id/leccion_1_text"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
                         android:background="@color/amarillo_light"
                         android:fontFamily="@font/ma_shan_zheng"
                         android:text="你好"
                         android:textColor="@color/black"
                         android:textSize="30dp"
-                        app:layout_constraintBottom_toTopOf="@+id/leccion_1"
                         app:layout_constraintEnd_toEndOf="@+id/leccion_1"
-                        app:layout_constraintStart_toStartOf="@+id/leccion_1" />
+                        app:layout_constraintStart_toStartOf="@+id/leccion_1"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/leccion_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="80dp"
                         android:src="@drawable/leccion_1"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/leccion_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="90dp"
-                        android:src="@drawable/leccion_1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/leccion_1" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="51dp"
-                        android:background="@color/amarillo_light"
-                        android:fontFamily="@font/ma_shan_zheng"
-                        android:text="你忙吗？"
-                        android:textColor="@color/black"
-                        android:textSize="30dp"
-                        app:layout_constraintBottom_toTopOf="@+id/leccion_2"
-                        app:layout_constraintEnd_toEndOf="@+id/leccion_2"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/leccion_2"
-                        app:layout_constraintTop_toBottomOf="@+id/leccion_1"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintTop_toBottomOf="@+id/leccion_1_text" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
