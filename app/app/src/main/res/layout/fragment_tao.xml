@@ -35,19 +35,45 @@
                         style="@style/texto_lecciones"
                         android:layout_marginTop="60dp"
                         android:text="你好"
-                        android:paddingStart="16dp"
                         app:layout_constraintEnd_toEndOf="@+id/leccion_1"
                         app:layout_constraintStart_toStartOf="@+id/leccion_1"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/leccion_1"
-                        android:layout_width="275dp"
-                        android:layout_height="154dp"
+                        style="@style/imagenes_lecciones"
                         android:src="@drawable/leccion_1"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/leccion_1_text" />
+
+                    <TextView
+                        android:id="@+id/leccion_2_text"
+                        style="@style/texto_lecciones"
+                        android:layout_marginTop="34dp"
+                        android:text="你忙吗？"
+                        app:layout_constraintEnd_toEndOf="@+id/leccion_2"
+                        app:layout_constraintStart_toStartOf="@+id/leccion_2"
+                        app:layout_constraintTop_toBottomOf="@+id/leccion_1" />
+
+                    <ImageView
+                        android:id="@+id/leccion_2"
+                        style="@style/imagenes_lecciones"
+                        android:src="@drawable/leccion_2"
+                        app:layout_constraintTop_toBottomOf="@+id/leccion_2_text" />
+
+                    <TextView
+                        android:id="@+id/leccion_3_text"
+                        style="@style/texto_lecciones"
+                        android:layout_marginTop="34dp"
+                        android:text="她是哪国人？"
+                        app:layout_constraintEnd_toEndOf="@+id/leccion_3"
+                        app:layout_constraintStart_toStartOf="@+id/leccion_3"
+                        app:layout_constraintTop_toBottomOf="@+id/leccion_2" />
+
+                    <ImageView
+                        android:id="@+id/leccion_3"
+                        style="@style/imagenes_lecciones"
+                        android:src="@drawable/leccion_3"
+                        app:layout_constraintTop_toBottomOf="@+id/leccion_3_text" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
