@@ -35,14 +35,15 @@
                         style="@style/texto_lecciones"
                         android:layout_marginTop="60dp"
                         android:text="你好"
+                        android:paddingStart="16dp"
                         app:layout_constraintEnd_toEndOf="@+id/leccion_1"
                         app:layout_constraintStart_toStartOf="@+id/leccion_1"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/leccion_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="275dp"
+                        android:layout_height="154dp"
                         android:src="@drawable/leccion_1"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
