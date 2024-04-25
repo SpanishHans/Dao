@@ -26,6 +26,9 @@ class kong : Fragment() {
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Templo"
+        toolbar.setOnClickListener {
+            null
+        }
 
         return binding.root
     }
