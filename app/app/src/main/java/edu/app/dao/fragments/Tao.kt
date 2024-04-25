@@ -30,7 +30,11 @@ class Tao : Fragment() {
             null
         }
 
+
+
+
         return binding.root
     }
+
 
 }
