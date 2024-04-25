@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentTaoBinding
@@ -28,6 +29,10 @@ class Tao : Fragment() {
         toolbarText.text = "Lecciones"
         toolbar.setOnClickListener {
             null
+        }
+
+        binding.leccion1.setOnClickListener {
+            Toast.makeText(requireContext(), "Pulsaste en la lección 1!", Toast.LENGTH_SHORT).show()
         }
 
 
