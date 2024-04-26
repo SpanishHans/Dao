@@ -11,49 +11,65 @@
     <Button
         android:id="@+id/button_palabras_nuevas"
         style="@style/botones_indice"
-        android:layout_marginTop="64dp"
         android:text="Palabras Nuevas"
+        app:layout_constraintBottom_toTopOf="@+id/button_lectura_1"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_lectura_1"
         style="@style/botones_indice"
         android:text="Lectura 1"
+        app:layout_constraintBottom_toTopOf="@+id/button_lectura_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/button_palabras_nuevas" />
 
     <Button
         android:id="@+id/button_lectura_2"
         style="@style/botones_indice"
         android:text="Lectura 2"
+        app:layout_constraintBottom_toTopOf="@+id/button_notas"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/button_lectura_1" />
 
     <Button
         android:id="@+id/button_notas"
         style="@style/botones_indice"
         android:text="Notas"
+        app:layout_constraintBottom_toTopOf="@+id/button_ejercicios_fonetica"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/button_lectura_2" />
 
     <Button
         android:id="@+id/button_ejercicios_fonetica"
         style="@style/botones_indice"
         android:text="Ejercicios de fonética"
+        app:layout_constraintBottom_toTopOf="@+id/button_conversacion"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/button_notas" />
 
     <Button
         android:id="@+id/button_conversacion"
         style="@style/botones_indice"
         android:text="Práctica de conversación"
+        app:layout_constraintBottom_toTopOf="@+id/button_fonetica"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/button_ejercicios_fonetica" />
 
     <Button
         android:id="@+id/button_fonetica"
         style="@style/botones_indice"
         android:text="Fonética"
-        app:layout_constraintTop_toBottomOf="@id/button_conversacion" />
+        app:layout_constraintBottom_toTopOf="@+id/button_gramatica"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/button_conversacion" />
 
     <Button
         android:id="@+id/button_gramatica"
         style="@style/botones_indice"
+        android:layout_marginBottom="16dp"
         android:text="Gramática"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintTop_toBottomOf="@+id/button_fonetica" />
 </androidx.constraintlayout.widget.ConstraintLayout>
