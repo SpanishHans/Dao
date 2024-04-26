@@ -1,5 +1,6 @@
 package edu.app.dao.fragments
 
+import android.graphics.Typeface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,9 +29,11 @@ class Tao : Fragment() {
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Lecciones"
+        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.setOnClickListener {
             null
         }
+
 
         binding.leccion1.setOnClickListener {
             Toast.makeText(requireContext(), "Pulsaste en la lección 1!", Toast.LENGTH_SHORT).show()

@@ -1,6 +1,7 @@
 package edu.app.dao.fragments
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -49,6 +50,7 @@ class yop : Fragment() {
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Editar Perfil"
+        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
 
         // Carga la foto de perfil que se tiene en la base de datos, si no se tiene nada entonces
         // carga la foto de perfil predeterminada (la gris)
