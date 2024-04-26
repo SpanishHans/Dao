@@ -31,6 +31,7 @@
     <string name="username">Nombre de usuario</string>
     <string name="default_description_editar">Ingresa aquí tu nueva descripción!</string>
     <string name="title_activity_profile_pic">ProfilePic</string>
+    <string name="title_activity_indice">Indice</string>
 
 
 </resources>

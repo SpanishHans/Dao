@@ -30,20 +30,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/leccion_1_text"
-                        style="@style/texto_lecciones"
-                        android:layout_marginTop="60dp"
-                        android:text="你好"
-                        app:layout_constraintEnd_toEndOf="@+id/leccion_1"
-                        app:layout_constraintStart_toStartOf="@+id/leccion_1"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/leccion_1_text"
+                            style="@style/texto_lecciones"
+                            android:layout_marginTop="60dp"
+                            android:text="你好"
+                            app:layout_constraintEnd_toEndOf="@+id/leccion_1"
+                            app:layout_constraintStart_toStartOf="@+id/leccion_1"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/leccion_1"
-                        style="@style/imagenes_lecciones"
-                        android:src="@drawable/leccion_1"
-                        app:layout_constraintTop_toBottomOf="@+id/leccion_1_text" />
+                        <ImageView
+                            android:id="@+id/leccion_1"
+                            style="@style/imagenes_lecciones"
+                            android:src="@drawable/leccion_1"
+                            app:layout_constraintTop_toBottomOf="@+id/leccion_1_text" />
 
                     <TextView
                         android:id="@+id/leccion_2_text"

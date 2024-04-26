@@ -7,12 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentTaoBinding
 import edu.app.dao.fragments.leccion1.Indice
-import org.w3c.dom.Text
 
 
 class Tao : Fragment() {
@@ -36,7 +34,6 @@ class Tao : Fragment() {
 
 
         binding.leccion1.setOnClickListener {
-            Toast.makeText(requireContext(), "Pulsaste en la lección 1!", Toast.LENGTH_SHORT).show()
             val indice = Indice()
             requireActivity().supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fl_wrapper, indice)
