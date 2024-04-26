@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentIndiceBinding
+import edu.app.dao.fragments.leccion1.ui.theme.Leccion1PalabrasNuevas
 
 class Indice : Fragment() {
 
@@ -23,11 +24,12 @@ class Indice : Fragment() {
         binding = FragmentIndiceBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "你好"
-
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
 
         binding.buttonPalabrasNuevas.setOnClickListener {
+            val leccion1PalabrasNuevas = Leccion1PalabrasNuevas()
             Toast.makeText(requireContext(), "Clic en Palabras nuevas", Toast.LENGTH_SHORT).show()
+            navegarFragmento(leccion1PalabrasNuevas)
         }
 
         binding.buttonLectura1.setOnClickListener {
@@ -60,6 +62,13 @@ class Indice : Fragment() {
 
 
         return binding.root
+    }
+
+    private fun navegarFragmento(fragment: Fragment) {
+        requireActivity().supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_wrapper, fragment)
+            commit()
+        }
     }
 
 }
