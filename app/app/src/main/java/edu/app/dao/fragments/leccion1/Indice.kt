@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentIndiceBinding
 import edu.app.dao.fragments.leccion1.ui.theme.Leccion1PalabrasNuevas
@@ -23,8 +25,10 @@ class Indice : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentIndiceBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
+        val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
         toolbarText.text = "你好"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
+        toolbar.visibility = View.GONE
 
         binding.buttonPalabrasNuevas.setOnClickListener {
             val leccion1PalabrasNuevas = Leccion1PalabrasNuevas()
