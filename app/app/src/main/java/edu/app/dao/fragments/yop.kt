@@ -4,11 +4,13 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
@@ -51,9 +53,16 @@ class yop : Fragment() {
         val toolbar = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarDown = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
+        val devolverFlecha = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
+        val fragmentManager = requireActivity().supportFragmentManager
         toolbarText.text = "Editar Perfil"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbarDown.visibility = View.VISIBLE
+        devolverFlecha.visibility = View.GONE
+
+
+
+
 
         // Carga la foto de perfil que se tiene en la base de datos, si no se tiene nada entonces
         // carga la foto de perfil predeterminada (la gris)

@@ -55,7 +55,7 @@ class InicioPrincipal : AppCompatActivity() {
     fun makeCurrentFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction()
             .replace(R.id.fl_wrapper, fragment)
-            .addToBackStack(null)
             .commit()
     }
+
 }

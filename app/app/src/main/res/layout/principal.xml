@@ -27,6 +27,28 @@
             android:textColor="@android:color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/flecha_devolver"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_50dp"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/fl_wrapper"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.18">
+
+            <ImageButton
+                android:id="@+id/flecha_devolver_imagen"
+                style="@style/invisible"
+                android:layout_weight="1"
+                android:src="@drawable/ic_action_arrow_back"
+                android:tint="@color/black"
+                tools:ignore="UseAppTint"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="259dp" />
+        </LinearLayout>
+
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
@@ -57,5 +79,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/menu_inferior" />
     </FrameLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

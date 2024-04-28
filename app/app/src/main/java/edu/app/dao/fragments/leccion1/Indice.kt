@@ -7,11 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentIndiceBinding
+import edu.app.dao.fragments.Tao
 import edu.app.dao.fragments.leccion1.ui.theme.Leccion1PalabrasNuevas
 
 class Indice : Fragment() {
@@ -26,9 +29,21 @@ class Indice : Fragment() {
         binding = FragmentIndiceBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
+        val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
+        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
         toolbar.visibility = View.GONE
+        flechaDevolver.visibility = View.VISIBLE
+
+        flechaDevolverImagen.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+            val tao = Tao()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, tao)
+                commit()
+            }
+        }
 
         binding.buttonPalabrasNuevas.setOnClickListener {
             val leccion1PalabrasNuevas = Leccion1PalabrasNuevas()

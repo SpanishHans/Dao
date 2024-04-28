@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
@@ -27,9 +28,16 @@ class Tao : Fragment() {
         // Define la barra de tareas superior y hace que el título cambie a "Entrenar"
         val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
+        val toolbarUp = requireActivity().findViewById<Toolbar>(R.id.toolbar)
+        val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         toolbarText.text = "Lecciones"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
+        flechaDevolver.visibility = View.GONE
+
+        toolbarUp.setOnClickListener {
+            null
+        }
 
 
 

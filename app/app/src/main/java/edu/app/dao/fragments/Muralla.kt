@@ -26,10 +26,17 @@ class Muralla : Fragment() {
 
         // Define la barra de tareas superior y hace que el título cambie a "Tú Camino"
         val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
+        val toolbarUp = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Tú Camino"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
+
+        toolbarUp.setOnClickListener {
+            null
+        }
+
+
 
 
         return binding.root
