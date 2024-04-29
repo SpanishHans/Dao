@@ -32,7 +32,10 @@
     <string name="default_description_editar">Ingresa aquí tu nueva descripción!</string>
     <string name="title_activity_profile_pic">ProfilePic</string>
     <string name="title_activity_indice">Indice</string>
-    <string name="Leccion1Lectura1">陆雨平：力波，你好\n\n力波：你好，陆雨平。</string>
+    <string name="Leccion1Lectura1">陆雨平： 力波，你好\n\n力波： 你好，陆雨平。</string>
+    <string name="Leccion1Lectura2">力波： 林娜， 你好吗？\n\n
+                                    林娜：我很好， 你呢？\n\n
+                                    力波： 也很好。</string>
 
 
 </resources>

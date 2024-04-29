@@ -57,7 +57,8 @@ class Indice : Fragment() {
         }
 
         binding.buttonLectura2.setOnClickListener {
-            Toast.makeText(requireContext(), "Clic en lectura 2", Toast.LENGTH_SHORT).show()
+            val leccion1Lectura2 = Leccion1Lectura2()
+            navegarFragmento(leccion1Lectura2)
         }
 
         binding.buttonNotas.setOnClickListener {
