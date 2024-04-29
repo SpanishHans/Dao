@@ -30,7 +30,7 @@
                 android:background="@drawable/button_border"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/linearLayout"
@@ -41,13 +41,12 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="54dp"
-                        android:layout_marginTop="-4dp"
                         android:fontFamily="@font/helvetica_neue_bold"
                         android:text="Nǐ"
                         android:textColor="@color/black"
-                        android:textSize="48dp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="28dp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView3"
+                        app:layout_constraintStart_toStartOf="@+id/textView3"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -108,15 +107,12 @@
                         android:id="@+id/hao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="34dp"
-                        android:layout_marginTop="-4dp"
-                        android:layout_marginEnd="20dp"
                         android:fontFamily="@font/helvetica_neue_bold"
                         android:text="Hǎo"
                         android:textColor="@color/black"
-                        android:textSize="48dp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView3"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="28dp"
+                        app:layout_constraintEnd_toEndOf="@+id/hao_char"
+                        app:layout_constraintStart_toStartOf="@+id/hao_char"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -159,8 +155,78 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/luyuping"
+                android:layout_width="275dp"
+                android:layout_height="214dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bien">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/hao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_neue_bold"
+                        android:text="Lù yǔpíng"
+                        android:textColor="@color/black"
+                        android:textSize="28dp"
+                        app:layout_constraintEnd_toEndOf="@+id/luyuping_char"
+                        app:layout_constraintStart_toStartOf="@+id/luyuping_char"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/luyuping_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="-15dp"
+                        android:fontFamily="@font/ma_shan_zheng"
+                        android:text="陆雨平"
+                        android:textColor="@color/black"
+                        android:textSize="48dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/hao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_neue_bold"
+                        android:text="A"
+                        android:textColor="@color/black"
+                        android:textSize="48dp"
+                        app:layout_constraintEnd_toEndOf="@+id/luyuping_char"
+                        app:layout_constraintHorizontal_bias="0.56"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/luyuping_char" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/helvetica_neue_bold"
+                        android:text="(Periodista chino)"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
