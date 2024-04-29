@@ -27,17 +27,36 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <Button
-                    android:id="@+id/boton_notas"
+                    android:id="@+id/boton_notas_1"
                     style="@style/boton_notas"
-                    android:text="(1). Nǐ hǎo" />
+                    android:layout_marginTop="32dp"
+                    android:text="(1). Nǐ hǎo"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/notas_content"
+                    android:id="@+id/notas_content_1"
                     style="@style/texto_notas"
                     android:text="@string/Leccion1Notas"
-                    app:layout_constraintTop_toBottomOf="@+id/boton_notas"
-                    />
+                    app:layout_constraintTop_toBottomOf="@+id/boton_notas_1" />
+
+                <Button
+                    android:id="@+id/boton_notas_2"
+                    style="@style/boton_notas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="(2) Nǐ hǎo ma？"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/notas_content_1" />
+
+                <TextView
+                    android:id="@+id/notas_content_2"
+                    style="@style/texto_notas"
+                    android:text="@string/Leccion1Notas2"
+                    app:layout_constraintTop_toBottomOf="@+id/boton_notas_2" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

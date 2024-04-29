@@ -38,6 +38,10 @@
                                     力波： 也很好。</string>
     <string name="Leccion1Notas">“Hola”, “¿Cómo te va?”
 Ésta es la fórmula para saludar más común en chino. Puede ser utilizada en cualquier momento del día, cuando nos reunimos con gente por primera vez o para personas que ya conocemos. La respuesta a esta forma de saludo es también “你好“ (“Nǐ hǎo”).</string>
+    <string name="Leccion1Notas2">“¿Qué tal estás?”\n
+                            Ésta es también una forma de saludar. Se suele utilizar cuando hace mucho tiempo
+                            no ves a una persona, y la respuesta es normalmente “我很好” (“Wǒ hěn hǎo”)
+                            u otra fórmula similar.</string>
 
 
 </resources>
