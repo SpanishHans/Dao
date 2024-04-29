@@ -32,6 +32,7 @@
                     android:id="@+id/boton_notas_1"
                     style="@style/boton_notas"
                     android:layout_marginTop="32dp"
+                    android:backgroundTint="@color/amarillo_light"
                     android:text="(1). Nǐ hǎo"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,6 +45,7 @@
                 <Button
                     android:id="@+id/boton_notas_2"
                     style="@style/boton_notas"
+                    android:backgroundTint="@color/amarillo_light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
