@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentIndiceBinding
 import edu.app.dao.fragments.Tao
+import edu.app.dao.fragments.leccion1.ui.theme.Leccion1Lectura1
 import edu.app.dao.fragments.leccion1.ui.theme.Leccion1PalabrasNuevas
 
 class Indice : Fragment() {
@@ -47,12 +48,12 @@ class Indice : Fragment() {
 
         binding.buttonPalabrasNuevas.setOnClickListener {
             val leccion1PalabrasNuevas = Leccion1PalabrasNuevas()
-            Toast.makeText(requireContext(), "Clic en Palabras nuevas", Toast.LENGTH_SHORT).show()
             navegarFragmento(leccion1PalabrasNuevas)
         }
 
         binding.buttonLectura1.setOnClickListener {
-            Toast.makeText(requireContext(), "Clic en lectura 1", Toast.LENGTH_SHORT).show()
+            val leccion1Lectura1 = Leccion1Lectura1()
+            navegarFragmento(leccion1Lectura1)
         }
 
         binding.buttonLectura2.setOnClickListener {
