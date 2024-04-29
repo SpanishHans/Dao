@@ -42,6 +42,12 @@
                             Ésta es también una forma de saludar. Se suele utilizar cuando hace mucho tiempo
                             no ves a una persona, y la respuesta es normalmente “我很好” (“Wǒ hěn hǎo”)
                             u otra fórmula similar.</string>
+    <string name="Leccion1Notas3">“¿Y (cómo estás) tú?”</string>
+    <string name="Leccion1Notas4">“(Yo estoy) bien (literalmente, muy bien) también”\n\n
+                                    Ésta es una oración elíptica, con el sujeto “我” (wǒ) omitido.
+                                    En el chino hablado, cuando el contexro es explícito y no hay
+                                    ambigüedad, el sujeto se suele omitir. Se puede decir “很好” (“hěn hǎo”)
+                                    para responder a la pregunta “你好吗？”(“Nǐ hǎo má？”)</string>
 
 
 </resources>
