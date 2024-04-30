@@ -178,6 +178,44 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/hao"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/libo">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_hao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/hao_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="Hǎo"
+                        app:layout_constraintEnd_toEndOf="@+id/hao_caracter"
+                        app:layout_constraintStart_toStartOf="@+id/hao_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hao_caracter"
+                        style="@style/text_character"
+                        android:text="好"
+                        app:layout_constraintTop_toBottomOf="@+id/hao_pinyin" />
+
+                    <TextView
+                        android:id="@+id/hao_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Adj. Bien, bueno, OK"
+                        app:layout_constraintStart_toStartOf="@id/hao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/hao_caracter" />
+
+                    <ImageView style="@style/image_palabras_nuevas" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
