@@ -36,9 +36,7 @@ class Muralla : Fragment() {
         toolbar.visibility = View.VISIBLE
         flechaDevolver.visibility = View.GONE
 
-        toolbarUp.setOnClickListener {
-            null
-        }
+
 
         binding.nivel1.setOnClickListener {
             val gamemodeOrdenar = GameFragment()
