@@ -20,6 +20,7 @@
             />
 
         <ImageButton
+            android:id="@+id/nivel_1"
             style="@style/lvl"
             android:src="@drawable/botones_niveles"
             app:layout_constraintStart_toStartOf="parent"
