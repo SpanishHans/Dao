@@ -62,7 +62,6 @@
         android:layout_marginBottom="@dimen/dim_30dp"
         android:autofillHints="password"
         android:hint="@string/field_contraseña"
-
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@id/login_button_login" />
 
