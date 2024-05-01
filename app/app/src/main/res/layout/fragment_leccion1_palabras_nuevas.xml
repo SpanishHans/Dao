@@ -216,6 +216,82 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/ma"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/hao">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_ma"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/ma_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="Ma"
+                        app:layout_constraintEnd_toEndOf="@+id/ma_caracter"
+                        app:layout_constraintStart_toStartOf="@+id/ma_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ma_caracter"
+                        style="@style/text_character"
+                        android:text="吗"
+                        app:layout_constraintTop_toBottomOf="@+id/ma_pinyin" />
+
+                    <TextView
+                        android:id="@+id/ma_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Ptl. (Partícula interrogativa)"
+                        app:layout_constraintStart_toStartOf="@id/ma_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/ma_caracter" />
+
+                    <ImageView style="@style/image_palabras_nuevas" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wo"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/ma">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_wo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/wo_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="Wǒ"
+                        app:layout_constraintEnd_toEndOf="@+id/wo_caracter"
+                        app:layout_constraintStart_toStartOf="@+id/wo_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/wo_caracter"
+                        style="@style/text_character"
+                        android:text="我"
+                        app:layout_constraintTop_toBottomOf="@+id/wo_pinyin" />
+
+                    <TextView
+                        android:id="@+id/wo_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Pro. Yo, mí, me"
+                        app:layout_constraintStart_toStartOf="@id/wo_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/wo_caracter" />
+
+                    <ImageView style="@style/image_palabras_nuevas" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
