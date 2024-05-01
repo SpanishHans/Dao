@@ -8,11 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridLayout
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
+import edu.app.dao.databinding.FragmentGamemodeOrdenarBinding
+import edu.app.dao.fragments.Muralla
+import edu.app.dao.fragments.leccion1.Indice
 
 class GameFragment : Fragment() {
 
+    private lateinit var binding: FragmentGamemodeOrdenarBinding
     private lateinit var targetSentenceTextView: TextView
     private lateinit var characterBarLayout: LinearLayout
     private lateinit var keyboardGridLayout: GridLayout
@@ -22,14 +27,25 @@ class GameFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_gamemode_ordenar, container, false)
-        targetSentenceTextView = view.findViewById(R.id.targetSentenceTextView)
-        characterBarLayout = view.findViewById(R.id.characterBarLayout)
-        keyboardGridLayout = view.findViewById(R.id.keyboardGridLayout)
+        val binding = FragmentGamemodeOrdenarBinding.inflate(inflater, container, false)
+        targetSentenceTextView = binding.targetSentenceTextView
+        characterBarLayout = binding.characterBarLayout
+        keyboardGridLayout = binding.keyboardGridLayout
         setupKeyboard()
-        val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
-        flechaDevolver.visibility = View.VISIBLE
-        return view
+        val devolverFlecha = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
+        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+        devolverFlecha.visibility = View.VISIBLE
+
+        flechaDevolverImagen.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+            val muralla = Muralla()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, muralla)
+                commit()
+            }
+        }
+
+        return binding.root
     }
 
     private fun setupKeyboard() {

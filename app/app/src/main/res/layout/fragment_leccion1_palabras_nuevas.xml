@@ -257,7 +257,9 @@
             <RelativeLayout
                 android:id="@+id/wo"
                 style="@style/relative_palabras_nuevas"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/button_border"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ma">
 
                 <androidx.constraintlayout.widget.ConstraintLayout

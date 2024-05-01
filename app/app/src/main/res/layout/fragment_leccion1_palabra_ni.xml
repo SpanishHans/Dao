@@ -8,11 +8,151 @@
     tools:context=".fragments.leccion1.ui.theme.Leccion1PalabraNi">
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:id="@+id/ni_gif"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/ni_animation"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ni3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:textColor="@color/black"
+        android:text="Nǐ"
+        android:textSize="30dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ni_gif" />
+
+    <TextView
+        android:id="@+id/ni3_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:textColor="@color/black"
+        android:text="Pronombre."
+        android:textSize="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ni3" />
+
+    <TextView
+        android:id="@+id/ni3_traduccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Tú"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ni3_pro" />
+
+    <TextView
+        android:id="@+id/ni3_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Ejemplos"
+        android:textSize="35dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ni3_traduccion"/>
+
+    <ScrollView
+        android:id="@+id/ni3_palabra_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ni3_subtitulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_nihao"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_nihao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/nihao_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="Nǐ      Hǎo"
+                        app:layout_constraintEnd_toEndOf="@+id/nihao_caracter"
+                        app:layout_constraintStart_toStartOf="@+id/nihao_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/nihao_caracter"
+                        style="@style/text_character"
+                        android:text="你好"
+                        app:layout_constraintTop_toBottomOf="@+id/nihao_pinyin" />
+
+                    <TextView
+                        android:id="@+id/nihao_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Hola"
+                        app:layout_constraintStart_toStartOf="@id/nihao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/nihao_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_nihao">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_nihaoma"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/nihaoma_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="    Nǐ       hǎo      ma"
+                        app:layout_constraintStart_toStartOf="@+id/nihaoma_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/nihaoma_caracter"
+                        style="@style/text_character"
+                        android:text="你好吗？"
+                        app:layout_constraintTop_toBottomOf="@+id/nihaoma_pinyin" />
+
+                    <TextView
+                        android:id="@+id/nihaoma_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. ¿Cómo estas?"
+                        app:layout_constraintStart_toStartOf="@id/nihaoma_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/nihaoma_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

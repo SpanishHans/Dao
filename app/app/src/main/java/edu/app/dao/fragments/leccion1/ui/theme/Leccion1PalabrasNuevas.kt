@@ -29,7 +29,7 @@ class Leccion1PalabrasNuevas : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val devolverFlecha = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
-        toolbarText.text = "Nuevas palabras"
+        toolbarText.text = "Palabras nuevas"
         toolbarText.textSize = 30F
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         devolverFlecha.visibility = View.VISIBLE
