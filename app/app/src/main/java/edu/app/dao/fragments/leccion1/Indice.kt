@@ -33,6 +33,7 @@ class Indice : Fragment() {
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好"
+        toolbarText.textSize = 35F
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
         toolbar.visibility = View.GONE
         flechaDevolver.visibility = View.VISIBLE

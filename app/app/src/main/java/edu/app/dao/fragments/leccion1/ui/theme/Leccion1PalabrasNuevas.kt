@@ -43,10 +43,18 @@ class Leccion1PalabrasNuevas : Fragment() {
             }
         }
 
+        binding.linearLayoutTu.setOnClickListener {
+            val palabraNi = Leccion1PalabraNi()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, palabraNi)
+                commit()
+            }
+        }
+
 
 
         return binding.root
     }
-
+    
 
 }
