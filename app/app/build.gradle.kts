@@ -52,6 +52,7 @@ android {
 }
 
 dependencies {
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
     implementation(libs.firebase.database)
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
