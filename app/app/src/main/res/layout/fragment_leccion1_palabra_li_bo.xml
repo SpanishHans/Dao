@@ -98,112 +98,77 @@
             android:layout_height="wrap_content">
 
             <RelativeLayout
-                android:id="@+id/relativeLayout_luzaidaxue"
+                android:id="@+id/relativeLayout_libochimianbao"
                 style="@style/relative_palabras_nuevas"
                 android:background="@drawable/button_border"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_luzaidaxue"
+                    android:id="@+id/linearLayout_libochimianbao"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/luzaidaxue_pinyin"
+                        android:id="@+id/libochimianbao_pinyin"
                         style="@style/text_pinyin"
-                        android:text="Lù       yǔ        píng     zài       dà      xué "
-                        app:layout_constraintEnd_toEndOf="@+id/luzaidaxue_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/luzaidaxue_caracter"
+                        android:text="     Lì       bō      chī     miàn     bāo"
+                        app:layout_constraintStart_toStartOf="@+id/libochimianbao_caracter"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/luzaidaxue_caracter"
+                        android:id="@+id/libochimianbao_caracter"
                         style="@style/text_character"
-                        android:text="陆雨平在大学"
-                        app:layout_constraintTop_toBottomOf="@+id/luzaidaxue_pinyin" />
+                        android:text="力波吃面包"
+                        app:layout_constraintTop_toBottomOf="@+id/libochimianbao_pinyin" />
 
                     <TextView
-                        android:id="@+id/luzaidaxue_traduccion"
+                        android:id="@+id/libochimianbao_traduccion"
                         style="@style/text_traduccion"
-                        android:text="Frs. Lu Yuping está en la universidad."
-                        app:layout_constraintStart_toStartOf="@id/luzaidaxue_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/luzaidaxue_caracter" />
+                        android:text="Frs. Libo come pan"
+                        app:layout_constraintStart_toStartOf="@id/libochimianbao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/libochimianbao_caracter" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/relative_woailu"
+                android:id="@+id/relative_libohecha"
                 style="@style/relative_palabras_nuevas"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/button_border"
-                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_luzaidaxue">
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_libochimianbao">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_woailu"
+                    android:id="@+id/linearLayout_libohecha"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/woailu_pinyin"
+                        android:id="@+id/libohecha_pinyin"
                         style="@style/text_pinyin"
-                        android:text="   Wǒ       ài        lù        yǔ       píng"
-                        app:layout_constraintStart_toStartOf="@+id/woailu_caracter"
+                        android:text="    Lì        bō        hē     chá "
+                        app:layout_constraintStart_toStartOf="@+id/libohecha_caracter"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/woailu_caracter"
+                        android:id="@+id/libohecha_caracter"
                         style="@style/text_character"
-                        android:text="我爱陆雨平"
-                        app:layout_constraintTop_toBottomOf="@+id/woailu_pinyin" />
+                        android:text="力波喝茶"
+                        app:layout_constraintTop_toBottomOf="@+id/libohecha_pinyin" />
 
                     <TextView
-                        android:id="@+id/woailu_traduccion"
+                        android:id="@+id/libohecha_traduccion"
                         style="@style/text_traduccion"
-                        android:text="Frs. Yo amo a Lu Yuping"
-                        app:layout_constraintStart_toStartOf="@id/woailu_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/woailu_caracter" />
+                        android:text="Frs. Libo toma té"
+                        app:layout_constraintStart_toStartOf="@id/libohecha_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/libohecha_caracter" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/relative_luhengao"
-                style="@style/relative_palabras_nuevas"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/button_border"
-                app:layout_constraintTop_toBottomOf="@+id/relative_woailu">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_luhengao"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/luhengao_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="   Lù       yǔ       píng    hěn      gāo"
-                        app:layout_constraintStart_toStartOf="@+id/luhengao_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/luhengao_caracter"
-                        style="@style/text_character"
-                        android:text="陆雨平很高"
-                        app:layout_constraintTop_toBottomOf="@+id/luhengao_pinyin" />
-
-                    <TextView
-                        android:id="@+id/luhengao_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="Frs. Lu Yuping es alto"
-                        app:layout_constraintStart_toStartOf="@id/luhengao_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/luhengao_caracter" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

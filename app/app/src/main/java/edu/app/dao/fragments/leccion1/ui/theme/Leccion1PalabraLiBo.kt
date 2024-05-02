@@ -38,7 +38,7 @@ class Leccion1PalabraLiBo : Fragment() {
             }
         }
 
-
+        binding
 
 
         return binding.root

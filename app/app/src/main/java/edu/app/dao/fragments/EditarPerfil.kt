@@ -107,9 +107,6 @@ class EditarPerfil : Fragment() {
             if (newNombre.isNotEmpty()) nuevosDatos["nameFull"] = newNombre
             if (newDescription.isNotEmpty()) nuevosDatos["description"] = newDescription
 
-            // Llama al método makeCurrentFragment() de la actividad principal para cambiar de fragmento
-            (activity as InicioPrincipal).makeCurrentFragment(yop)
-
             // Actualiza los datos en la base de datos solo si hay campos no vacíos
             if (nuevosDatos.isNotEmpty()) {
                 refUsuarios.updateChildren(nuevosDatos)
@@ -128,6 +125,7 @@ class EditarPerfil : Fragment() {
                 Toast.makeText(requireContext(), "No hay cambios para guardar", Toast.LENGTH_SHORT)
                     .show()
             }
+
         }
 
         // Al hacer clic sobre la foto de perfil lo lleva a la actividad para cambiar la foto
