@@ -7,7 +7,9 @@ plugins {
 android {
     namespace = "edu.app.dao"
     compileSdk = 34
-
+    aaptOptions{
+        noCompress.add("flac")
+    }
     defaultConfig {
         applicationId = "edu.app.dao"
         minSdk = 30

@@ -1,6 +1,7 @@
 package edu.app.dao.fragments.leccion1.ui.theme
 
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import edu.app.dao.fragments.leccion1.Indice
 class Leccion1PalabraNi : Fragment() {
 
     private lateinit var binding: FragmentLeccion1PalabraNiBinding
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,8 +40,30 @@ class Leccion1PalabraNi : Fragment() {
             }
         }
 
+        binding.niGif.setOnClickListener {
+            if (!this::mediaPlayer.isInitialized){
+                mediaPlayer = MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_ni)
+            }
+            if (mediaPlayer.isPlaying){
+                mediaPlayer.pause()
+                mediaPlayer.seekTo(0)
+                return@setOnClickListener
+            }
+
+            mediaPlayer.start()
+
+        }
+
 
         return binding.root
+    }
+
+    override fun onDestroy() {
+        if (this::mediaPlayer.isInitialized){
+            mediaPlayer.stop()
+            mediaPlayer.release()
+        }
+        super.onDestroy()
     }
 
 }
