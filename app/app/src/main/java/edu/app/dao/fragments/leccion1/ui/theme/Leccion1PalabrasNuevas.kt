@@ -51,6 +51,14 @@ class Leccion1PalabrasNuevas : Fragment() {
             }
         }
 
+        binding.linearLayoutLuyu.setOnClickListener{
+            val palabraLuYu = Leccion1PalabraLuYuPing()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, palabraLuYu)
+                commit()
+            }
+        }
+
 
 
         return binding.root
