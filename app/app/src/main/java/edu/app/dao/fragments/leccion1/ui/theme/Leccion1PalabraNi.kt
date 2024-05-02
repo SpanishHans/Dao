@@ -11,7 +11,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentLeccion1PalabraNiBinding
-import edu.app.dao.fragments.leccion1.Indice
 
 
 class Leccion1PalabraNi : Fragment() {
