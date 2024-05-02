@@ -59,6 +59,38 @@ class Leccion1PalabrasNuevas : Fragment() {
             }
         }
 
+        binding.linearLayoutLibo.setOnClickListener {
+            val palabraLiBo = Leccion1PalabraLiBo()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, palabraLiBo)
+                commit()
+            }
+        }
+
+        binding.linearLayoutHao.setOnClickListener {
+            val palabraHao = Leccion1PalabraHao()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, palabraHao)
+                commit()
+            }
+        }
+
+        binding.linearLayoutMa.setOnClickListener {
+            val palabraMa = Leccion1PalabraHao()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, palabraMa)
+                commit()
+            }
+        }
+
+        binding.linearLayoutWo.setOnClickListener {
+            val palabraWo = Leccion1PalabraWo()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, palabraWo)
+                commit()
+            }
+        }
+
 
 
         return binding.root

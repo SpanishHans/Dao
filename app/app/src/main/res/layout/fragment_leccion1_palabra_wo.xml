@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.leccion1.ui.theme.Leccion1PalabraNi">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/wo_gif"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/wo_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/wo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Wǒ"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wo_gif" />
+
+    <TextView
+        android:id="@+id/wo_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Pronombre."
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wo3" />
+
+    <TextView
+        android:id="@+id/wo3_traduccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Yo, mí, me"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wo_nom" />
+
+    <TextView
+        android:id="@+id/wo3_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Ejemplos"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wo3_traduccion" />
+
+    <ScrollView
+        android:id="@+id/wo3_palabra_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wo3_subtitulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_wohenhao"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_wohenhao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/wohenhao_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="  Wǒ      hěn      hǎo"
+                        app:layout_constraintStart_toStartOf="@+id/wohenhao_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/wohenhao_caracter"
+                        style="@style/text_character"
+                        android:text="我很好"
+                        app:layout_constraintTop_toBottomOf="@+id/wohenhao_pinyin" />
+
+                    <TextView
+                        android:id="@+id/wohenhao_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Yo estoy bien"
+                        app:layout_constraintStart_toStartOf="@id/wohenhao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/wohenhao_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_woaini"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_wohenhao">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_woaini"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/woaini_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="  Wǒ       ài         nǐ"
+                        app:layout_constraintStart_toStartOf="@+id/woaini_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/woaini_caracter"
+                        style="@style/text_character"
+                        android:text="我爱你"
+                        app:layout_constraintTop_toBottomOf="@+id/woaini_pinyin" />
+
+                    <TextView
+                        android:id="@+id/woaini_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Te amo"
+                        app:layout_constraintStart_toStartOf="@id/woaini_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/woaini_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

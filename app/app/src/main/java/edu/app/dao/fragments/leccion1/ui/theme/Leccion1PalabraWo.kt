@@ -10,19 +10,18 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import edu.app.dao.R
-import edu.app.dao.databinding.FragmentLeccion1PalabraLiBoBinding
+import edu.app.dao.databinding.FragmentLeccion1PalabraWoBinding
 
-class Leccion1PalabraLiBo : Fragment() {
-
-    private lateinit var binding: FragmentLeccion1PalabraLiBoBinding
-    private var liMediaplayer: MediaPlayer? = null
-    private var boMediaPlayer: MediaPlayer? = null
+class Leccion1PalabraWo : Fragment() {
+    private lateinit var binding: FragmentLeccion1PalabraWoBinding
+    private var MediaPlayer: MediaPlayer? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLeccion1PalabraLiBoBinding.inflate(inflater, container, false)
+        // Inflate the layout for this fragment
+        binding = FragmentLeccion1PalabraWoBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好-生词"
@@ -38,11 +37,11 @@ class Leccion1PalabraLiBo : Fragment() {
             }
         }
 
-        binding.liGif.setOnClickListener {
-            if (liMediaplayer == null){
-                liMediaplayer = MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_li)
+        binding.woGif.setOnClickListener {
+            if (MediaPlayer == null){
+                MediaPlayer = android.media.MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_wo)
             }
-            liMediaplayer?.apply {
+            MediaPlayer?.apply {
                 if (isPlaying){
                     pause()
                     seekTo(0)
@@ -51,29 +50,14 @@ class Leccion1PalabraLiBo : Fragment() {
                 }
             }
         }
-
-        binding.boGif.setOnClickListener {
-            if (boMediaPlayer == null){
-                boMediaPlayer = MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_bo)
-            }
-            boMediaPlayer?.apply {
-                if (isPlaying){
-                    pause()
-                    seekTo(0)
-                } else {
-                    start()
-                }
-            }
-        }
-
 
         return binding.root
     }
 
     override fun onDestroy() {
-        liMediaplayer?.release()
-        boMediaPlayer?.release()
+        MediaPlayer?.release()
         super.onDestroy()
     }
+
 
 }
