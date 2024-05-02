@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.leccion1.ui.theme.Leccion1PalabraNi">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/bo_gif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/bo_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/li_gif"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/li_gif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/li_animation"
+        app:layout_constraintEnd_toStartOf="@+id/bo_gif"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/li4bo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Lì                bō "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/li_gif" />
+
+    <TextView
+        android:id="@+id/libo_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Nombre."
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/li4bo1" />
+
+    <TextView
+        android:id="@+id/li4bo1_traduccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Libo"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/libo_nom" />
+
+    <TextView
+        android:id="@+id/li4bo1_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Ejemplos"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/li4bo1_traduccion" />
+
+    <ScrollView
+        android:id="@+id/li4bo1_palabra_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/li4bo1_subtitulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_luzaidaxue"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_luzaidaxue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/luzaidaxue_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="Lù       yǔ        píng     zài       dà      xué "
+                        app:layout_constraintEnd_toEndOf="@+id/luzaidaxue_caracter"
+                        app:layout_constraintStart_toStartOf="@+id/luzaidaxue_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/luzaidaxue_caracter"
+                        style="@style/text_character"
+                        android:text="陆雨平在大学"
+                        app:layout_constraintTop_toBottomOf="@+id/luzaidaxue_pinyin" />
+
+                    <TextView
+                        android:id="@+id/luzaidaxue_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Lu Yuping está en la universidad."
+                        app:layout_constraintStart_toStartOf="@id/luzaidaxue_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/luzaidaxue_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_woailu"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_luzaidaxue">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_woailu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/woailu_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="   Wǒ       ài        lù        yǔ       píng"
+                        app:layout_constraintStart_toStartOf="@+id/woailu_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/woailu_caracter"
+                        style="@style/text_character"
+                        android:text="我爱陆雨平"
+                        app:layout_constraintTop_toBottomOf="@+id/woailu_pinyin" />
+
+                    <TextView
+                        android:id="@+id/woailu_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Yo amo a Lu Yuping"
+                        app:layout_constraintStart_toStartOf="@id/woailu_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/woailu_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_luhengao"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relative_woailu">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_luhengao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/luhengao_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="   Lù       yǔ       píng    hěn      gāo"
+                        app:layout_constraintStart_toStartOf="@+id/luhengao_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/luhengao_caracter"
+                        style="@style/text_character"
+                        android:text="陆雨平很高"
+                        app:layout_constraintTop_toBottomOf="@+id/luhengao_pinyin" />
+
+                    <TextView
+                        android:id="@+id/luhengao_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Lu Yuping es alto"
+                        app:layout_constraintStart_toStartOf="@id/luhengao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/luhengao_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
