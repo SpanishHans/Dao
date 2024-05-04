@@ -208,5 +208,14 @@
         <item name="layout_constraintTop_toTopOf">parent</item>
     </style>
 
+    <style name="button_ejercicios_fonetica">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/amarillo_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_bold</item>
+    </style>
+
 
 </resources>

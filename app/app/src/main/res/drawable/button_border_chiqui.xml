@@ -1,0 +1,6 @@
+<!-- button_border_chiqui.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/dim_15dp" />
+    <solid android:color="@color/amarillo_light" />
+</shape>
