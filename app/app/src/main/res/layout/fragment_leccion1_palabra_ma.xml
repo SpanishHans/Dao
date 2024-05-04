@@ -1,14 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.leccion1.ui.theme.Leccion1PalabraMa">
+    tools:context=".fragments.leccion1.ui.theme.Leccion1PalabraNi">
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/ma_gif"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ma_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/ma0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Ma"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ma_gif" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/ma_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Partícula."
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ma0" />
+
+    <TextView
+        android:id="@+id/ma0_traduccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Usado al final de una pregunta"
+        android:textColor="@color/black"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ma_nom" />
+
+    <TextView
+        android:id="@+id/ma0_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Ejemplos"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ma0_traduccion" />
+
+    <ScrollView
+        android:id="@+id/ma0_palabra_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ma0_subtitulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_xihuanma"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_xihuanma"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/xihuanma_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="   Nǐ         xǐ      huan     ma"
+                        app:layout_constraintStart_toStartOf="@+id/xihuanma_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/xihuanma_caracter"
+                        style="@style/text_character"
+                        android:text="你喜欢吗？"
+                        app:layout_constraintTop_toBottomOf="@+id/xihuanma_pinyin" />
+
+                    <TextView
+                        android:id="@+id/xihuanma_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. ¿Te gusta?"
+                        app:layout_constraintStart_toStartOf="@id/xihuanma_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/xihuanma_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_mangma"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_xihuanma">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_mangma"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/mangma_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="   Nǐ     máng    ma "
+                        app:layout_constraintStart_toStartOf="@+id/mangma_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mangma_caracter"
+                        style="@style/text_character"
+                        android:text="你忙吗？"
+                        app:layout_constraintTop_toBottomOf="@+id/mangma_pinyin" />
+
+                    <TextView
+                        android:id="@+id/mangma_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Estás ocupado/a/e"
+                        app:layout_constraintStart_toStartOf="@id/mangma_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/mangma_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

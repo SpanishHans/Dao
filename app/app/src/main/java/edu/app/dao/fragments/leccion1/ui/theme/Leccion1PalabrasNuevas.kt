@@ -76,7 +76,7 @@ class Leccion1PalabrasNuevas : Fragment() {
         }
 
         binding.linearLayoutMa.setOnClickListener {
-            val palabraMa = Leccion1PalabraHao()
+            val palabraMa = Leccion1PalabraMa()
             requireActivity().supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fl_wrapper, palabraMa)
                 commit()

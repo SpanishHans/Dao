@@ -1,6 +1,7 @@
 package edu.app.dao.fragments.leccion1.ui.theme
 
 import android.graphics.Typeface
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,7 +14,7 @@ import edu.app.dao.databinding.FragmentLeccion1PalabraMaBinding
 
 class Leccion1PalabraMa : Fragment() {
     private lateinit var binding: FragmentLeccion1PalabraMaBinding
-
+    private var MediaPlayer: MediaPlayer? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +34,22 @@ class Leccion1PalabraMa : Fragment() {
                 commit()
             }
         }
+
+        binding.maGif.setOnClickListener {
+            if (MediaPlayer == null){
+                MediaPlayer = android.media.MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_ma)
+            }
+            MediaPlayer?.apply {
+                if (isPlaying){
+                    pause()
+                    seekTo(0)
+                } else {
+                    start()
+                }
+            }
+        }
+
+
         return binding.root
     }
 
