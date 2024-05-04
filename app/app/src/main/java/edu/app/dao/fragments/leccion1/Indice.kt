@@ -67,7 +67,7 @@ class Indice : Fragment() {
             navegarFragmento(leccion1Notas)
         }
 
-        binding.buttonFonetica.setOnClickListener {
+        binding.buttonEjerciciosFonetica.setOnClickListener {
             Toast.makeText(requireContext(), "Clic en ejercicios de fonética", Toast.LENGTH_SHORT).show()
         }
 
