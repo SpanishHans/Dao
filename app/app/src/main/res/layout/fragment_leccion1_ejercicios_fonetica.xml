@@ -23,9 +23,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <Button
                     android:id="@+id/boton_deletrear_1"
                     style="@style/boton_notas"
@@ -37,11 +39,141 @@
                 <Button
                     android:id="@+id/button"
                     style="@style/button_ejercicios_fonetica"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="bing"
+                    android:text="bā"
+                    app:layout_constraintEnd_toStartOf="@+id/button2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/boton_deletrear_1" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:layout_marginTop="16dp"
+                    android:text="bō"
+                    app:layout_constraintEnd_toStartOf="@+id/button3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button"
+                    app:layout_constraintTop_toBottomOf="@+id/boton_deletrear_1" />
+
+                <Button
+                    android:id="@+id/button3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:layout_marginTop="16dp"
+                    android:text="bī"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button2"
+                    app:layout_constraintTop_toBottomOf="@+id/boton_deletrear_1" />
+
+                <Button
+                    android:id="@+id/button5"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="bū"
+                    app:layout_constraintEnd_toStartOf="@+id/button6"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button" />
+
+                <Button
+                    android:id="@+id/button6"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="bīn"
+                    app:layout_constraintEnd_toStartOf="@+id/button7"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button5"
+                    app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+                <Button
+                    android:id="@+id/button7"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="bīng"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button6"
+                    app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+                <Button
+                    android:id="@+id/button11"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="pā"
+                    app:layout_constraintEnd_toStartOf="@+id/button12"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+                <Button
+                    android:id="@+id/button12"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="pō"
+                    app:layout_constraintEnd_toStartOf="@+id/button13"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button11"
+                    app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+                <Button
+                    android:id="@+id/button13"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="pī"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button12"
+                    app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+                <Button
+                    android:id="@+id/button14"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="pū"
+                    app:layout_constraintEnd_toStartOf="@+id/button15"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+                <Button
+                    android:id="@+id/button15"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="pīn"
+                    app:layout_constraintEnd_toStartOf="@+id/button17"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button14"
+                    app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+                <Button
+                    android:id="@+id/button17"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="pīng"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button15"
+                    app:layout_constraintTop_toBottomOf="@+id/button13" />
+
+                <Button
+                    android:id="@+id/button18"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="mā"
+                    app:layout_constraintEnd_toStartOf="@+id/button19"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button14" />
+
+                <Button
+                    android:id="@+id/button19"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="mō"
+                    app:layout_constraintEnd_toStartOf="@+id/button21"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button18"
+                    app:layout_constraintTop_toBottomOf="@+id/button15" />
+
+                <Button
+                    android:id="@+id/button21"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="mī"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button19"
+                    app:layout_constraintTop_toBottomOf="@+id/button17" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
