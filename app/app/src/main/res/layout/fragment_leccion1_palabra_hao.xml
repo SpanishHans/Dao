@@ -1,14 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.leccion1.ui.theme.Leccion1PalabraHao">
+    tools:context=".fragments.leccion1.ui.theme.Leccion1PalabraNi">
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/hao_gif"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/hao_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/hao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Hǎo"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hao_gif" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/hao_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Adjetivo."
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hao3" />
+
+    <TextView
+        android:id="@+id/hao3_traduccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:text="Bueno, amable, amigable"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hao_nom" />
+
+    <TextView
+        android:id="@+id/hao3_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Ejemplos"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hao3_traduccion" />
+
+    <ScrollView
+        android:id="@+id/hao3_palabra_nueva"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hao3_subtitulo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_haoren"
+                style="@style/relative_palabras_nuevas"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_haoren"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/haoren_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="  Hǎo     rén"
+                        app:layout_constraintStart_toStartOf="@+id/haoren_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/haoren_caracter"
+                        style="@style/text_character"
+                        android:text="好人"
+                        app:layout_constraintTop_toBottomOf="@+id/haoren_pinyin" />
+
+                    <TextView
+                        android:id="@+id/haoren_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Buena persona"
+                        app:layout_constraintStart_toStartOf="@id/haoren_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/haoren_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_haopeng"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout_haoren">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_haopeng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/haopeng_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="  Hǎo     péng   you "
+                        app:layout_constraintStart_toStartOf="@+id/haopeng_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/haopeng_caracter"
+                        style="@style/text_character"
+                        android:text="好朋友"
+                        app:layout_constraintTop_toBottomOf="@+id/haopeng_pinyin" />
+
+                    <TextView
+                        android:id="@+id/haopeng_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Buen amigo"
+                        app:layout_constraintStart_toStartOf="@id/haopeng_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/haopeng_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_tinghao"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relative_haopeng">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_tinghao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tinghao_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="  Tǐng    hǎo       de"
+                        app:layout_constraintStart_toStartOf="@+id/tinghao_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tinghao_caracter"
+                        style="@style/text_character"
+                        android:text="挺好的"
+                        app:layout_constraintTop_toBottomOf="@+id/tinghao_pinyin" />
+
+                    <TextView
+                        android:id="@+id/tinghao_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Muy bien"
+                        app:layout_constraintStart_toStartOf="@id/tinghao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/tinghao_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_buhao"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintTop_toBottomOf="@+id/relative_tinghao">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_buhao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/buhao_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="   Bù      hǎo "
+                        app:layout_constraintStart_toStartOf="@+id/buhao_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/buhao_caracter"
+                        style="@style/text_character"
+                        android:text="不好"
+                        app:layout_constraintTop_toBottomOf="@+id/buhao_pinyin" />
+
+                    <TextView
+                        android:id="@+id/buhao_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. No está bien"
+                        app:layout_constraintStart_toStartOf="@id/buhao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/buhao_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_shentihao"
+                style="@style/relative_palabras_nuevas"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/relative_buhao">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout_shentihao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/shentihao_pinyin"
+                        style="@style/text_pinyin"
+                        android:text="  Shēn     tǐ        hǎo"
+                        app:layout_constraintStart_toStartOf="@+id/shentihao_caracter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/shentihao_caracter"
+                        style="@style/text_character"
+                        android:text="身体好"
+                        app:layout_constraintTop_toBottomOf="@+id/shentihao_pinyin" />
+
+                    <TextView
+                        android:id="@+id/shentihao_traduccion"
+                        style="@style/text_traduccion"
+                        android:text="Frs. Estar en buena salud"
+                        app:layout_constraintStart_toStartOf="@id/shentihao_caracter"
+                        app:layout_constraintTop_toBottomOf="@+id/shentihao_caracter" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
