@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
@@ -51,6 +52,12 @@ class EditarPerfil : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         toolbarText.text = "Información personal"
         toolbarText.textSize = 30F
+
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
         // Carga la foto de perfil que se tienen guardada con el usuario. Si no se encuentra nada
         // entonces carga una imagen por defecto (la gris toda fea)

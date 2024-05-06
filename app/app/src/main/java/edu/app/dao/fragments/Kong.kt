@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.Toolbar
 import edu.app.dao.completar.FragmentoCompletar
 import edu.app.dao.R
@@ -35,6 +36,11 @@ class Kong : Fragment() {
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
         flechaDevolver.visibility = View.GONE
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
 
 

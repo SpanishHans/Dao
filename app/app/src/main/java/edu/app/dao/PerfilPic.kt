@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.storage.FirebaseStorage
@@ -19,6 +20,10 @@ class PerfilPic : AppCompatActivity(){
         supportActionBar?.hide()
         binding = PerfilPicBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        })
 
         val storageReference = FirebaseStorage.getInstance().reference
 

@@ -13,6 +13,7 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.Toolbar
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
@@ -55,6 +56,12 @@ class yop : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val devolverFlecha = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         val fragmentManager = requireActivity().supportFragmentManager
+
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
         toolbarText.text = "Editar Perfil"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbarDown.visibility = View.VISIBLE

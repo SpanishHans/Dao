@@ -10,6 +10,8 @@ import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.OnBackPressedDispatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.graphics.Color
 import androidx.core.content.ContextCompat
@@ -27,6 +29,11 @@ class WelcomeToApp : AppCompatActivity() {
     private lateinit var binding: WelcomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        })
 
         // Oculta una parte de arriba que se ve feísima (Barra de acción)
         supportActionBar?.hide()
@@ -61,7 +68,5 @@ class WelcomeToApp : AppCompatActivity() {
                 Toast.makeText(this, "No estás conectado a internet!", Toast.LENGTH_SHORT).show()
             }
         }
-
-
     }
 }
