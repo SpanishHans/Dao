@@ -15,6 +15,7 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.replace
 import com.google.firebase.database.DataSnapshot
@@ -59,8 +60,11 @@ class FragmentoOrdenar : Fragment() {
         binding.buttonEnd.visibility = View.GONE
         binding.buttonContinue.visibility = View.GONE
         toolbar.visibility = View.GONE
-
-
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
         val answer = listOf("你", "好", "吗", "？")
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
@@ -163,7 +167,7 @@ class FragmentoOrdenar : Fragment() {
     private fun setupKeyboard() {
 
         val keyboardCharacters = listOf(
-            '你', '好', '吗', '？'
+            '好', '你', '？', '吗'
         )
         val buttonMargin = resources.getDimensionPixelSize(R.dimen.dim_2dp)
         keyboardCharacters.forEach { char ->

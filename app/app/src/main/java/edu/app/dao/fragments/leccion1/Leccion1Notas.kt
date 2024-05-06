@@ -10,6 +10,7 @@ import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentLeccion1NotasBinding
 
@@ -30,6 +31,11 @@ class Leccion1Notas : Fragment() {
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
         toolbar.visibility = View.GONE
         flechaDevolver.visibility = View.VISIBLE
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
 
         flechaDevolverImagen.setOnClickListener {

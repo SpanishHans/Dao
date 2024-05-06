@@ -12,6 +12,7 @@ import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.core.os.bundleOf
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentLeccion1EjerciciosFoneticaBinding
@@ -36,6 +37,11 @@ class Leccion1EjerciciosFonetica : Fragment() {
             Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
         toolbar.visibility = View.GONE
         flechaDevolver.visibility = View.VISIBLE
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()

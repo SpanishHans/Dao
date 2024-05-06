@@ -2,6 +2,7 @@ package edu.app.dao.fragments
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.firebase.database.DatabaseReference
@@ -34,6 +35,10 @@ class InicioPrincipal : AppCompatActivity() {
         val yopFragment = yop()
         val taoFragment = Tao()
         val murallaFragment = Muralla()
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        })
 
         // Hacer que cuando se inicie esta actividad, que el fragmento que diriga sea el de Kong (Dojo)
         makeCurrentFragment(murallaFragment)

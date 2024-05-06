@@ -3,6 +3,7 @@ package edu.app.dao
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -34,6 +35,11 @@ class RegisterToApp : AppCompatActivity() {
 
         // Oculta la barra de arriba que se ve feísima
         supportActionBar?.hide()
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        })
 
         // Se utiliza el binding para inflar la vista y meterse como raiz
         binding = RegisterBinding.inflate(layoutInflater)

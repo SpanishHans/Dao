@@ -10,6 +10,7 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.renderscript.Sampler.Value
 import android.util.Log
+import androidx.activity.OnBackPressedCallback
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -40,6 +41,11 @@ class LoginToApp : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        })
 
         // Oculta la parte de arriba que se vía feísima
         supportActionBar?.hide()
