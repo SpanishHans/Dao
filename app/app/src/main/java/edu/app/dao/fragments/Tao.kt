@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.replace
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentTaoBinding
 import edu.app.dao.fragments.leccion1.Indice
@@ -39,6 +40,7 @@ class Tao : Fragment() {
             override fun handleOnBackPressed() {
             }
         }
+        val indice = Indice()
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
         toolbarUp.setOnClickListener {
@@ -49,7 +51,27 @@ class Tao : Fragment() {
 
 
         binding.leccion1.setOnClickListener {
-            val indice = Indice()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, indice)
+                commit()
+            }
+        }
+
+        binding.leccion2.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper,  indice)
+                commit()
+            }
+        }
+
+        binding.leccion3.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, indice)
+                commit()
+            }
+        }
+
+        binding.leccion4.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fl_wrapper, indice)
                 commit()
