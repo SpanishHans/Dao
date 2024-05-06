@@ -12,6 +12,7 @@ import android.widget.GridLayout
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentGamemodeOrdenarBinding
 import edu.app.dao.fragments.Muralla
@@ -36,7 +37,7 @@ class FragmentoOrdenar : Fragment() {
         val flechaDevolverImagen =
             requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         devolverFlecha.visibility = View.VISIBLE
-
+        val answer = listOf("你", "好", "吗", "？")
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
             val muralla = Muralla()
@@ -46,28 +47,50 @@ class FragmentoOrdenar : Fragment() {
             }
         }
 
-        binding.buttonComprobar.setOnClickListener {
+        binding.buttonVerificar.setOnClickListener {
             val containerLayout: ViewGroup = characterBarLayout
 
             val buttonsToRemove = mutableListOf<Button>()
-            for (i in 0 until containerLayout.childCount){
+            val inputUser = mutableListOf<String>()
+            for (i in 0 until containerLayout.childCount) {
                 val view = containerLayout.getChildAt(i)
-                if (view is Button){
-                    val buttonText= view.text.toString()
-                    Log.wtf("Texto del botón", buttonText)
+                if (view is Button) {
+                    val buttonText = view.text.toString()
+                    buttonsToRemove.add(view)
+                    inputUser += buttonText
+                }
+            }
+            if (inputUser == answer) {
+                Toast.makeText(requireContext(), "La respuesta es correcta!", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+                Toast.makeText(requireContext(), "La respuesta es incorrecta!", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        binding.buttonReordenar.setOnClickListener {
+            characterBarLayout.removeAllViews()
+            keyboardGridLayout.removeAllViews()
+            val containerLayout: ViewGroup = characterBarLayout
+            val buttonsToRemove = mutableListOf<Button>()
+            for (i in 0 until containerLayout.childCount) {
+                val view = containerLayout.getChildAt(i)
+                if (view is Button) {
                     buttonsToRemove.add(view)
                 }
             }
-
             buttonsToRemove.forEach { button ->
                 containerLayout.removeView(button)
             }
             setupKeyboard()
         }
+
         return binding.root
     }
 
     private fun setupKeyboard() {
+
         val keyboardCharacters = listOf(
             '你', '好', '吗', '？'
         )
@@ -106,11 +129,6 @@ class FragmentoOrdenar : Fragment() {
                         0
                     ) // Set margins (left, top, right, bottom)
                     setLayoutParams(layoutParams2)
-                    setOnClickListener {
-                        characterBarLayout.removeView(this)
-                        (this.parent as? ViewGroup)?.removeView(this)
-                        keyboardGridLayout.addView(this)
-                    }
                 })
                 keyboardGridLayout.removeView(button)
             }
