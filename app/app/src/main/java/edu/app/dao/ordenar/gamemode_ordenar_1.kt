@@ -167,7 +167,7 @@ class FragmentoOrdenar : Fragment() {
     private fun setupKeyboard() {
 
         val keyboardCharacters = listOf(
-            '你', '好', '吗', '？'
+            '好', '你', '？', '吗'
         )
         val buttonMargin = resources.getDimensionPixelSize(R.dimen.dim_2dp)
         keyboardCharacters.forEach { char ->

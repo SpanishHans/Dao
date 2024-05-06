@@ -11,6 +11,7 @@ import android.widget.EditText
 
 import android.text.SpannableString
 import android.text.Spanned
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import edu.app.dao.R
 
@@ -39,7 +40,11 @@ class FragmentoCompletar : Fragment() {
         editText.hint = "Fill in the missing word"
         editText.setBackgroundColor(ContextCompat.getColor(requireContext(), android.R.color.transparent))
         spannableString.setSpan(editText, fillWordStart, fillWordEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
         // Set the SpannableString to the TextView
         contextParagraphTextView.text = spannableString
 
