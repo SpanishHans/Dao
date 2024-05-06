@@ -1,5 +1,7 @@
 package edu.app.dao.ordenar
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.util.Log
@@ -69,6 +71,8 @@ class FragmentoOrdenar : Fragment() {
                 binding.buttonVerificar.apply {
                     setBackgroundColor(ContextCompat.getColor(context, R.color.amarillo_dark))
                 }
+                binding.buttonVerificar.backgroundTintList = ColorStateList.valueOf(Color.GRAY)
+                binding.buttonReordenar.backgroundTintList = ColorStateList.valueOf(Color.GRAY)
             } else {
                 Toast.makeText(requireContext(), "La respuesta es incorrecta!", Toast.LENGTH_SHORT)
                     .show()

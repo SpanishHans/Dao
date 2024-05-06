@@ -60,4 +60,16 @@
         android:layout_height="match_parent"
         android:background="#80000000" />
 
+    <Button
+        android:id="@+id/button_end"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/button_border"
+        android:text="Button"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/view_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
