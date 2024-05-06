@@ -73,7 +73,8 @@ class Indice : Fragment() {
         }
 
         binding.buttonConversacion.setOnClickListener {
-            Toast.makeText(requireContext(), "Clic en práctica de conversacion", Toast.LENGTH_SHORT).show()
+            val leccion1PracticaConversacion = Leccion1PracticaConversacion()
+            navegarFragmento(leccion1PracticaConversacion)
         }
 
         binding.buttonFonetica.setOnClickListener {
