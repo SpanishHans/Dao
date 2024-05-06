@@ -9,15 +9,53 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/leccion_1_expresiones_clave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/helvetica_neue_bold"
         android:textColor="@color/black"
+        android:textSize="20dp"
         android:text="@string/leccion1_expresionesclave_text"
         android:gravity="center_vertical"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/leccion_1_dialogo_situacional"
+        style="@style/boton_notas"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="dialogo situacional"
+        app:layout_constraintTop_toBottomOf="@+id/leccion_1_expresiones_clave"
+        tools:layout_editor_absoluteX="41dp" />
+
+    <TextView
+        android:id="@+id/text_dialogo_situacional"
+        style="@style/texto_notas"
+        android:textSize="18dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_dialogo_situacional"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/leccion_1_dialogo_situacional" />
+
+    <TextView
+        android:id="@+id/text_zh_dialogo_situacional"
+        style="@style/texto_notas"
+        android:fontFamily="@font/ma_shan_zheng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialogo_situacional_zh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dialogo_situacional" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
