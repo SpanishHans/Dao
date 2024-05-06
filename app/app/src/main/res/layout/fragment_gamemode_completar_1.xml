@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="@dimen/dim_30dp"
+    android:background="@color/fondo"
     >
 
     <TextView
@@ -105,17 +106,6 @@
             app:layout_constraintStart_toEndOf="@+id/hint_4"
             />
 
-        <TextView
-            android:id="@+id/hint_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/amarillo_light"
-            android:layout_margin="@dimen/dim_5dp"
-            android:padding="@dimen/dim_15dp"
-            android:text="texto6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/hint_5"
-            />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -130,53 +120,231 @@
         android:textStyle="bold"
         android:fontFamily="@font/helvetica_neue_bold"
         app:layout_constraintTop_toBottomOf="@id/carousel_palabras_completar"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ej_completar_1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/titulo_completar_2"
-        >
-        <TextView
-            android:id="@+id/num_ej_completar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/helvetica_neue_black"
-            android:textSize="@dimen/dim_30dp"
-            android:text="1."
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/texto_ej_completar"
-
-            />
-        <TextView
-            android:id="@+id/texto_ej_completar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="torquent per conubia nostra, per inceptos himenaeos. Phasellus cursus metus quis lacus gravida lacinia. Mauris facilisis felis non condimentum blandit. Nunc at pellentesque turpis. Vestibulum vehicula lectus convallis, sollicitudin nisi at, iaculis magna. Phasellus cursus, massa quis interdum finibus, massa lectus eleifend tortor, a faucibus lacus nunc a ligula. Suspendisse quis suscipit risus, a ultricies tortor. Vestibulum volutpat tempor mollis. "
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/num_ej_completar"
-
-            />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-    <Button
-        style="@style/boton_primario"
-        android:text="Enviar"
-        android:id="@+id/boton_submit_completar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ej_completar_1"
         android:layout_marginTop="@dimen/dim_30dp"
-        />
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ej_completar_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingBottom="@dimen/dim_30dp"
+                >
+                <TextView
+                    android:id="@+id/num_ej_completar_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue_black"
+                    android:textSize="@dimen/dim_30dp"
+                    android:text="1."
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/texto_ej_completar_1_parte1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="陆雨平："
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/num_ej_completar_1"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/ma_shan_zheng"
+                    />
+
+                <EditText
+                    android:id="@+id/texto_ej_completar_1_input"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:autofillHints="Palabra"
+                    android:inputType="text"
+                    android:hint="Palabra"
+                    style="@style/input_field"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/texto_ej_completar_1_parte1"
+                    />
+
+                <TextView
+                    android:id="@+id/texto_ej_completar_1_parte2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我不忙。 你男朋友呢？"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/texto_ej_completar_1_input"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/ma_shan_zheng"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ej_completar_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ej_completar_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingBottom="@dimen/dim_30dp"
+                >
+                <TextView
+                    android:id="@+id/num_ej_completar_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue_black"
+                    android:textSize="@dimen/dim_30dp"
+                    android:text="2."
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    />
+                <TextView
+                    android:id="@+id/texto_ej_completar_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_30dp"
+                    android:text="林娜：(_) 他很忙。"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/num_ej_completar_2"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ej_completar_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ej_completar_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingBottom="@dimen/dim_30dp"
+                >
+                <TextView
+                    android:id="@+id/num_ej_completar_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue_black"
+                    android:textSize="@dimen/dim_30dp"
+                    android:text="3."
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    />
+                <TextView
+                    android:id="@+id/texto_ej_completar_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_30dp"
+                    android:text="林娜：(_) 他很忙。"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/num_ej_completar_3"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ej_completar_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ej_completar_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingBottom="@dimen/dim_30dp"
+                >
+                <TextView
+                    android:id="@+id/num_ej_completar_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue_black"
+                    android:textSize="@dimen/dim_30dp"
+                    android:text="4."
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    />
+                <TextView
+                    android:id="@+id/texto_ej_completar_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_30dp"
+                    android:text="林娜：(_) 他很忙。"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/num_ej_completar_4"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ej_completar_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ej_completar_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingBottom="@dimen/dim_30dp"
+                >
+                <TextView
+                    android:id="@+id/num_ej_completar_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue_black"
+                    android:textSize="@dimen/dim_30dp"
+                    android:text="5."
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    />
+                <TextView
+                    android:id="@+id/texto_ej_completar_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_30dp"
+                    android:text="林娜：(_) 他很忙。"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/num_ej_completar_5"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                style="@style/boton_primario"
+                android:text="Enviar"
+                android:id="@+id/boton_submit_completar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ej_completar_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
