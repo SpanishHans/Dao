@@ -12,8 +12,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/muralla"
         >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fondo_camino"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
         <ImageButton
             android:id="@+id/nivel1"
@@ -22,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="136dp"
             android:layout_marginTop="708dp"
-            android:src="@drawable/boton1"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="264dp"
             android:layout_marginTop="628dp"
-            android:src="@drawable/boton2"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="144dp"
             android:layout_marginTop="580dp"
-            android:src="@drawable/boton3"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="43dp"
             android:layout_marginTop="492dp"
-            android:src="@drawable/boton4"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="224dp"
             android:layout_marginTop="432dp"
-            android:src="@drawable/boton5"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="240dp"
             android:layout_marginTop="276dp"
-            android:src="@drawable/boton6"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="168dp"
             android:layout_marginTop="156dp"
-            android:src="@drawable/boton7"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -99,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
             android:layout_marginTop="112dp"
-            android:src="@drawable/boton8"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="168dp"
             android:layout_marginTop="28dp"
-            android:src="@drawable/boton9"
+            android:src="@drawable/boton_muralla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
