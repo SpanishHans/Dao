@@ -149,6 +149,10 @@ class Leccion1EjerciciosFonetica : Fragment() {
             reproducirSonido(R.raw.pronunciation_zh_huo1)
         }
 
+        binding.button2A1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_a1)
+        }
+
 
         return binding.root
     }
