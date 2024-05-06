@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_muralla"
+        android:icon="@drawable/muralla"
+        android:title="@string/Camino"
+        />
+
     <item
         android:id="@+id/ic_Kong"
         android:icon="@drawable/dojo"
@@ -10,12 +17,6 @@
         android:id="@+id/ic_tao"
         android:icon="@drawable/tao"
         android:title="@string/Entrenar"
-        />
-
-    <item
-        android:id="@+id/ic_muralla"
-        android:icon="@drawable/muralla"
-        android:title="@string/Camino"
         />
 
     <item
