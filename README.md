@@ -55,3 +55,8 @@ Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es i
 
 ---
 	
+## Welcome To App
+
+![Texto alternativo](/ImagenesPreview/WelcomeToApp.png)
+
+---
