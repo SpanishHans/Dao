@@ -84,7 +84,8 @@ class Indice : Fragment() {
         }
 
         binding.buttonFonetica.setOnClickListener {
-            Toast.makeText(requireContext(), "Clic en fonética", Toast.LENGTH_SHORT).show()
+            val leccion1Fonetica = Leccion1Fonetica()
+            navegarFragmento(leccion1Fonetica)
         }
 
         binding.buttonGramatica.setOnClickListener {

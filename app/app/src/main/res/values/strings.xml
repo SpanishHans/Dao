@@ -53,6 +53,29 @@
     <string name="text_dialogo_situacional">Te encuentras con un amigo chino al que no has visto en mucho tiempo. ¿Qué le dirías a él/ella?\n\n
                                             Generalmente, se suele responder con las siguientes frases para saludar.</string>
     <string name="dialogo_situacional_zh">你好吗？\n我很好，你呢？\n我也很好。</string>
+    <string name="leccion_1_fonetica_1">    En el chino moderno una sílaba generalmente está compuesta por una parte inicial, que es una consonante con la que
+    comienza la sílaba, y una parte final, que forma el resto de la sílaba. Por ejemplo, en la sílaba
+    “ping”, “p” es la parte inicial y “ing”, la final. Una sílaba puede formarse sin la parte inicial,
+    como en “ye”, pero todas las sílabas deben tener un final. En el chino moderno hay en total
+    21 partes iniciales y 38 finales.</string>
+    <string name="leccion1_fonetica_2">Iniciales: m, n, l, h se pronuncian de modo similar a sus correspondientes
+    en la lengua española. \n\t\t\t\t - b como “b” de “Barcelona” (no aspirada, sorda)
+    \n\t\t\t\t - p como “p” de “Pamplona” (aspirada, sorda)
+    \n\t\t\t\t - Nota: Se debe prestar especial atención a la pronunciación de las consonantes aspiradas y no aspiradas: b-p
+    \n\nFinales: e como “e” en “her” de la palabra inglesa.
+    \n\t\t\t\t ie como “ye” en “yeso” de la palabra española.
+    \n\t\t\t\t -ng (final) un sonido nasal como “ng” en “bang” de la palabra inglesa sin pronunciar la “g”
+    \n\t\t\t\t Noa: La pronunciación de la “e” en una final compuesta es diferente de la final simple “e”.</string>
+    <string name="leccion1_fonetica_3">La lengua china es una lengua tonal en la que los tonos expresan diferencias en el significado.
+    \n\n En la pronunciación hay 4 tonos básicos, representados respectivamente por las siguientes marcas de tono:
+    \n\t\t “-” para el primer tono.
+    \n\t\t “´” para el segundo tono.
+    \n\t\t “^” para el tercer tono.
+    \n\t\t “`” para el cuarto tono.
+    \n\n Cuando una sílaba contiene una única vocal, la marca de tono se coloca directamente sobre la vocal
+    como en “lù” y “hěn”. El punto de la vocal “i” se tiene que quitar si la marca de tono se coloca
+    sobre ella, como en “ní”, “nín” y “píng”. Cuando el final de la sílaba está compuesto por dos o más vocales,
+    la marca de tono se debe colocar sobre la vocal pronunciada con la boca más abierta.</string>
 
 
 </resources>
