@@ -6,45 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Target sentence -->
-    <TextView
-        android:id="@+id/targetSentenceTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_50dp"
-        android:gravity="center"
-        android:text="¿Cómo estás?"
 
-        android:textSize="@dimen/dim_30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        />
 
     <!-- Character bar -->
     <LinearLayout
         android:id="@+id/characterBarLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/keyboardGridLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/targetSentenceTextView"
 
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Keyboard -->
     <GridLayout
         android:id="@+id/keyboardGridLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
