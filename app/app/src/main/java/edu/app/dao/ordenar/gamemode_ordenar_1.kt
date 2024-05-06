@@ -2,6 +2,7 @@ package edu.app.dao.ordenar
 
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -45,6 +46,24 @@ class FragmentoOrdenar : Fragment() {
             }
         }
 
+        binding.buttonComprobar.setOnClickListener {
+            val containerLayout: ViewGroup = characterBarLayout
+
+            val buttonsToRemove = mutableListOf<Button>()
+            for (i in 0 until containerLayout.childCount){
+                val view = containerLayout.getChildAt(i)
+                if (view is Button){
+                    val buttonText= view.text.toString()
+                    Log.wtf("Texto del botón", buttonText)
+                    buttonsToRemove.add(view)
+                }
+            }
+
+            buttonsToRemove.forEach { button ->
+                containerLayout.removeView(button)
+            }
+            setupKeyboard()
+        }
         return binding.root
     }
 
@@ -87,11 +106,11 @@ class FragmentoOrdenar : Fragment() {
                         0
                     ) // Set margins (left, top, right, bottom)
                     setLayoutParams(layoutParams2)
-                    setOnClickListener { characterBarLayout.removeView(this)
-                        if (this.parent != null){
-                            (this.parent as? ViewGroup)?.removeView(this)
-                        }
-                        keyboardGridLayout.addView(this) }
+                    setOnClickListener {
+                        characterBarLayout.removeView(this)
+                        (this.parent as? ViewGroup)?.removeView(this)
+                        keyboardGridLayout.addView(this)
+                    }
                 })
                 keyboardGridLayout.removeView(button)
             }
