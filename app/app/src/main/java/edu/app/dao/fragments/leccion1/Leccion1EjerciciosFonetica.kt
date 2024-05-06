@@ -12,6 +12,7 @@ import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentLeccion1EjerciciosFoneticaBinding
 
@@ -153,7 +154,193 @@ class Leccion1EjerciciosFonetica : Fragment() {
             reproducirSonido(R.raw.pronunciation_zh_a1)
         }
 
+        binding.button2A2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_a2)
+        }
 
+        binding.button2A3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_a3)
+        }
+
+        binding.button2A4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_a4)
+        }
+
+        binding.button2Ni1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ni1)
+        }
+
+        binding.button2Ni2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ni2)
+        }
+
+        binding.button2Ni3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ni3)
+        }
+
+        binding.button2Ni4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ni4)
+        }
+
+        binding.button2Hao1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_hao1)
+        }
+
+        binding.button2Hao2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_hao2)
+        }
+
+        binding.button2Hao3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_hao3)
+        }
+
+        binding.button2Hao4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_hao4)
+        }
+
+        binding.button2Li1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_li1)
+        }
+
+        binding.button2Li2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_li2)
+        }
+
+        binding.button2Li3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_li3)
+        }
+
+        binding.button2Li4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_li4)
+        }
+
+        binding.button2Bo1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_bo1)
+        }
+
+        binding.button2Bo2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_bo2)
+        }
+
+        binding.button2Bo3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_bo3)
+        }
+
+        binding.button2Bo4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_bo4)
+        }
+
+        binding.button2Lin1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lin1)
+        }
+
+        binding.button2Lin2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lin2)
+        }
+
+        binding.button2Lin3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lin3)
+        }
+
+        binding.button2Lin4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lin4)
+        }
+
+        binding.button2Na1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_na1)
+        }
+
+        binding.button2Na2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_na2)
+        }
+
+        binding.button2Na3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_na3)
+        }
+
+        binding.button2Na4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_na4)
+        }
+
+        binding.button2Lu1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lu1)
+        }
+
+        binding.button2Lu2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lu2)
+        }
+
+        binding.button2Lu3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lu3)
+        }
+
+        binding.button2Lu4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_lu4)
+        }
+
+        binding.button2Yu1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_yu1)
+        }
+
+        binding.button2Yu2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_yu2)
+        }
+
+        binding.button2Yu3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_yu3)
+        }
+
+        binding.button2Yu4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_yu4)
+        }
+
+        binding.button2Ping1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ping1)
+        }
+
+        binding.button2Ping2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ping2)
+        }
+
+        binding.button2Wo1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_wo1)
+        }
+
+        binding.button2Wo3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_wo3)
+        }
+
+        binding.button2Wo4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_wo4)
+        }
+
+        binding.button2Hen2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_hen2)
+        }
+
+        binding.button2Hen3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_hen3)
+        }
+
+        binding.button2Hen4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_hen4)
+        }
+
+        binding.button2Ye1.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ye1)
+        }
+
+        binding.button2Ye2.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ye2)
+        }
+
+        binding.button2Ye3.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ye3)
+        }
+
+        binding.button2Ye4.setOnClickListener {
+            reproducirSonido(R.raw.pronunciation_zh_ye4)
+        }
         return binding.root
     }
 
