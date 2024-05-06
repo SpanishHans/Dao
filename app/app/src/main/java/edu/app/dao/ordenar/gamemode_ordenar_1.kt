@@ -13,6 +13,7 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentGamemodeOrdenarBinding
 import edu.app.dao.fragments.Muralla
@@ -37,6 +38,7 @@ class FragmentoOrdenar : Fragment() {
         val flechaDevolverImagen =
             requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         devolverFlecha.visibility = View.VISIBLE
+        binding.viewBack.visibility = View.GONE
         val answer = listOf("你", "好", "吗", "？")
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
@@ -63,6 +65,10 @@ class FragmentoOrdenar : Fragment() {
             if (inputUser == answer) {
                 Toast.makeText(requireContext(), "La respuesta es correcta!", Toast.LENGTH_SHORT)
                     .show()
+                binding.viewBack.visibility = View.VISIBLE
+                binding.buttonVerificar.apply {
+                    setBackgroundColor(ContextCompat.getColor(context, R.color.amarillo_dark))
+                }
             } else {
                 Toast.makeText(requireContext(), "La respuesta es incorrecta!", Toast.LENGTH_SHORT)
                     .show()

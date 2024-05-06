@@ -54,4 +54,10 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_verificar" />
 
+    <View
+        android:id="@+id/view_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
