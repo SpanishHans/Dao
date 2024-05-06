@@ -28,7 +28,7 @@ import edu.app.dao.databinding.FragmentGamemodeOrdenarBinding
 import edu.app.dao.fragments.Muralla
 import edu.app.dao.funciones.GlobalData
 
-class gamemode_ordenar_2 : Fragment() {
+class GamemodeOrdenar3 : Fragment() {
     private lateinit var binding: FragmentGamemodeOrdenarBinding
     private lateinit var targetSentenceTextView: TextView
     private lateinit var characterBarLayout: LinearLayout
@@ -61,7 +61,7 @@ class gamemode_ordenar_2 : Fragment() {
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
-        val answer = listOf("我", "很", "好")
+        val answer = listOf("妈妈", "很", "忙")
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
             val muralla = Muralla()
@@ -162,7 +162,7 @@ class gamemode_ordenar_2 : Fragment() {
     private fun setupKeyboard() {
 
         val keyboardCharacters = listOf(
-            '好', '我', '很'
+            "妈妈", '忙', '很'
         )
         val buttonMargin = resources.getDimensionPixelSize(R.dimen.dim_2dp)
         keyboardCharacters.forEach { char ->
@@ -205,5 +205,4 @@ class gamemode_ordenar_2 : Fragment() {
             keyboardGridLayout.addView(button)
         }
     }
-
 }

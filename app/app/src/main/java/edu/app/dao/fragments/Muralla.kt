@@ -14,6 +14,8 @@ import androidx.appcompat.widget.Toolbar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentMurallaBinding
 import edu.app.dao.ordenar.FragmentoOrdenar
+import edu.app.dao.ordenar.GamemodeOrdenar3
+import edu.app.dao.ordenar.gamemode_ordenar_2
 
 
 class Muralla : Fragment() {
@@ -48,6 +50,16 @@ class Muralla : Fragment() {
         binding.nivel1.setOnClickListener {
             val gamemodeOrdenar = FragmentoOrdenar()
             fragmentoNav(gamemodeOrdenar)
+        }
+
+        binding.nivel2.setOnClickListener {
+            val gamemodeOrdenar2 = gamemode_ordenar_2()
+            fragmentoNav(gamemodeOrdenar2)
+        }
+
+        binding.nivel3.setOnClickListener {
+            val gamemodeOrdenar3 = GamemodeOrdenar3()
+            fragmentoNav(gamemodeOrdenar3)
         }
 
         return binding.root
