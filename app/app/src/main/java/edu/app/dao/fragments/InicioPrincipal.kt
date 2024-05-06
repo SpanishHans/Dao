@@ -30,7 +30,7 @@ class InicioPrincipal : AppCompatActivity() {
         setContentView(binding.root)
 
         // Instancias de los fragmentos para luego ser utilizados
-        val kongFragment = kong()
+        val kongFragment = Kong()
         val yopFragment = yop()
         val taoFragment = Tao()
         val murallaFragment = Muralla()

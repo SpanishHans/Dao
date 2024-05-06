@@ -10,11 +10,12 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import edu.app.dao.FragmentoCompletar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentKongBinding
 
 
-class kong : Fragment() {
+class Kong : Fragment() {
 
     private lateinit var binding: FragmentKongBinding
 
@@ -22,27 +23,34 @@ class kong : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Infla el layour: fragment_kong.xml y lo infla
+        // Infla el layout: fragment_muralla.xml para el fragmento
         binding = FragmentKongBinding.inflate(inflater, container, false)
 
-        // Realiza el setup para la barra de tareas superior y le coloca como título "Templo"
+        // Define la barra de tareas superior y hace que el título cambie a "Tú Camino"
         val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
         val toolbarUp = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
-        toolbarText.text = "Templo"
+        toolbarText.text = "Tú Camino"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
         flechaDevolver.visibility = View.GONE
 
-        toolbarUp.setOnClickListener {
-            null
+
+
+        binding.submitButton.setOnClickListener {
+            val gamemodeOrdenar = FragmentoCompletar()
+            fragmentoNav(gamemodeOrdenar)
         }
 
-
-
-
         return binding.root
+    }
+
+    private fun fragmentoNav (fragment: Fragment){
+        requireActivity().supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_wrapper,fragment)
+            commit()
+        }
     }
 
 }

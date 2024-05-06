@@ -15,7 +15,7 @@ import edu.app.dao.databinding.FragmentGamemodeOrdenarBinding
 import edu.app.dao.fragments.Muralla
 import edu.app.dao.fragments.leccion1.Indice
 
-class GameFragment : Fragment() {
+class FragmentoOrdenar : Fragment() {
 
     private lateinit var binding: FragmentGamemodeOrdenarBinding
     private lateinit var targetSentenceTextView: TextView

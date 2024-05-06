@@ -1,0 +1,70 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/carousel_palabras_completar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/amarillo_light"
+                android:layout_margin="@dimen/dim_5dp"
+                android:padding="@dimen/dim_15dp"
+                android:text="texto1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/amarillo_light"
+                android:layout_margin="@dimen/dim_5dp"
+                android:padding="@dimen/dim_15dp"
+                android:text="texto2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/amarillo_light"
+                android:layout_margin="@dimen/dim_5dp"
+                android:padding="@dimen/dim_15dp"
+                android:text="texto3"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/parrafo_completar_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="torquent per conubia nostra, per inceptos himenaeos. Phasellus cursus metus quis lacus gravida lacinia. Mauris facilisis felis non condimentum blandit. Nunc at pellentesque turpis. Vestibulum vehicula lectus convallis, sollicitudin nisi at, iaculis magna. Phasellus cursus, massa quis interdum finibus, massa lectus eleifend tortor, a faucibus lacus nunc a ligula. Suspendisse quis suscipit risus, a ultricies tortor. Vestibulum volutpat tempor mollis. "
+        app:layout_constraintTop_toBottomOf="@+id/carousel_palabras_completar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dim_30dp"
+        />
+
+
+    <Button
+        android:id="@+id/boton_submit_completar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parrafo_completar_1"
+        android:layout_marginTop="@dimen/dim_30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
