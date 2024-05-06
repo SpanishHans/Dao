@@ -277,10 +277,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/button_1_luo1" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/coton_cuatro_tonos_1"
                     style="@style/boton_notas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="2. Los cuatro tonos"
                     android:textSize="20dp"
@@ -288,12 +286,304 @@
                     app:layout_constraintTop_toBottomOf="@+id/button_1_hao1" />
 
                 <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Button"
-                    app:layout_constraintTop_toBottomOf="@+id/button"
-                    tools:layout_editor_absoluteX="312dp" />
+                    android:id="@+id/button_2_a1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:layout_marginTop="16dp"
+                    android:text="ā"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_a2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/coton_cuatro_tonos_1" />
+
+                <Button
+                    android:id="@+id/button_2_a2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:layout_marginTop="16dp"
+                    android:text="á"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_a3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_a1"
+                    app:layout_constraintTop_toBottomOf="@+id/coton_cuatro_tonos_1" />
+
+                <Button
+                    android:id="@+id/button_2_a3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:layout_marginTop="16dp"
+                    android:text="ǎ"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_a2"
+                    app:layout_constraintTop_toBottomOf="@+id/coton_cuatro_tonos_1" />
+
+                <Button
+                    android:id="@+id/button_2_a4"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="à"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_ni1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_a1" />
+
+                <Button
+                    android:id="@+id/button_2_ni1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Nī"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_ni2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_a4"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_a2" />
+
+                <Button
+                    android:id="@+id/button_2_ni2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="ní"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_ni1"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_a3" />
+
+                <Button
+                    android:id="@+id/button_2_ni3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Nǐ"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_ni4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_a4" />
+
+                <Button
+                    android:id="@+id/button_2_ni4"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Nì"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_hao1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_ni3"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_ni1" />
+
+                <Button
+                    android:id="@+id/button_2_hao1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Hāo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_ni4"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_ni2" />
+
+                <Button
+                    android:id="@+id/button_2_hao2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Háo"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_hao3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_ni3" />
+
+                <Button
+                    android:id="@+id/button_2_hao3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Hǎo"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_hao4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_hao2"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_ni4" />
+
+                <Button
+                    android:id="@+id/button_2_hao4"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Hào"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_hao3"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_hao1" />
+
+                <Button
+                    android:id="@+id/button_2_li1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="Lī"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_li2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_hao2" />
+
+                <Button
+                    android:id="@+id/button_2_li2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lí"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_li3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_li1"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_hao3" />
+
+                <Button
+                    android:id="@+id/button_2_li3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lǐ"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_li2"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_hao4" />
+
+                <Button
+                    android:id="@+id/button_2_li4"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lì"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_bo1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_li1" />
+
+                <Button
+                    android:id="@+id/button_2_bo1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="bō"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_bo2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_li4"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_li2" />
+
+                <Button
+                    android:id="@+id/button_2_bo2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="bó"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_bo1"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_li3" />
+
+                <Button
+                    android:id="@+id/button_2_bo3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="bǒ"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_bo4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_li4" />
+
+                <Button
+                    android:id="@+id/button_2_bo4"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="bò"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_lin1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_bo3"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_bo1" />
+
+                <Button
+                    android:id="@+id/button_2_lin1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="līn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_bo4"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_bo2" />
+
+                <Button
+                    android:id="@+id/button_2_lin2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lín"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_lin3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_bo3" />
+
+                <Button
+                    android:id="@+id/button_2_lin3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lǐn"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_lin4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_lin2"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_bo4" />
+
+                <Button
+                    android:id="@+id/button_2_lin4"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lìn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_lin3"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_lin1" />
+
+                <Button
+                    android:id="@+id/button_2_na1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="nā"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_na2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_lin2" />
+
+                <Button
+                    android:id="@+id/button_2_na2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="ná"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_na3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_na1"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_lin3" />
+
+                <Button
+                    android:id="@+id/button_2_na3"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="nǎ"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_na2"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_lin4" />
+
+                <Button
+                    android:id="@+id/button_2_na4"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="nà"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_lu1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_na1" />
+
+                <Button
+                    android:id="@+id/button_2_lu1"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lū"
+                    app:layout_constraintEnd_toStartOf="@+id/button_2_lu2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_na4"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_na2" />
+
+                <Button
+                    android:id="@+id/button_2_lu2"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lú"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button_2_lu1"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_na3" />
+
+                <Button
+                    android:id="@+id/button32"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lǔ"
+                    app:layout_constraintEnd_toStartOf="@+id/button33"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_na4" />
+
+                <Button
+                    android:id="@+id/button33"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="lù"
+                    app:layout_constraintEnd_toStartOf="@+id/button34"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button32"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_lu1" />
+
+                <Button
+                    android:id="@+id/button34"
+                    style="@style/button_ejercicios_fonetica"
+                    android:text="yū"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button33"
+                    app:layout_constraintTop_toBottomOf="@+id/button_2_lu2" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
