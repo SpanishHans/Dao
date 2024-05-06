@@ -10,9 +10,9 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import edu.app.dao.GameFragment
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentMurallaBinding
+import edu.app.dao.ordenar.FragmentoOrdenar
 
 
 class Muralla : Fragment() {
@@ -39,8 +39,8 @@ class Muralla : Fragment() {
 
 
         binding.nivel1.setOnClickListener {
-            val gamemodeOrdenar = GameFragment()
-            fragmentoNav(gamemodeOrdenar)
+            val gamemodeOrdenar1 = FragmentoOrdenar()
+            fragmentoNav(gamemodeOrdenar1)
         }
 
         return binding.root
