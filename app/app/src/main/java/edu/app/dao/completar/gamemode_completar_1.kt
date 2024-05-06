@@ -24,7 +24,7 @@ class FragmentoCompletar : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_gamemode_completar, container, false)
+        val view = inflater.inflate(R.layout.fragment_gamemode_completar_1, container, false)
         contextParagraphTextView = view.findViewById(R.id.parrafo_completar_1)
         submitButton = view.findViewById(R.id.boton_submit_completar)
 
