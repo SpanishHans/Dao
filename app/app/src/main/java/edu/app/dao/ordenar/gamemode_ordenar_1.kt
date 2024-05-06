@@ -4,21 +4,29 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.GridLayout
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.replace
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentGamemodeOrdenarBinding
 import edu.app.dao.fragments.Muralla
+import edu.app.dao.funciones.GlobalData
 
 class FragmentoOrdenar : Fragment() {
 
@@ -35,12 +43,24 @@ class FragmentoOrdenar : Fragment() {
         val binding = FragmentGamemodeOrdenarBinding.inflate(inflater, container, false)
         characterBarLayout = binding.characterBarLayout
         keyboardGridLayout = binding.keyboardGridLayout
+
+        val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+        val refUsuariosTao: DatabaseReference =
+            database.getReference("Usuarios/${GlobalData.idCurrent}/aciertosTao")
+        val storageReference = FirebaseStorage.getInstance().reference
+        val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
         setupKeyboard()
         val devolverFlecha = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         val flechaDevolverImagen =
             requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+
         devolverFlecha.visibility = View.VISIBLE
         binding.viewBack.visibility = View.GONE
+        binding.buttonEnd.visibility = View.GONE
+        binding.buttonContinue.visibility = View.GONE
+        toolbar.visibility = View.GONE
+
+
         val answer = listOf("你", "好", "吗", "？")
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
@@ -68,11 +88,45 @@ class FragmentoOrdenar : Fragment() {
                 Toast.makeText(requireContext(), "La respuesta es correcta!", Toast.LENGTH_SHORT)
                     .show()
                 binding.viewBack.visibility = View.VISIBLE
+                binding.buttonEnd.visibility = View.VISIBLE
+                binding.buttonContinue.visibility = View.VISIBLE
                 binding.buttonVerificar.apply {
                     setBackgroundColor(ContextCompat.getColor(context, R.color.amarillo_dark))
                 }
                 binding.buttonVerificar.backgroundTintList = ColorStateList.valueOf(Color.GRAY)
                 binding.buttonReordenar.backgroundTintList = ColorStateList.valueOf(Color.GRAY)
+
+                refUsuariosTao.addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            val valorActual = dataSnapshot.getValue(Long::class.java)
+
+                            val nuevoValor = (valorActual ?: 0) + 1
+
+                            refUsuariosTao.setValue(nuevoValor)
+                                .addOnSuccessListener {
+                                    Toast.makeText(
+                                        requireContext(),
+                                        "Victoria sumada!",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                                .addOnFailureListener {
+                                    Toast.makeText(
+                                        requireContext(),
+                                        "Ha ocurrido un error!",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        Toast.makeText(requireContext(), "Error: ${error}", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                })
+
             } else {
                 Toast.makeText(requireContext(), "La respuesta es incorrecta!", Toast.LENGTH_SHORT)
                     .show()
@@ -96,6 +150,13 @@ class FragmentoOrdenar : Fragment() {
             setupKeyboard()
         }
 
+        binding.buttonContinue.setOnClickListener {
+            val murallaFragment = Muralla()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, murallaFragment)
+                commit()
+            }
+        }
         return binding.root
     }
 

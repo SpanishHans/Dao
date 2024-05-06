@@ -48,6 +48,7 @@
                                     En el chino hablado, cuando el contexro es explícito y no hay
                                     ambigüedad, el sujeto se suele omitir. Se puede decir “很好” (“hěn hǎo”)
                                     para responder a la pregunta “你好吗？”(“Nǐ hǎo má？”)</string>
+    <string name="text_victoria">Bien hecho!\n\nHas ordenado correctamente la oración!\n\nGanaste (1) punto extra para tú perfil </string>
 
 
 </resources>
