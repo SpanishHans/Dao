@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import edu.app.dao.FragmentoCompletar
+import edu.app.dao.completar.FragmentoCompletar
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentKongBinding
 

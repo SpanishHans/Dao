@@ -1,4 +1,4 @@
-package edu.app.dao
+package edu.app.dao.completar
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.text.SpannableString
 import android.text.Spanned
 import androidx.core.content.ContextCompat
+import edu.app.dao.R
 
 class FragmentoCompletar : Fragment() {
 
