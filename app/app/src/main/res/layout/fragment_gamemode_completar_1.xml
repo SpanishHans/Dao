@@ -15,6 +15,10 @@
         android:textSize="@dimen/textsize30sp"
         android:textStyle="bold"
         android:fontFamily="@font/helvetica_neue_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="left"
         />
 
     <TextView
@@ -23,7 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A continuación te brindamos un listado con las palabras que debes colocar en la posición correspondiente el la frase."
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titulo_completar"
         />
 
@@ -127,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@id/carousel_palabras_completar"
         />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ej_completar_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -136,21 +141,28 @@
         >
         <TextView
             android:id="@+id/num_ej_completar"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="torquent per conubia nostra, per inceptos himenaeos. Phasellus cursus metus quis lacus gravida lacinia. Mauris facilisis felis non condimentum blandit. Nunc at pellentesque turpis. Vestibulum vehicula lectus convallis, sollicitudin nisi at, iaculis magna. Phasellus cursus, massa quis interdum finibus, massa lectus eleifend tortor, a faucibus lacus nunc a ligula. Suspendisse quis suscipit risus, a ultricies tortor. Vestibulum volutpat tempor mollis. "
+            android:fontFamily="@font/helvetica_neue_black"
+            android:textSize="@dimen/dim_30dp"
+            android:text="1."
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/texto_ej_completar"
+
             />
         <TextView
             android:id="@+id/texto_ej_completar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="torquent per conubia nostra, per inceptos himenaeos. Phasellus cursus metus quis lacus gravida lacinia. Mauris facilisis felis non condimentum blandit. Nunc at pellentesque turpis. Vestibulum vehicula lectus convallis, sollicitudin nisi at, iaculis magna. Phasellus cursus, massa quis interdum finibus, massa lectus eleifend tortor, a faucibus lacus nunc a ligula. Suspendisse quis suscipit risus, a ultricies tortor. Vestibulum volutpat tempor mollis. "
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/num_ej_completar"
 
             />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
