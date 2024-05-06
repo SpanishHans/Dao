@@ -56,7 +56,7 @@ class Leccion1PalabraLuYuPing : Fragment() {
 
         binding.yuGif.setOnClickListener {
             if (yuMediaPlayer == null) {
-                yuMediaPlayer = MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_yu)
+                yuMediaPlayer = MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_yu3)
             }
             yuMediaPlayer?.apply {
                 if (isPlaying) {
