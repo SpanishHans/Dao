@@ -152,11 +152,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/helvetica_neue_black"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/dim_30dp"
                     android:text="1."
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-
                     />
                 <TextView
                     android:id="@+id/texto_ej_completar_1_parte1"
@@ -166,6 +165,8 @@
                     android:textSize="15sp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/num_ej_completar_1"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/ma_shan_zheng"
                     />
 
                 <EditText
@@ -188,6 +189,8 @@
                     android:textSize="15sp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_1_input"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/ma_shan_zheng"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
