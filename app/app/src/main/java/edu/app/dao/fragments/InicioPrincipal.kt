@@ -36,7 +36,7 @@ class InicioPrincipal : AppCompatActivity() {
         val murallaFragment = Muralla()
 
         // Hacer que cuando se inicie esta actividad, que el fragmento que diriga sea el de Kong (Dojo)
-        makeCurrentFragment(kongFragment)
+        makeCurrentFragment(murallaFragment)
 
         // Controla la navegación a las diferentes secciones de la aplicación.
         binding.navigationBarButtom.setOnItemSelectedListener{
