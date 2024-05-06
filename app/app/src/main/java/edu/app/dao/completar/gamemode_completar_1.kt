@@ -26,7 +26,7 @@ class FragmentoCompletar : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_gamemode_completar_1, container, false)
-        contextParagraphTextView = view.findViewById(R.id.texto_ej_completar_5)
+        contextParagraphTextView = view.findViewById(R.id.texto_ej_completar_5_parte2)
         submitButton = view.findViewById(R.id.boton_submit_completar)
 
         // Define the paragraph text with the fill-in-the-blank word
