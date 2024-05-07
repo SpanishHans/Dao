@@ -14,9 +14,10 @@ import android.text.Spanned
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import edu.app.dao.R
+import edu.app.dao.databinding.FragmentGamemodeCompletar1Binding
 
 class FragmentoCompletar : Fragment() {
-
+    private lateinit var binding: FragmentGamemodeCompletar1Binding
     private lateinit var contextParagraphTextView: TextView
     private lateinit var submitButton: Button
 
@@ -25,9 +26,9 @@ class FragmentoCompletar : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_gamemode_completar_1, container, false)
-        contextParagraphTextView = view.findViewById(R.id.texto_ej_completar_5_parte2)
-        submitButton = view.findViewById(R.id.boton_submit_completar)
+        binding = FragmentGamemodeCompletar1Binding.inflate(inflater, container, false)
+        contextParagraphTextView = binding.textoEjCompletar5Parte2
+        submitButton = binding.botonSubmitCompletar
 
         // Define the paragraph text with the fill-in-the-blank word
         val paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet velit nec est gravida [vehicula]. Nam id bibendum ipsum. Duis eleifend orci sit amet urna dapibus, vitae pretium urna pulvinar. Sed ultricies tellus eget nibh fringilla, nec consectetur lacus tempor. Phasellus nec malesuada risus."
@@ -49,17 +50,10 @@ class FragmentoCompletar : Fragment() {
         contextParagraphTextView.text = spannableString
 
         submitButton.setOnClickListener {
-            val userInput = editText.text.toString()
-            val correctAnswer = "vehicula"
-            if (userInput.equals(correctAnswer, ignoreCase = true)) {
-                // User answered correctly
-                // You can perform any actions here, like showing a toast or moving to the next question
-            } else {
-                // User answered incorrectly
-                // You can provide feedback or let them try again
-            }
+            val userInput = mutableListOf<String>()
+            val correctAnswer = listOf<String>()
         }
 
-        return view
+        return binding.root
     }
 }
