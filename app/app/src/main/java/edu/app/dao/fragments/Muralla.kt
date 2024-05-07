@@ -15,6 +15,7 @@ import edu.app.dao.R
 import edu.app.dao.databinding.FragmentMurallaBinding
 import edu.app.dao.ordenar.FragmentoOrdenar
 import edu.app.dao.ordenar.GamemodeOrdenar3
+import edu.app.dao.ordenar.GamemodeOrdenar4
 import edu.app.dao.ordenar.gamemode_ordenar_2
 
 
@@ -60,6 +61,11 @@ class Muralla : Fragment() {
         binding.nivel3.setOnClickListener {
             val gamemodeOrdenar3 = GamemodeOrdenar3()
             fragmentoNav(gamemodeOrdenar3)
+        }
+
+        binding.nivel4.setOnClickListener {
+            val gamemodeOrdenar4 = GamemodeOrdenar4()
+            fragmentoNav(gamemodeOrdenar4)
         }
 
         return binding.root
