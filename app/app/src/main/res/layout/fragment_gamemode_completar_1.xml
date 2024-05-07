@@ -53,7 +53,9 @@
             android:background="@color/amarillo_light"
             android:layout_margin="@dimen/dim_5dp"
             android:padding="@dimen/dim_15dp"
-            android:text="texto1"
+            android:fontFamily="@font/ma_shan_zheng"
+            android:textSize="23dp"
+            android:text="吗"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />
@@ -65,7 +67,9 @@
             android:background="@color/amarillo_light"
             android:layout_margin="@dimen/dim_5dp"
             android:padding="@dimen/dim_15dp"
-            android:text="texto2"
+            android:textSize="23dp"
+            android:fontFamily="@font/ma_shan_zheng"
+            android:text="呢"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/hint_1"
             />
@@ -172,17 +176,19 @@
 
                 <EditText
                     android:id="@+id/texto_ej_completar_1_input"
-                    android:layout_width="40dp"
-                    android:layout_height="25dp"
-                    android:autofillHints="Palabra"
-                    android:inputType="text"
-                    android:hint="Palabra"
                     style="@style/input_field"
-                    android:gravity="center"
-                    app:layout_constraintStart_toEndOf="@id/texto_ej_completar_1_parte1"
-                    app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_1"
+                    android:layout_width="45dp"
+                    android:layout_height="50dp"
                     android:layout_margin="1dp"
-                    />
+                    android:layout_marginStart="8dp"
+                    android:autofillHints="Palabra"
+                    android:gravity="center"
+                    android:fontFamily="@font/ma_shan_zheng"
+                    android:hint="我"
+                    android:maxLength="1"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/texto_ej_completar_1_parte1" />
 
                 <TextView
                     android:id="@+id/texto_ej_completar_1_parte2"

@@ -67,7 +67,7 @@ class Leccion1PalabrasNuevas : Fragment() {
             }
         }
 
-        binding.linearLayoutHao.setOnClickListener {
+        binding.linearLayoutBien.setOnClickListener {
             val palabraHao = Leccion1PalabraHao()
             requireActivity().supportFragmentManager.beginTransaction().apply {
                 replace(R.id.fl_wrapper, palabraHao)

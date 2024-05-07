@@ -32,7 +32,7 @@ class Kong : Fragment() {
         val toolbarUp = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
-        toolbarText.text = "Tú Camino"
+        toolbarText.text = "Mahjong"
         toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
         flechaDevolver.visibility = View.GONE
