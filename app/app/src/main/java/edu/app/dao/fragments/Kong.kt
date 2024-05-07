@@ -44,7 +44,7 @@ class Kong : Fragment() {
 
 
 
-        binding.submitButton.setOnClickListener {
+        binding.m12.setOnClickListener {
             val gamemodeOrdenar = FragmentoCompletar()
             fragmentoNav(gamemodeOrdenar)
         }
