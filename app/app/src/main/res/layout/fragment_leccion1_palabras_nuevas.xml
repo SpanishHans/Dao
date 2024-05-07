@@ -20,281 +20,259 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            >
 
-            <RelativeLayout
-                android:id="@+id/tu"
-                style="@style/relative_palabras_nuevas"
-                android:background="@drawable/button_border"
-                app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout_tu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_border_chiqui">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_tu"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="0dp">
+                <TextView
+                    android:id="@+id/tu_pinyin"
+                    style="@style/text_pinyin"
+                    android:text="Nǐ"
+                    app:layout_constraintEnd_toEndOf="@+id/tu_caracter"
+                    app:layout_constraintStart_toStartOf="@+id/tu_caracter"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/tu_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="Nǐ"
-                        app:layout_constraintEnd_toEndOf="@+id/tu_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/tu_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tu_caracter"
+                    style="@style/text_character"
+                    android:text="你"
+                    app:layout_constraintTop_toBottomOf="@+id/tu_pinyin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
 
-                    <TextView
-                        android:id="@+id/tu_caracter"
-                        style="@style/text_character"
-                        android:text="你"
-                        app:layout_constraintTop_toBottomOf="@+id/tu_pinyin" />
+                <TextView
+                    android:id="@+id/tu_traduccion"
+                    style="@style/text_traduccion"
+                    android:text="Pro. Tú"
+                    app:layout_constraintTop_toBottomOf="@id/tu_caracter"
+                    app:layout_constraintStart_toStartOf="@id/tu_caracter"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/tu_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="Pro. Tú"
-                        app:layout_constraintStart_toStartOf="@id/tu_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/tu_caracter" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout_bien"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout_tu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_border_chiqui">
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        style="@style/image_palabras_nuevas" />
+                <TextView
+                    android:id="@+id/bien_pinyin"
+                    style="@style/text_pinyin"
+                    android:text="Hǎo"
+                    app:layout_constraintEnd_toEndOf="@+id/bien_caracter"
+                    app:layout_constraintStart_toStartOf="@+id/bien_caracter"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
+                <TextView
+                    android:id="@+id/bien_caracter"
+                    style="@style/text_character"
+                    android:text="好"
+                    app:layout_constraintTop_toBottomOf="@+id/bien_pinyin"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
+                <TextView
+                    android:id="@+id/bien_traduccion"
+                    style="@style/text_traduccion"
+                    android:text="Adj. Bien, bueno, OK"
+                    app:layout_constraintStart_toStartOf="@id/bien_caracter"
+                    app:layout_constraintTop_toBottomOf="@+id/bien_caracter" />
 
-            <RelativeLayout
-                android:id="@+id/bien"
-                style="@style/relative_palabras_nuevas"
-                android:background="@drawable/button_border"
-                app:layout_constraintTop_toBottomOf="@+id/tu">
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_bien"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout_libo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout_bien"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_border_chiqui">
 
-                    <TextView
-                        android:id="@+id/bien_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="Hǎo"
-                        app:layout_constraintEnd_toEndOf="@+id/bien_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/bien_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/libo_pinyin"
+                    style="@style/text_pinyin"
+                    android:text="Lì       bō"
+                    app:layout_constraintEnd_toEndOf="@+id/libo_caracter"
+                    app:layout_constraintStart_toStartOf="@+id/libo_caracter"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/bien_caracter"
-                        style="@style/text_character"
-                        android:text="好"
-                        app:layout_constraintTop_toBottomOf="@+id/bien_pinyin" />
+                <TextView
+                    android:id="@+id/libo_caracter"
+                    style="@style/text_character"
+                    android:text="力波"
+                    app:layout_constraintTop_toBottomOf="@+id/libo_pinyin"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
-                    <TextView
-                        android:id="@+id/bien_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="Adj. Bien, bueno, OK"
-                        app:layout_constraintStart_toStartOf="@id/bien_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/bien_caracter" />
+                <TextView
+                    android:id="@+id/libo_traduccion"
+                    style="@style/text_traduccion"
+                    android:text="NP. (Nombre de un estudiante)"
+                    app:layout_constraintStart_toStartOf="@id/libo_caracter"
+                    app:layout_constraintTop_toBottomOf="@+id/libo_caracter" />
 
-                    <ImageView style="@style/image_palabras_nuevas" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout_luyu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout_libo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_border_chiqui">
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
+                <TextView
+                    android:id="@+id/luyu_pinyin"
+                    style="@style/text_pinyin"
+                    android:text="Lù        yǔ     píng"
+                    app:layout_constraintEnd_toEndOf="@+id/luyu_caracter"
+                    app:layout_constraintStart_toStartOf="@+id/luyu_caracter"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <RelativeLayout
-                android:id="@+id/libo"
-                style="@style/relative_palabras_nuevas"
-                android:background="@drawable/button_border"
-                app:layout_constraintTop_toBottomOf="@+id/luyu">
+                <TextView
+                    android:id="@+id/luyu_caracter"
+                    style="@style/text_character"
+                    android:text="陆雨平"
+                    app:layout_constraintTop_toBottomOf="@+id/luyu_pinyin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_libo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/luyu_traduccion"
+                    style="@style/text_traduccion"
+                    android:text="NP. (Nombre de un periodista chino)"
+                    app:layout_constraintStart_toStartOf="@id/luyu_caracter"
+                    app:layout_constraintTop_toBottomOf="@+id/luyu_caracter" />
 
-                    <TextView
-                        android:id="@+id/libo_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="Lì       bō"
-                        app:layout_constraintEnd_toEndOf="@+id/libo_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/libo_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/libo_caracter"
-                        style="@style/text_character"
-                        android:text="力波"
-                        app:layout_constraintTop_toBottomOf="@+id/libo_pinyin" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout_hao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout_luyu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_border_chiqui">
 
-                    <TextView
-                        android:id="@+id/libo_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="NP. (Nombre de un estudiante)"
-                        app:layout_constraintStart_toStartOf="@id/libo_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/libo_caracter" />
+                <TextView
+                    android:id="@+id/hao_pinyin"
+                    style="@style/text_pinyin"
+                    android:text="Hǎo"
+                    app:layout_constraintEnd_toEndOf="@+id/hao_caracter"
+                    app:layout_constraintStart_toStartOf="@+id/hao_caracter"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView style="@style/image_palabras_nuevas" />
+                <TextView
+                    android:id="@+id/hao_caracter"
+                    style="@style/text_character"
+                    android:text="好"
+                    app:layout_constraintTop_toBottomOf="@+id/hao_pinyin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
 
+                <TextView
+                    android:id="@+id/hao_traduccion"
+                    style="@style/text_traduccion"
+                    android:text="Adj. Bien, bueno, OK"
+                    app:layout_constraintStart_toStartOf="@id/hao_caracter"
+                    app:layout_constraintTop_toBottomOf="@+id/hao_caracter" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RelativeLayout
-                android:id="@+id/luyu"
-                style="@style/relative_palabras_nuevas"
-                android:background="@drawable/button_border"
-                app:layout_constraintTop_toBottomOf="@+id/tu">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout_ma"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout_hao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_border_chiqui">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_luyu"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/ma_pinyin"
+                    style="@style/text_pinyin"
+                    android:text="Ma"
+                    app:layout_constraintEnd_toEndOf="@+id/ma_caracter"
+                    app:layout_constraintStart_toStartOf="@+id/ma_caracter"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/luyu_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="Lù        yǔ     píng"
-                        app:layout_constraintEnd_toEndOf="@+id/luyu_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/luyu_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/ma_caracter"
+                    style="@style/text_character"
+                    android:text="吗"
+                    app:layout_constraintTop_toBottomOf="@+id/ma_pinyin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
 
-                    <TextView
-                        android:id="@+id/luyu_caracter"
-                        style="@style/text_character"
-                        android:text="陆雨平"
-                        app:layout_constraintTop_toBottomOf="@+id/luyu_pinyin" />
+                <TextView
+                    android:id="@+id/ma_traduccion"
+                    style="@style/text_traduccion"
+                    android:text="Ptl. (Partícula interrogativa)"
+                    app:layout_constraintStart_toStartOf="@id/ma_caracter"
+                    app:layout_constraintTop_toBottomOf="@+id/ma_caracter" />
 
-                    <TextView
-                        android:id="@+id/luyu_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="NP. (Nombre de un periodista chino)"
-                        app:layout_constraintStart_toStartOf="@id/luyu_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/luyu_caracter" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <ImageView style="@style/image_palabras_nuevas" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout_wo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_ma"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_border_chiqui">
 
+                <TextView
+                    android:id="@+id/wo_pinyin"
+                    style="@style/text_pinyin"
+                    android:text="Wǒ"
+                    app:layout_constraintEnd_toEndOf="@+id/wo_caracter"
+                    app:layout_constraintStart_toStartOf="@+id/wo_caracter"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
+                <TextView
+                    android:id="@+id/wo_caracter"
+                    style="@style/text_character"
+                    android:text="我"
+                    app:layout_constraintTop_toBottomOf="@+id/wo_pinyin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
 
-            <RelativeLayout
-                android:id="@+id/hao"
-                style="@style/relative_palabras_nuevas"
-                android:background="@drawable/button_border"
-                app:layout_constraintTop_toBottomOf="@+id/libo">
+                <TextView
+                    android:id="@+id/wo_traduccion"
+                    style="@style/text_traduccion"
+                    android:text="Pro. Yo, mí, me"
+                    app:layout_constraintStart_toStartOf="@id/wo_caracter"
+                    app:layout_constraintTop_toBottomOf="@+id/wo_caracter" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_hao"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/hao_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="Hǎo"
-                        app:layout_constraintEnd_toEndOf="@+id/hao_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/hao_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/hao_caracter"
-                        style="@style/text_character"
-                        android:text="好"
-                        app:layout_constraintTop_toBottomOf="@+id/hao_pinyin" />
-
-                    <TextView
-                        android:id="@+id/hao_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="Adj. Bien, bueno, OK"
-                        app:layout_constraintStart_toStartOf="@id/hao_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/hao_caracter" />
-
-                    <ImageView style="@style/image_palabras_nuevas" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/ma"
-                style="@style/relative_palabras_nuevas"
-                android:background="@drawable/button_border"
-                app:layout_constraintTop_toBottomOf="@+id/hao">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_ma"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/ma_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="Ma"
-                        app:layout_constraintEnd_toEndOf="@+id/ma_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/ma_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/ma_caracter"
-                        style="@style/text_character"
-                        android:text="吗"
-                        app:layout_constraintTop_toBottomOf="@+id/ma_pinyin" />
-
-                    <TextView
-                        android:id="@+id/ma_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="Ptl. (Partícula interrogativa)"
-                        app:layout_constraintStart_toStartOf="@id/ma_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/ma_caracter" />
-
-                    <ImageView style="@style/image_palabras_nuevas" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/wo"
-                style="@style/relative_palabras_nuevas"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/button_border"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ma">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout_wo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/wo_pinyin"
-                        style="@style/text_pinyin"
-                        android:text="Wǒ"
-                        app:layout_constraintEnd_toEndOf="@+id/wo_caracter"
-                        app:layout_constraintStart_toStartOf="@+id/wo_caracter"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/wo_caracter"
-                        style="@style/text_character"
-                        android:text="我"
-                        app:layout_constraintTop_toBottomOf="@+id/wo_pinyin" />
-
-                    <TextView
-                        android:id="@+id/wo_traduccion"
-                        style="@style/text_traduccion"
-                        android:text="Pro. Yo, mí, me"
-                        app:layout_constraintStart_toStartOf="@id/wo_caracter"
-                        app:layout_constraintTop_toBottomOf="@+id/wo_caracter" />
-
-                    <ImageView style="@style/image_palabras_nuevas" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
-
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
