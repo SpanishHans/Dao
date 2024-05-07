@@ -1,4 +1,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -6,15 +7,86 @@
 
 
     <!-- Submit button -->
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Submit"
-        />
+
+    <ImageButton
+        android:id="@+id/m1"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <ImageButton
+        android:id="@+id/m2"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_2"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <ImageButton
+        android:id="@+id/m3"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_3"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <ImageButton
+        android:id="@+id/m4"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_4"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="565dp" />
+
+    <ImageButton
+        android:id="@+id/m5"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_5"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <ImageButton
+        android:id="@+id/m6"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_6"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <ImageButton
+        android:id="@+id/m7"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_7"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <ImageButton
+        android:id="@+id/m8"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_8"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="565dp" />
+
+    <ImageButton
+        android:id="@+id/m9"
+        style="@style/invisible"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/m_page_9"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="565dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
