@@ -11,13 +11,11 @@
     >
 
     <TextView
+        style="@style/subtitulos"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/boton_notas_1"
         android:text="(1). Nǐ hǎo"
-        android:padding="10dp"
-        android:fontFamily="@font/helvetica_neue_bold"
-        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,17 +26,14 @@
         android:text="@string/Leccion1Notas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton_notas_1"
-        android:layout_marginTop="10dp"
         />
 
     <TextView
+        style="@style/subtitulos"
         android:id="@+id/boton_notas_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="(2) Nǐ hǎo ma？"
-        android:padding="10dp"
-        android:fontFamily="@font/helvetica_neue_bold"
-        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notas_content_1"
         android:layout_marginTop="30dp"
@@ -51,17 +46,14 @@
         android:text="@string/Leccion1Notas2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/boton_notas_2"
-        android:layout_marginTop="10dp"
         />
 
     <TextView
+        style="@style/subtitulos"
         android:id="@+id/boton_notas_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="(3) Nǐ ne？"
-        android:padding="10dp"
-        android:fontFamily="@font/helvetica_neue_bold"
-        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notas_content_2"
         android:layout_marginTop="30dp"
@@ -74,17 +66,15 @@
         android:text="@string/Leccion1Notas3"
         app:layout_constraintTop_toBottomOf="@+id/boton_notas_3"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
+
         />
 
     <TextView
+        style="@style/subtitulos"
         android:id="@+id/boton_notas_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="(4) Yě hěn hǎo"
-        android:padding="10dp"
-        android:fontFamily="@font/helvetica_neue_bold"
-        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notas_content_3"
         android:layout_marginTop="30dp"
@@ -97,7 +87,7 @@
         android:text="@string/Leccion1Notas4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boton_notas_4"
-        android:layout_marginTop="10dp"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

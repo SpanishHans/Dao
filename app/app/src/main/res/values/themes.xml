@@ -73,9 +73,17 @@
 
     <style name="titulos">
         <item name="android:fontFamily">@font/helvetica_neue_bold</item>
-        <item name="android:textSize">@dimen/dim_20dp</item>
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">@dimen/textsize30sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gris_claro</item>
+    </style>
+
+    <style name="subtitulos">
+        <item name="android:fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">@dimen/textsize30sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/gris_claro</item>

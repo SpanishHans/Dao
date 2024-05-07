@@ -21,13 +21,12 @@
             android:layout_height="wrap_content">
 
             <TextView
+                style="@style/titulos"
                 android:id="@+id/boton_deletrear_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/amarillo_light"
                 android:text="1. Deletrear"
-                android:textSize="30dp"
-                android:fontFamily="@font/helvetica_neue_bold"
                 app:layout_constraintTop_toTopOf="parent" 
                 app:layout_constraintStart_toStartOf="parent"
                 />
@@ -35,7 +34,7 @@
             <Button
                 android:id="@+id/button_1_ba1"
                 style="@style/button_ejercicios_fonetica"
-                android:layout_marginTop="16dp"
+
                 android:text="bā"
                 app:layout_constraintEnd_toStartOf="@+id/button_1_bo1"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +43,7 @@
             <Button
                 android:id="@+id/button_1_bo1"
                 style="@style/button_ejercicios_fonetica"
-                android:layout_marginTop="16dp"
+
                 android:text="bō"
                 app:layout_constraintEnd_toStartOf="@+id/button_1_bi1"
                 app:layout_constraintStart_toEndOf="@+id/button_1_ba1"
@@ -53,7 +52,6 @@
             <Button
                 android:id="@+id/button_1_bi1"
                 style="@style/button_ejercicios_fonetica"
-                android:layout_marginTop="16dp"
                 android:text="bī"
                 app:layout_constraintEnd_toEndOf="parent"
                 
@@ -245,13 +243,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/button_1_luo1" />
 
             <TextView
+                style="@style/titulos"
                 android:id="@+id/coton_cuatro_tonos_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/amarillo_light"
                 android:text="2. Los cuatro tonos"
-                android:textSize="30dp"
-                android:fontFamily="@font/helvetica_neue_bold"
                 app:layout_constraintTop_toBottomOf="@+id/button_1_hao1"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="40dp"
@@ -260,7 +257,7 @@
             <Button
                 android:id="@+id/button_2_a1"
                 style="@style/button_ejercicios_fonetica"
-                android:layout_marginTop="16dp"
+
                 android:text="ā"
                 app:layout_constraintEnd_toStartOf="@+id/button_2_a2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -269,7 +266,6 @@
             <Button
                 android:id="@+id/button_2_a2"
                 style="@style/button_ejercicios_fonetica"
-                android:layout_marginTop="16dp"
                 android:text="á"
                 app:layout_constraintEnd_toStartOf="@+id/button_2_a3"
                 app:layout_constraintStart_toEndOf="@+id/button_2_a1"
@@ -278,7 +274,6 @@
             <Button
                 android:id="@+id/button_2_a3"
                 style="@style/button_ejercicios_fonetica"
-                android:layout_marginTop="16dp"
                 android:text="ǎ"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/button_2_a2"

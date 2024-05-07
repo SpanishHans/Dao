@@ -8,7 +8,7 @@
     tools:context=".fragments.leccion1.Leccion1PracticaConversacion">
 
 
-    <Button
+    <TextView
         android:id="@+id/leccion_1_expresiones_clave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <TextView
         android:id="@+id/leccion_1_dialogo_situacional"
         style="@style/boton_notas"
         android:layout_marginTop="16dp"
