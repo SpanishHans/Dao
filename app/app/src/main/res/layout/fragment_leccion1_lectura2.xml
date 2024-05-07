@@ -11,14 +11,19 @@
     <TextView
         android:id="@+id/nihao"
         style="@style/titulo_lectura"
-        android:text="你好" />
+        android:text="你好"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/textView"
         android:text="二， 课文"
         style="@style/subtitulo_lectura"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/nihao" />
+        app:layout_constraintTop_toBottomOf="@+id/nihao"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <TextView
         android:id="@+id/textView4"
