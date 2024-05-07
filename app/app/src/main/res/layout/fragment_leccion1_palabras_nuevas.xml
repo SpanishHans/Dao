@@ -35,6 +35,16 @@
                 android:layout_margin="30dp"
                 android:background="@drawable/button_border_chiqui">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_action_arrow_back"
+                    android:rotation="180"
+                    />
+
                 <TextView
                     android:id="@+id/tu_pinyin"
                     style="@style/text_pinyin"
@@ -71,6 +81,16 @@
                 android:layout_margin="30dp"
                 android:background="@drawable/button_border_chiqui">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_action_arrow_back"
+                    android:rotation="180"
+                    />
+
                 <TextView
                     android:id="@+id/bien_pinyin"
                     style="@style/text_pinyin"
@@ -106,6 +126,16 @@
                 android:layout_margin="30dp"
                 android:background="@drawable/button_border_chiqui">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_action_arrow_back"
+                    android:rotation="180"
+                    />
+
                 <TextView
                     android:id="@+id/libo_pinyin"
                     style="@style/text_pinyin"
@@ -124,7 +154,7 @@
                 <TextView
                     android:id="@+id/libo_traduccion"
                     style="@style/text_traduccion"
-                    android:text="NP. (Nombre de un estudiante)"
+                    android:text="NP. Nombre"
                     app:layout_constraintStart_toStartOf="@id/libo_caracter"
                     app:layout_constraintTop_toBottomOf="@+id/libo_caracter" />
 
@@ -140,6 +170,16 @@
                 android:padding="10dp"
                 android:layout_margin="30dp"
                 android:background="@drawable/button_border_chiqui">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_action_arrow_back"
+                    android:rotation="180"
+                    />
 
                 <TextView
                     android:id="@+id/luyu_pinyin"
@@ -160,7 +200,7 @@
                 <TextView
                     android:id="@+id/luyu_traduccion"
                     style="@style/text_traduccion"
-                    android:text="NP. (Nombre de un periodista chino)"
+                    android:text="NP. periodista chino"
                     app:layout_constraintStart_toStartOf="@id/luyu_caracter"
                     app:layout_constraintTop_toBottomOf="@+id/luyu_caracter" />
 
@@ -176,6 +216,16 @@
                 android:padding="10dp"
                 android:layout_margin="30dp"
                 android:background="@drawable/button_border_chiqui">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_action_arrow_back"
+                    android:rotation="180"
+                    />
 
                 <TextView
                     android:id="@+id/hao_pinyin"
@@ -213,6 +263,16 @@
                 android:layout_margin="30dp"
                 android:background="@drawable/button_border_chiqui">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_action_arrow_back"
+                    android:rotation="180"
+                    />
+
                 <TextView
                     android:id="@+id/ma_pinyin"
                     style="@style/text_pinyin"
@@ -232,7 +292,7 @@
                 <TextView
                     android:id="@+id/ma_traduccion"
                     style="@style/text_traduccion"
-                    android:text="Ptl. (Partícula interrogativa)"
+                    android:text="Ptl. Partícula interrogativa"
                     app:layout_constraintStart_toStartOf="@id/ma_caracter"
                     app:layout_constraintTop_toBottomOf="@+id/ma_caracter" />
 
@@ -248,6 +308,16 @@
                 android:padding="10dp"
                 android:layout_margin="30dp"
                 android:background="@drawable/button_border_chiqui">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_action_arrow_back"
+                    android:rotation="180"
+                    />
 
                 <TextView
                     android:id="@+id/wo_pinyin"
