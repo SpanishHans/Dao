@@ -21,21 +21,25 @@
             android:name=".fragments.leccion1.Indice"
             android:exported="false"
             android:label="@string/title_activity_indice"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".PerfilPic"
             android:exported="false"
             android:label="@string/title_activity_profile_pic"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".FondoPic"
             android:exported="false"
             android:label="FondoPic"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".fragments.InicioPrincipal"
             android:exported="false"
             android:label="@string/title_activity_inicio_principal"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".WelcomeToApp"
