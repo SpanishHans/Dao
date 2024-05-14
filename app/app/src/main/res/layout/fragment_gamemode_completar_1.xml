@@ -1,5 +1,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo"
@@ -44,60 +45,36 @@
 
             <TextView
                 android:id="@+id/hint_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dim_5dp"
-                android:background="@color/amarillo_light"
-                android:fontFamily="@font/ma_shan_zheng"
-                android:padding="@dimen/dim_15dp"
+                style="@style/hint_palabra"
                 android:text="吗"
-                android:textSize="23dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/hint_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dim_5dp"
-                android:background="@color/amarillo_light"
-                android:fontFamily="@font/ma_shan_zheng"
-                android:padding="@dimen/dim_15dp"
-                android:text="呢"
-                android:textSize="23dp"
+                style="@style/hint_palabra"
+                android:text="力波"
                 app:layout_constraintStart_toEndOf="@+id/hint_1"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/hint_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dim_5dp"
-                android:background="@color/amarillo_light"
-                android:padding="@dimen/dim_15dp"
-                android:text="texto3"
+                style="@style/hint_palabra"
+                android:text="你好"
                 app:layout_constraintStart_toEndOf="@+id/hint_2"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/hint_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dim_5dp"
-                android:background="@color/amarillo_light"
-                android:padding="@dimen/dim_15dp"
-                android:text="texto4"
+                style="@style/hint_palabra"
+                android:text="好"
                 app:layout_constraintStart_toEndOf="@+id/hint_3"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/hint_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dim_5dp"
-                android:background="@color/amarillo_light"
-                android:padding="@dimen/dim_15dp"
-                android:text="texto5"
+                style="@style/hint_palabra"
+                android:text="呢"
                 app:layout_constraintStart_toEndOf="@+id/hint_4"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -171,9 +148,9 @@
                     android:autofillHints="Palabra"
                     android:fontFamily="@font/ma_shan_zheng"
                     android:gravity="center"
-                    android:hint="这"
+                    android:hint="写"
                     android:inputType="text"
-                    android:maxLength="1"
+                    android:maxLength="2"
                     android:textColor="@color/black"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_1_parte1" />
 
@@ -183,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="我不忙。你男朋友呢？"
+                    android:text="， 你好。"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_1"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_1_input" />
@@ -215,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="陆雨平："
+                    android:text="力波："
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_2"
                     app:layout_constraintStart_toEndOf="@id/num_ej_completar_2" />
@@ -223,14 +200,15 @@
                 <EditText
                     android:id="@+id/texto_ej_completar_2_input"
                     style="@style/input_field"
-                    android:layout_width="40dp"
-                    android:layout_height="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_margin="1dp"
                     android:autofillHints="Palabra"
+                    android:fontFamily="@font/ma_shan_zheng"
                     android:gravity="center"
-                    android:hint="Palabra"
+                    android:hint="写"
                     android:inputType="text"
-                    app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_2"
+                    android:maxLength="2"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_2_parte1" />
 
                 <TextView
@@ -239,7 +217,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="我不忙。你男朋友呢？"
+                    android:text="，陆雨平。"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_2"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_2_input" />
@@ -271,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="陆雨平："
+                    android:text="力波：林娜，你好"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_3"
                     app:layout_constraintStart_toEndOf="@id/num_ej_completar_3" />
@@ -279,14 +257,15 @@
                 <EditText
                     android:id="@+id/texto_ej_completar_3_input"
                     style="@style/input_field"
-                    android:layout_width="40dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
                     android:autofillHints="Palabra"
+                    android:fontFamily="@font/ma_shan_zheng"
                     android:gravity="center"
-                    android:hint="Palabra"
+                    android:hint="写"
                     android:inputType="text"
-                    app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_3"
+                    android:maxLength="1"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_3_parte1" />
 
                 <TextView
@@ -295,7 +274,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="我不忙。你男朋友呢？"
+                    android:text="？"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_3"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_3_input" />
@@ -327,7 +306,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="陆雨平："
+                    android:text="林娜：我很好，你"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_4"
                     app:layout_constraintStart_toEndOf="@id/num_ej_completar_4" />
@@ -335,14 +314,15 @@
                 <EditText
                     android:id="@+id/texto_ej_completar_4_input"
                     style="@style/input_field"
-                    android:layout_width="40dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
                     android:autofillHints="Palabra"
+                    android:fontFamily="@font/ma_shan_zheng"
                     android:gravity="center"
-                    android:hint="Palabra"
+                    android:hint="写"
                     android:inputType="text"
-                    app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_4"
+                    android:maxLength="1"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_4_parte1" />
 
                 <TextView
@@ -351,7 +331,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="我不忙。你男朋友呢？"
+                    android:text="？"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_4"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_4_input" />
@@ -383,7 +363,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="陆雨平："
+                    android:text="力波：也很"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_5"
                     app:layout_constraintStart_toEndOf="@id/num_ej_completar_5" />
@@ -391,14 +371,15 @@
                 <EditText
                     android:id="@+id/texto_ej_completar_5_input"
                     style="@style/input_field"
-                    android:layout_width="40dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
                     android:autofillHints="Palabra"
+                    android:fontFamily="@font/ma_shan_zheng"
                     android:gravity="center"
-                    android:hint="Palabra"
+                    android:hint="写"
                     android:inputType="text"
-                    app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_5"
+                    android:maxLength="1"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_5_parte1" />
 
                 <TextView
@@ -407,7 +388,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:fontFamily="@font/ma_shan_zheng"
-                    android:text="我不忙。你男朋友呢？"
+                    android:text="。"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/num_ej_completar_5"
                     app:layout_constraintStart_toEndOf="@id/texto_ej_completar_5_input" />
@@ -420,12 +401,26 @@
                 style="@style/boton_primario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enviar"
+                android:text="Verificar"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_continuar"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ej_completar_5"
+                app:layout_constraintTop_toBottomOf="@id/ej_completar_5" />
 
-                />
+            <Button
+                android:id="@+id/button_continuar"
+                style="@style/boton_primario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="continuar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/boton_submit_completar"
+                app:layout_constraintTop_toBottomOf="@+id/ej_completar_5" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -19,44 +19,50 @@
         tools:targetApi="31">
         <activity
             android:name=".fragments.leccion1.Indice"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false"
             android:label="@string/title_activity_indice"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".PerfilPic"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false"
             android:label="@string/title_activity_profile_pic"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".FondoPic"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false"
             android:label="FondoPic"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".fragments.InicioPrincipal"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false"
             android:label="@string/title_activity_inicio_principal"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Dao" />
         <activity
             android:name=".WelcomeToApp"
+            android:windowSoftInputMode="adjustResize"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".RegisterToApp"
+            android:windowSoftInputMode="adjustResize"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LoginToApp"
+            android:windowSoftInputMode="adjustResize"
             android:exported="true"
             android:screenOrientation="portrait" />
     </application>

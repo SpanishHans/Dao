@@ -216,6 +216,16 @@
         <item name="android:textSize">20dp</item>
         <item name="android:fontFamily">@font/helvetica_neue_bold</item>
     </style>
+    
+    <style name="hint_palabra">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/amarillo_light</item>
+        <item name="android:fontFamily">@font/ma_shan_zheng</item>
+        <item name="android:textSize">23dp</item>
+        <item name="android:padding">@dimen/dim_15dp</item>
+        <item name="android:layout_margin">@dimen/dim_5dp</item>
+    </style>
 
 
 </resources>

@@ -42,7 +42,7 @@ class LoginToApp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         })
@@ -74,14 +74,18 @@ class LoginToApp : AppCompatActivity() {
             val loginPassword = binding.loginPassword.text.toString()
 
             // Verifica la conección a internet del usuario e imprime un aviso en cano de que no esté conectado.
-            if (!isOnline(this)){
+            if (!isOnline(this)) {
                 Toast.makeText(this, "No estás conectado a internet!", Toast.LENGTH_SHORT).show()
             }
             // Si no están vacíos manda los valores a la función loginUser, si no, salta un aviso.
-            if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()){
+            if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()) {
                 loginUser(loginUsername, loginPassword)
             } else {
-                Toast.makeText(this@LoginToApp, "Todos los campos deben ser llenados", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@LoginToApp,
+                    "Todos los campos deben ser llenados",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -95,7 +99,7 @@ class LoginToApp : AppCompatActivity() {
 
 
     // Creación de la función para hacer el login
-    private fun loginUser(username: String, password: String){
+    private fun loginUser(username: String, password: String) {
         /*
         Argumentos:
             username: type -> String
@@ -109,43 +113,42 @@ class LoginToApp : AppCompatActivity() {
                 un "Inicio fallido!"
             3. En caso de que ocurra algún error en la base de datos, este va a imprimir el error
          */
-        databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (dataSnapshot.exists()){
-                    for (userSnapshot in dataSnapshot.children){
-                        val userData = userSnapshot.getValue(UserData::class.java)
-                        if (userData != null && userData.password == password){
-                            // Aquí guarda la id del usuario actual en la variable idCurrent de
-                            // la clase GlobalData, esto es re IMPORTANTE
-                            GlobalData.idCurrent = userData.id.toString()
-                            Toast.makeText(this@LoginToApp, "Inicio exitoso!", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this@LoginToApp, InicioPrincipal::class.java))
-                            finish()
-                            return
+        databaseReference.orderByChild("username").equalTo(username)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        for (userSnapshot in dataSnapshot.children) {
+                            val userData = userSnapshot.getValue(UserData::class.java)
+                            if (userData != null && userData.password == password) {
+                                // Aquí guarda la id del usuario actual en la variable idCurrent de
+                                // la clase GlobalData, esto es re IMPORTANTE
+                                GlobalData.idCurrent = userData.id.toString()
+                                Toast.makeText(
+                                    this@LoginToApp,
+                                    "Inicio exitoso!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                startActivity(Intent(this@LoginToApp, InicioPrincipal::class.java))
+                                finish()
+                                return
+                            }
                         }
                     }
+                    Toast.makeText(this@LoginToApp, "Credenciales incorrectas!", Toast.LENGTH_SHORT)
+                        .show()
+
                 }
-                Toast.makeText(this@LoginToApp, "Credenciales incorrectas!", Toast.LENGTH_SHORT).show()
 
-            }
+                override fun onCancelled(databaseError: DatabaseError) {
+                    Toast.makeText(
+                        this@LoginToApp,
+                        "Error en la base de datos ${databaseError.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
-            override fun onCancelled(databaseError: DatabaseError) {
-                Toast.makeText(this@LoginToApp, "Error en la base de datos ${databaseError.message}", Toast.LENGTH_SHORT).show()
-
-            }
-        })
+                }
+            })
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
