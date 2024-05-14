@@ -15,6 +15,7 @@
       4. [Arch](#arch)
    2. [Windows](#windows)
    3. [Mac](#mac)
+   4. [Instalación en el dispositvo](#configurar-la-aplicación)
 ---
 
 # DAO
@@ -66,6 +67,7 @@ Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es i
 
 Se necesita tener instalado de antes la suite de Android Studio y otras dependencias que se mostrarán a continuación.
 
+
 ## Linux
 
 Se necesita tener preinstalado **git**, dependiendo de su distribución puede que ya lo tenga instalado, si no está seguro ejecute el comando
@@ -97,22 +99,45 @@ sudo yum install git
 sudo pacman -S git
 ```
 
+---
+
 ## Windows
 
 Los autores no piensan ayudar a ningún usuario de Windows, suerte con eso.
+
+---
 
 ## Mac
 
 Si no ayudamos a los de Windows mucho menos a los de Mac, de hecho, ojalá ni puedas ejecutar la aplicación.
 
+---
+
+## Configurar la aplicación
+
+1. Una vez terminado de instalar **git**, lo siguiente es clonar el repositorio por lo que puede ejecutar el siguiente comando desde una terminal **bash**
+
+```bash
+git clone https://github.com/Juanjomarg/Dao.git
+```
+
+2. Conectar el dispositivo físico con el computador mediante un USB.
+
+3. En el dispositivo, irse a **configuración**>**Acerca del teléfono**>**Información del software** y dar clic 7 veces en la opción de **Número de construcción**, pedirá la contraseña del dispositivo, una vez digitada ya tendrá habilitado el dispositivo en modo de desarrollador.
 
 <img src="/ImagenesPreview/BuildNumber.png" width="400">
 
+4. Abrir el proyecto en Android Studio y asegurarse de configurar el dispositivo (para más información de cómo configurar un dispositivo para que Android Studio pueda ejecutar una aplicación puede dar clic [aquí](https://developer.android.com/studio/run/device.html)).
+
+5. En Android Studio dar clic en el botón **Run 'app'** o usar el atajo **Shift + F10**.
+<img src="/ImagenesPreview/Run app.png" >
+
+6. Felicidades! Ha realizado de manera éxitosa la instalación de la aplicación. Para tener saber más información de los modulos y las secciones de la aplicación, puede leer las secciones a continuación.
 ---
 
-
-## Welcome To App
-
-
+# Welcome To App
+<p align = "center">
+<img src="/ImagenesPreview/WelcomeToApp.png" width = "200">
+</p>
 
 ---
