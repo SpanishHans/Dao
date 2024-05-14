@@ -64,7 +64,7 @@ Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es i
 
 ## Welcome To App
 
-![](/ImagenesPreview/WelcomeToApp.png | width=200)
+<img src="/ImagenesPreview/BuildNumber.png" width="400">
 
 
 ---
