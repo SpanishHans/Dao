@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -33,10 +34,11 @@ class Kong : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         toolbarText.text = "Mahjong"
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
         flechaDevolver.visibility = View.GONE
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }
@@ -52,11 +54,24 @@ class Kong : Fragment() {
         return binding.root
     }
 
-    private fun fragmentoNav (fragment: Fragment){
+    private fun fragmentoNav(fragment: Fragment) {
         requireActivity().supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_wrapper,fragment)
+            replace(R.id.fl_wrapper, fragment)
             commit()
         }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.scrollDomino.viewTreeObserver.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                binding.scrollDomino.post {
+                    binding.scrollDomino.fullScroll(View.FOCUS_DOWN)
+                }
+                binding.scrollDomino.viewTreeObserver.removeOnGlobalLayoutListener(this)
+            }
+        })
     }
 
 }

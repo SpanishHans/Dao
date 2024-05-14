@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -37,10 +38,11 @@ class Muralla : Fragment() {
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         toolbarText.text = "Tú Camino"
 
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
         flechaDevolver.visibility = View.GONE
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }
@@ -71,11 +73,23 @@ class Muralla : Fragment() {
         return binding.root
     }
 
-        private fun fragmentoNav (fragment: Fragment){
-            requireActivity().supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fl_wrapper,fragment)
-                commit()
-            }
+    private fun fragmentoNav(fragment: Fragment) {
+        requireActivity().supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_wrapper, fragment)
+            commit()
         }
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.scrollMuralla.viewTreeObserver.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                binding.scrollMuralla.post {
+                    binding.scrollMuralla.fullScroll(View.FOCUS_DOWN)
+                }
+                binding.scrollMuralla.viewTreeObserver.removeOnGlobalLayoutListener(this)
+            }
+        })
+    }
 }
