@@ -54,9 +54,17 @@ Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es i
 <a href='https://www.canva.com/design/DAF_yS9chbA/7_VDtAfJWx8XuPMo-PZ4fA/view?utm_content=DAF_yS9chbA&utm_campaign=designshare&utm_medium=link&utm_source=editor'><img src='https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' height="50"></a>
 
 ---
-	
+
+# Instalación de la aplicación
+
+
+
+---
+
+
 ## Welcome To App
 
-![Texto alternativo](/ImagenesPreview/WelcomeToApp.png)
+![Texto alternativo](/ImagenesPreview/WelcomeToApp.png){width=200px}
+
 
 ---
