@@ -1,31 +1,29 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    android:background="@color/fondo">
 
     <ScrollView
         android:id="@+id/scroll_domino"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
             <ImageButton
                 android:id="@+id/m1"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_9"
                 android:layout_marginLeft="45dp"
                 android:rotation="90"
-                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/m_page_9"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
 
                 />
 
@@ -34,180 +32,166 @@
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_2"
                 android:layout_marginLeft="30dp"
                 android:rotation="270"
+                android:src="@drawable/m_page_2"
                 app:layout_constraintStart_toEndOf="@+id/m1"
-                app:layout_constraintTop_toTopOf="@+id/m1"
-                />
+                app:layout_constraintTop_toTopOf="@+id/m1" />
 
             <ImageButton
                 android:id="@+id/m3"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:rotation="0"
+                android:src="@drawable/m_page_4"
                 app:layout_constraintStart_toEndOf="@+id/m2"
-                app:layout_constraintTop_toTopOf="@+id/m2"
-                />
+                app:layout_constraintTop_toTopOf="@+id/m2" />
 
             <ImageButton
                 android:id="@+id/m4"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_6"
-                android:layout_marginTop="-40dp"
                 android:layout_marginLeft="-20dp"
+                android:layout_marginTop="-40dp"
                 android:rotation="90"
+                android:src="@drawable/m_page_6"
                 app:layout_constraintStart_toStartOf="@+id/m3"
-                app:layout_constraintTop_toBottomOf="@+id/m3"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/m3" />
 
             <ImageButton
                 android:id="@+id/m5"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_4"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:rotation="0"
-                app:layout_constraintTop_toTopOf="@+id/m4"
+                android:src="@drawable/m_page_4"
                 app:layout_constraintEnd_toStartOf="@+id/m4"
-                />
+                app:layout_constraintTop_toTopOf="@+id/m4" />
 
             <ImageButton
                 android:id="@+id/m6"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_7"
                 android:layout_marginTop="-40dp"
                 android:layout_marginRight="-80dp"
                 android:rotation="270"
-                app:layout_constraintTop_toBottomOf="@+id/m5"
+                android:src="@drawable/m_page_7"
                 app:layout_constraintEnd_toStartOf="@+id/m5"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/m5" />
 
             <ImageButton
                 android:id="@+id/m7"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_8"
                 android:layout_marginTop="-130dp"
                 android:layout_marginRight="10dp"
                 android:rotation="0"
-                app:layout_constraintTop_toBottomOf="@+id/m6"
+                android:src="@drawable/m_page_8"
                 app:layout_constraintEnd_toStartOf="@+id/m6"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/m6" />
 
             <ImageButton
                 android:id="@+id/m8"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_1"
                 android:layout_marginTop="-20dp"
                 android:rotation="0"
-                app:layout_constraintTop_toBottomOf="@+id/m7"
+                android:src="@drawable/m_page_1"
                 app:layout_constraintStart_toStartOf="@+id/m7"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/m7" />
 
             <ImageButton
                 android:id="@+id/m9"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_3"
-                android:layout_marginTop="-40dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="-40dp"
                 android:rotation="90"
-                app:layout_constraintTop_toBottomOf="@+id/m8"
+                android:src="@drawable/m_page_3"
                 app:layout_constraintStart_toStartOf="@+id/m8"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/m8" />
 
             <ImageButton
                 android:id="@+id/m10"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="-20dp"
                 android:rotation="0"
+                android:src="@drawable/m_page_5"
                 app:layout_constraintStart_toEndOf="@+id/m9"
-                app:layout_constraintTop_toTopOf="@+id/m9"
-                />
+                app:layout_constraintTop_toTopOf="@+id/m9" />
 
             <ImageButton
                 android:id="@+id/m11"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_9"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="-20dp"
                 android:rotation="90"
+                android:src="@drawable/m_page_9"
                 app:layout_constraintStart_toEndOf="@+id/m10"
-                app:layout_constraintTop_toTopOf="@+id/m10"
-                />
+                app:layout_constraintTop_toTopOf="@+id/m10" />
 
             <ImageButton
                 android:id="@+id/m12"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_4"
                 android:layout_marginTop="-40dp"
                 android:layout_marginRight="-20dp"
                 android:rotation="0"
-                app:layout_constraintTop_toBottomOf="@+id/m11"
+                android:src="@drawable/m_page_4"
                 app:layout_constraintEnd_toEndOf="@+id/m11"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/m11" />
 
             <ImageButton
                 android:id="@+id/m13"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_2"
                 android:layout_marginTop="-40dp"
                 android:layout_marginRight="20dp"
                 android:rotation="90"
-                app:layout_constraintTop_toBottomOf="@+id/m12"
+                android:src="@drawable/m_page_2"
                 app:layout_constraintEnd_toEndOf="@+id/m12"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/m12" />
 
             <ImageButton
                 android:id="@+id/m14"
                 style="@style/invisible"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/m_page_9"
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="30dp"
                 android:rotation="90"
-                app:layout_constraintTop_toTopOf="@+id/m13"
+                android:src="@drawable/m_page_9"
                 app:layout_constraintEnd_toStartOf="@+id/m13"
-                />
+                app:layout_constraintTop_toTopOf="@+id/m13" />
 
             <ImageButton
-            android:id="@+id/m15"
-            style="@style/invisible"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
-            android:src="@drawable/m_page_6"
-            android:layout_marginTop="-40dp"
-            android:layout_marginLeft="-20dp"
-            android:rotation="0"
-            app:layout_constraintTop_toBottomOf="@+id/m14"
-            app:layout_constraintStart_toStartOf="@+id/m14"
-            />
+                android:id="@+id/m15"
+                style="@style/invisible"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="-40dp"
+                android:rotation="0"
+                android:src="@drawable/m_page_6"
+                app:layout_constraintStart_toStartOf="@+id/m14"
+                app:layout_constraintTop_toBottomOf="@+id/m14" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

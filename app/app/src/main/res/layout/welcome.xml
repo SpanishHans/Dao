@@ -1,41 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/welcome_constrait_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeToApp"
     android:background="@color/fondo"
     android:paddingHorizontal="@dimen/dim_40dp"
-    android:paddingVertical="33dp">
+    android:paddingVertical="33dp"
+    tools:context=".WelcomeToApp">
 
     <ImageView
         style="@style/invisible"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/descriptivo_logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/text_landing"
         android:background="@drawable/circle_image_crop"
+        android:contentDescription="@string/descriptivo_logo"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_launcher_logo"
-        />
+        app:layout_constraintBottom_toTopOf="@id/text_landing"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_landing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_40dp"
+        android:fontFamily="@font/helvetica_neue_light"
         android:gravity="center"
         android:text="@string/text_welcome"
-        android:fontFamily="@font/helvetica_neue_light"
-        android:textSize="30sp"
         android:textColor="@color/gris_oscuro"
-        app:layout_constraintBottom_toTopOf="@id/welcome_button_login"
-        android:layout_marginBottom="@dimen/dim_40dp"
-        />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/welcome_button_login" />
 
     <Button
         android:id="@+id/welcome_button_login"
@@ -43,8 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_login"
-        app:layout_constraintBottom_toTopOf="@id/welcome_button_register"
-        />
+        app:layout_constraintBottom_toTopOf="@id/welcome_button_register" />
 
     <Button
         android:id="@+id/welcome_button_register"
@@ -53,6 +49,5 @@
         android:layout_height="wrap_content"
         android:text="@string/button_register"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

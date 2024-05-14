@@ -26,12 +26,14 @@ class Leccion1Fonetica : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
-        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+        val flechaDevolverImagen =
+            requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好-注释"
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
         toolbar.visibility = View.GONE
         flechaDevolver.visibility = View.VISIBLE
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }

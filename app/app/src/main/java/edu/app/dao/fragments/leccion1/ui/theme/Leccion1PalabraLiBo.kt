@@ -24,10 +24,12 @@ class Leccion1PalabraLiBo : Fragment() {
     ): View? {
         binding = FragmentLeccion1PalabraLiBoBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+        val flechaDevolverImagen =
+            requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好-生词"
         toolbarText.textSize = 35F
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
 
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
@@ -39,11 +41,11 @@ class Leccion1PalabraLiBo : Fragment() {
         }
 
         binding.liGif.setOnClickListener {
-            if (liMediaplayer == null){
+            if (liMediaplayer == null) {
                 liMediaplayer = MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_li)
             }
             liMediaplayer?.apply {
-                if (isPlaying){
+                if (isPlaying) {
                     pause()
                     seekTo(0)
                 } else {
@@ -53,11 +55,11 @@ class Leccion1PalabraLiBo : Fragment() {
         }
 
         binding.boGif.setOnClickListener {
-            if (boMediaPlayer == null){
+            if (boMediaPlayer == null) {
                 boMediaPlayer = MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_bo)
             }
             boMediaPlayer?.apply {
-                if (isPlaying){
+                if (isPlaying) {
                     pause()
                     seekTo(0)
                 } else {

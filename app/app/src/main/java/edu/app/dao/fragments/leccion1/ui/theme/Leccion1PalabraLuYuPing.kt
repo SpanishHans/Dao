@@ -26,10 +26,12 @@ class Leccion1PalabraLuYuPing : Fragment() {
     ): View? {
         binding = FragmentLeccion1PalabraLuYuPingBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+        val flechaDevolverImagen =
+            requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好-生词"
         toolbarText.textSize = 35F
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
 
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()

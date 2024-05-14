@@ -5,63 +5,59 @@
     android:id="@+id/frameLayout8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.leccion1.Leccion1PracticaConversacion"
     android:background="@color/fondo"
     android:padding="30dp"
-    >
+    tools:context=".fragments.leccion1.Leccion1PracticaConversacion">
 
     <TextView
-        style="@style/titulos"
         android:id="@+id/titulo_conversacion"
+        style="@style/titulos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Expresiones clave"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/subtitulo_conversacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="重点句式"
-        app:layout_constraintTop_toBottomOf="@id/titulo_conversacion"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/titulo_conversacion" />
 
 
     <TextView
-        style="@style/texto_notas"
-        android:textStyle=""
-        android:textSize="20sp"
-        android:fontFamily="@font/helvetica_neue_bold"
         android:id="@+id/leccion_1_expresiones_clave"
+        style="@style/texto_notas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/leccion1_expresionesclave_text"
-        android:background="@drawable/campo_texto"
-        android:padding="30dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/campo_texto"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:padding="30dp"
+        android:text="@string/leccion1_expresionesclave_text"
+        android:textSize="20sp"
+        android:textStyle=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtitulo_conversacion" />
 
 
     <TextView
-        style="@style/titulos"
         android:id="@+id/leccion_1_dialogo_situacional"
-        android:layout_marginTop="40dp"
+        style="@style/titulos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Dialogo situacional"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leccion_1_expresiones_clave"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/leccion_1_expresiones_clave" />
 
     <TextView
         android:id="@+id/text_dialogo_situacional"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
         android:text="@string/text_dialogo_situacional"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,17 +66,17 @@
     <TextView
         android:id="@+id/text_zh_dialogo_situacional"
         style="@style/texto_notas"
-        android:fontFamily="@font/ma_shan_zheng"
-        android:background="@drawable/campo_texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="37dp"
-        android:padding="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
+        android:background="@drawable/campo_texto"
+        android:fontFamily="@font/ma_shan_zheng"
+        android:padding="30dp"
         android:text="@string/dialogo_situacional_zh"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="37dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_dialogo_situacional" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

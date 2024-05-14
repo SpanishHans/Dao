@@ -29,9 +29,11 @@ class Leccion1Lectura1 : Fragment() {
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
         val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
-        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+        val flechaDevolverImagen =
+            requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好-课文"
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
         toolbar.visibility = View.GONE
         flechaDevolver.visibility = View.VISIBLE
 

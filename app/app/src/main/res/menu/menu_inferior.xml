@@ -4,24 +4,20 @@
     <item
         android:id="@+id/ic_muralla"
         android:icon="@drawable/muralla"
-        android:title="@string/Camino"
-        />
+        android:title="@string/Camino" />
 
     <item
         android:id="@+id/ic_Kong"
         android:icon="@drawable/dojo"
-        android:title="@string/Dojo"
-        />
+        android:title="@string/Dojo" />
 
     <item
         android:id="@+id/ic_tao"
         android:icon="@drawable/tao"
-        android:title="@string/Entrenar"
-        />
+        android:title="@string/Entrenar" />
 
     <item
         android:id="@+id/ic_wo"
         android:icon="@drawable/yop"
-        android:title="@string/Yo"
-        />
+        android:title="@string/Yo" />
 </menu>

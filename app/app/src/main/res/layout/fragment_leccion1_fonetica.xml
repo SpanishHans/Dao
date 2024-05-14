@@ -5,9 +5,8 @@
     android:id="@+id/frameLayout9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.leccion1.Leccion1Fonetica"
     android:padding="30dp"
-    >
+    tools:context=".fragments.leccion1.Leccion1Fonetica">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,27 +21,25 @@
             android:layout_height="match_parent">
 
             <TextView
-                style="@style/subtitulos"
                 android:id="@+id/boton_notas_1"
+                style="@style/subtitulos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1. Iniciales y finales"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/notas_content_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/leccion_1_fonetica_1"
-                app:layout_constraintTop_toBottomOf="@+id/boton_notas_1"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/boton_notas_1" />
 
             <TextView
-                style="@style/subtitulos"
                 android:id="@+id/boton_notas_2"
+                style="@style/subtitulos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -55,13 +52,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/leccion1_fonetica_2"
-                app:layout_constraintTop_toBottomOf="@+id/boton_notas_2"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/boton_notas_2" />
 
             <TextView
-                style="@style/subtitulos"
                 android:id="@+id/boton_notas_3"
+                style="@style/subtitulos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -74,13 +70,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/leccion1_fonetica_3"
-                app:layout_constraintTop_toBottomOf="@+id/boton_notas_3"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/boton_notas_3" />
 
             <TextView
-                style="@style/subtitulos"
                 android:id="@+id/boton_notas_4"
+                style="@style/subtitulos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -95,8 +90,8 @@
                 android:layout_marginBottom="24dp"
                 android:text="@string/Leccion1Notas4"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/boton_notas_4"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boton_notas_4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

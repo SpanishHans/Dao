@@ -53,7 +53,7 @@ class EditarPerfil : Fragment() {
         toolbarText.text = "Información personal"
         toolbarText.textSize = 30F
 
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }

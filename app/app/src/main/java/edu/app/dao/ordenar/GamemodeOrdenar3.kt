@@ -56,7 +56,7 @@ class GamemodeOrdenar3 : Fragment() {
         binding.buttonEnd.visibility = View.GONE
         binding.buttonContinue.visibility = View.GONE
         toolbar.visibility = View.GONE
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }
@@ -159,6 +159,7 @@ class GamemodeOrdenar3 : Fragment() {
         }
         return binding.root
     }
+
     private fun setupKeyboard() {
 
         val keyboardCharacters = listOf(

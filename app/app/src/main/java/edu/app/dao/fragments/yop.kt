@@ -57,18 +57,16 @@ class yop : Fragment() {
         val devolverFlecha = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         val fragmentManager = requireActivity().supportFragmentManager
 
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
         toolbarText.text = "Editar Perfil"
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbarDown.visibility = View.VISIBLE
         devolverFlecha.visibility = View.GONE
-
-
-
 
 
         // Carga la foto de perfil que se tiene en la base de datos, si no se tiene nada entonces
@@ -89,9 +87,13 @@ class yop : Fragment() {
             Glide.with(this@yop)
                 .load(uri)
                 .into(object : CustomTarget<Drawable>() {
-                    override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
+                    override fun onResourceReady(
+                        resource: Drawable,
+                        transition: Transition<in Drawable>?
+                    ) {
                         binding.backgroundProfile.background = resource
                     }
+
                     override fun onLoadCleared(placeholder: Drawable?) {
                         // No hacer nada
                     }
@@ -122,20 +124,21 @@ class yop : Fragment() {
            username, descripción, victorias en Kong, aciertos en tao. Esos datos son los que están
            asociados al usuario a través de su ID, la ID está guardada en una clase global de datos
          */
-        refUsuarios.child(GlobalData.idCurrent).addListenerForSingleValueEvent(object : ValueEventListener{
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val usuario = dataSnapshot.getValue(UserData::class.java)
-                binding.username.text = usuario?.username
-                binding.descripcionPerfilUsuario.text = usuario?.description
-                binding.buttonEstadisticaKong.text = usuario?.victoriasKong.toString()
-                binding.buttonEstadisticaTao.text = usuario?.aciertosTao.toString()
-                binding.nameUser.text = "(${usuario?.nameFull.toString()})"
-            }
+        refUsuarios.child(GlobalData.idCurrent)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    val usuario = dataSnapshot.getValue(UserData::class.java)
+                    binding.username.text = usuario?.username
+                    binding.descripcionPerfilUsuario.text = usuario?.description
+                    binding.buttonEstadisticaKong.text = usuario?.victoriasKong.toString()
+                    binding.buttonEstadisticaTao.text = usuario?.aciertosTao.toString()
+                    binding.nameUser.text = "(${usuario?.nameFull.toString()})"
+                }
 
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(requireContext(), "Error :(", Toast.LENGTH_SHORT).show()
-            }
-        })
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(requireContext(), "Error :(", Toast.LENGTH_SHORT).show()
+                }
+            })
 
 
 
@@ -149,6 +152,6 @@ class yop : Fragment() {
             replace(R.id.fl_wrapper, fragment)
             commit()
         }
-        }
+    }
 
 }

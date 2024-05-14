@@ -20,16 +20,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_seleccionar"
-        android:layout_width="wrap_content"
-        android:background="@drawable/button_border"
         style="@style/boton_primario"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/button_border"
         android:text="Cargar imagen"
         app:layout_constraintEnd_toStartOf="@+id/button_guardar"
         app:layout_constraintHorizontal_bias="0.5"
@@ -38,11 +37,11 @@
 
     <Button
         android:id="@+id/button_guardar"
-        android:background="@drawable/button_border"
         style="@style/boton_primario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/button_border"
         android:text="Guardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

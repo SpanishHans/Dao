@@ -35,7 +35,7 @@ class InicioPrincipal : AppCompatActivity() {
         val yopFragment = yop()
         val taoFragment = Tao()
         val murallaFragment = Muralla()
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         })
@@ -44,8 +44,8 @@ class InicioPrincipal : AppCompatActivity() {
         makeCurrentFragment(murallaFragment)
 
         // Controla la navegación a las diferentes secciones de la aplicación.
-        binding.navigationBarButtom.setOnItemSelectedListener{
-            when (it.itemId){
+        binding.navigationBarButtom.setOnItemSelectedListener {
+            when (it.itemId) {
                 R.id.ic_Kong -> makeCurrentFragment(kongFragment)
                 R.id.ic_wo -> makeCurrentFragment(yopFragment)
                 R.id.ic_tao -> makeCurrentFragment(taoFragment)
@@ -57,7 +57,7 @@ class InicioPrincipal : AppCompatActivity() {
     }
 
     // Función para hacer que se ponga el fragmento
-    fun makeCurrentFragment(fragment: Fragment){
+    fun makeCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fl_wrapper, fragment)
             .commit()

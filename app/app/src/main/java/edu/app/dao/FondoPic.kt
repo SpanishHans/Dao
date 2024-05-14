@@ -13,15 +13,15 @@ import edu.app.dao.databinding.FondoPicBinding
 import edu.app.dao.databinding.PerfilPicBinding
 import edu.app.dao.funciones.GlobalData
 
-class FondoPic : AppCompatActivity(){
+class FondoPic : AppCompatActivity() {
     private lateinit var binding: FondoPicBinding
-    lateinit var imageUri : Uri
+    lateinit var imageUri: Uri
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         binding = FondoPicBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         })
@@ -61,7 +61,7 @@ class FondoPic : AppCompatActivity(){
 
     // Permite subir una imagen al firebase en el directorio de fondos y guarda la imagen seleccionada
     // con el ID único del usuario.
-    private fun uploadImage(){
+    private fun uploadImage() {
         val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Subiendo imagen...")
         progressDialog.setCancelable(false)
@@ -70,14 +70,13 @@ class FondoPic : AppCompatActivity(){
         val fileName = "${GlobalData.idCurrent}"
         val storageReference = FirebaseStorage.getInstance().getReference("fondos/$fileName")
 
-        storageReference.putFile(imageUri).
-                addOnSuccessListener {
-                    Toast.makeText(this@FondoPic, "Imagen subida correctamente!", Toast.LENGTH_SHORT).show()
-                    finish()
-                    if (progressDialog.isShowing) progressDialog.dismiss()
-                }.addOnFailureListener {error ->
-                    if (progressDialog.isShowing) progressDialog.dismiss()
-                    Toast.makeText(this@FondoPic, "Error: $error", Toast.LENGTH_LONG).show()
+        storageReference.putFile(imageUri).addOnSuccessListener {
+            Toast.makeText(this@FondoPic, "Imagen subida correctamente!", Toast.LENGTH_SHORT).show()
+            finish()
+            if (progressDialog.isShowing) progressDialog.dismiss()
+        }.addOnFailureListener { error ->
+            if (progressDialog.isShowing) progressDialog.dismiss()
+            Toast.makeText(this@FondoPic, "Error: $error", Toast.LENGTH_LONG).show()
 
         }
     }
@@ -93,7 +92,7 @@ class FondoPic : AppCompatActivity(){
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 100 && resultCode == RESULT_OK){
+        if (requestCode == 100 && resultCode == RESULT_OK) {
             imageUri = data?.data!!
             binding.imageUser.setImageURI(imageUri)
         }

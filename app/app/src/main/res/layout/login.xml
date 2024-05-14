@@ -45,12 +45,12 @@
     <EditText
         android:id="@+id/login_usuario"
         style="@style/input_field"
-        android:maxLength="46"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="username"
         android:hint="@string/field_username"
         android:inputType="text"
+        android:maxLength="46"
         app:layout_constraintBottom_toTopOf="@id/login_password" />
 
     <EditText
@@ -58,11 +58,11 @@
         style="@style/input_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLength="46"
         android:layout_marginBottom="@dimen/dim_30dp"
         android:autofillHints="password"
         android:hint="@string/field_contraseña"
         android:inputType="textPassword"
+        android:maxLength="46"
         app:layout_constraintBottom_toTopOf="@id/login_button_login" />
 
     <Button

@@ -37,7 +37,7 @@ class Leccion1EjerciciosFonetica : Fragment() {
             Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
         toolbar.visibility = View.GONE
         flechaDevolver.visibility = View.VISIBLE
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }

@@ -36,7 +36,7 @@ class RegisterToApp : AppCompatActivity() {
         // Oculta la barra de arriba que se ve feísima
         supportActionBar?.hide()
 
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         })
@@ -69,16 +69,21 @@ class RegisterToApp : AppCompatActivity() {
             val signupPassword = binding.registerPassword.text.toString()
 
             // Verifica la conección a internet del usuario e imprime un aviso en cano de que no esté conectado.
-            if (!isOnline(this)){
+            if (!isOnline(this)) {
                 Toast.makeText(this, "No estás conectado a internet!", Toast.LENGTH_SHORT).show()
             }
 
             // Si no están vacíos manda los valores a la función registrarUsuario, si no, salta un aviso.
             if (signupFullname.isNotEmpty() && signupUsername.isNotEmpty()
-                && signupCorreo.isNotEmpty() && signupPassword.isNotEmpty()){
+                && signupCorreo.isNotEmpty() && signupPassword.isNotEmpty()
+            ) {
                 registrarUsuario(signupFullname, signupUsername, signupCorreo, signupPassword)
-            }else{
-                Toast.makeText(this@RegisterToApp, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(
+                    this@RegisterToApp,
+                    "Todos los campos son obligatorios",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -91,7 +96,12 @@ class RegisterToApp : AppCompatActivity() {
 
 
     // Función para registrar el usuario en la base de datos
-    private fun registrarUsuario(nameFull: String, username: String, correo: String, password: String){
+    private fun registrarUsuario(
+        nameFull: String,
+        username: String,
+        correo: String,
+        password: String
+    ) {
         /*
         Argumentos:
             nameFull: type -> String
@@ -107,24 +117,34 @@ class RegisterToApp : AppCompatActivity() {
             3. En caso de que ocurra algún error en la base de datos, este va a imprimir el error
          */
 
-        databaseReference.orderByChild("nameFull").equalTo(nameFull).addListenerForSingleValueEvent(object : ValueEventListener{
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (!dataSnapshot.exists()){
-                    val id = databaseReference.push().key
-                    val userData = UserData(id, nameFull, username, correo, password)
-                    databaseReference.child(id!!).setValue(userData)
-                    Toast.makeText(this@RegisterToApp, "Registro Exitoso!", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@RegisterToApp, WelcomeToApp::class.java))
-                    finish()
-                } else{
-                    Toast.makeText(this@RegisterToApp, "El usuario ya existe", Toast.LENGTH_SHORT).show()
+        databaseReference.orderByChild("nameFull").equalTo(nameFull)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (!dataSnapshot.exists()) {
+                        val id = databaseReference.push().key
+                        val userData = UserData(id, nameFull, username, correo, password)
+                        databaseReference.child(id!!).setValue(userData)
+                        Toast.makeText(this@RegisterToApp, "Registro Exitoso!", Toast.LENGTH_SHORT)
+                            .show()
+                        startActivity(Intent(this@RegisterToApp, WelcomeToApp::class.java))
+                        finish()
+                    } else {
+                        Toast.makeText(
+                            this@RegisterToApp,
+                            "El usuario ya existe",
+                            Toast.LENGTH_SHORT
+                        ).show()
 
+                    }
                 }
-            }
 
-            override fun onCancelled(databaseError: DatabaseError) {
-                Toast.makeText(this@RegisterToApp, "Error en la base de datos: ${databaseError.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
+                override fun onCancelled(databaseError: DatabaseError) {
+                    Toast.makeText(
+                        this@RegisterToApp,
+                        "Error en la base de datos: ${databaseError.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            })
     }
 }

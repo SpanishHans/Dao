@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo"
-    >
+    android:background="@color/fondo">
 
 
     <!-- Character bar -->
@@ -66,12 +65,12 @@
         android:id="@+id/button_end"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/helvetica_neue_bold"
         android:backgroundTint="@color/amarillo_light"
-        android:text="@string/text_victoria"
+        android:fontFamily="@font/helvetica_neue_bold"
         android:gravity="center_horizontal"
+        android:text="@string/text_victoria"
+        android:textColor="@color/black"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/view_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,9 +81,9 @@
         style="@style/boton_primario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continuar"
-        android:background="@drawable/button_border"
         android:layout_marginTop="16dp"
+        android:background="@drawable/button_border"
+        android:text="Continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_end" />

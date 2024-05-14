@@ -1,4 +1,5 @@
 package edu.app.dao.funciones
+
 /*
     Se está utilizando esta clase de GlobalData para poder acceder a los usuarios de la base de datos
     Lo que se está haciendo es que se guarda la identificación que tiene el usuario al momento de

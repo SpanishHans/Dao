@@ -23,10 +23,12 @@ class Leccion1PalabraWo : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentLeccion1PalabraWoBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+        val flechaDevolverImagen =
+            requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好-生词"
         toolbarText.textSize = 35F
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
 
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
@@ -38,11 +40,12 @@ class Leccion1PalabraWo : Fragment() {
         }
 
         binding.woGif.setOnClickListener {
-            if (MediaPlayer == null){
-                MediaPlayer = android.media.MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_wo)
+            if (MediaPlayer == null) {
+                MediaPlayer =
+                    android.media.MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_wo)
             }
             MediaPlayer?.apply {
-                if (isPlaying){
+                if (isPlaying) {
                     pause()
                     seekTo(0)
                 } else {

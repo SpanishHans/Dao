@@ -22,10 +22,12 @@ class Leccion1PalabraHao : Fragment() {
     ): View? {
         binding = FragmentLeccion1PalabraHaoBinding.inflate(inflater, container, false)
         val toolbarText = requireActivity().findViewById<TextView>(R.id.toolbar_title)
-        val flechaDevolverImagen = requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
+        val flechaDevolverImagen =
+            requireActivity().findViewById<ImageButton>(R.id.flecha_devolver_imagen)
         toolbarText.text = "你好-生词"
         toolbarText.textSize = 35F
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/ma_shan_zheng.ttf")
 
         flechaDevolverImagen.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack()
@@ -37,11 +39,12 @@ class Leccion1PalabraHao : Fragment() {
         }
 
         binding.haoGif.setOnClickListener {
-            if (MediaPlayer == null){
-                MediaPlayer = android.media.MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_hao)
+            if (MediaPlayer == null) {
+                MediaPlayer =
+                    android.media.MediaPlayer.create(requireContext(), R.raw.pronunciation_zh_hao)
             }
             MediaPlayer?.apply {
-                if (isPlaying){
+                if (isPlaying) {
                     pause()
                     seekTo(0)
                 } else {

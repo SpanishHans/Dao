@@ -46,11 +46,11 @@
         android:id="@+id/register_nombre"
         style="@style/input_field"
         android:layout_width="match_parent"
-        android:maxLength="46"
         android:layout_height="wrap_content"
         android:autofillHints="name"
         android:hint="@string/field_nombre"
         android:inputType="text"
+        android:maxLength="46"
         app:layout_constraintBottom_toTopOf="@id/register_usuario"
 
         />
@@ -61,33 +61,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="username"
-        android:maxLength="46"
         android:hint="@string/field_username"
         android:inputType="text"
+        android:maxLength="46"
         app:layout_constraintBottom_toTopOf="@id/register_email" />
 
     <EditText
         android:id="@+id/register_email"
         style="@style/input_field"
-        android:maxLength="46"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="emailAddress"
         android:hint="@string/field_email"
         android:inputType="textEmailAddress"
+        android:maxLength="46"
         app:layout_constraintBottom_toTopOf="@id/register_password" />
 
     <EditText
         android:id="@+id/register_password"
         style="@style/input_field"
-        android:maxLength="46"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dim_30dp"
         android:autofillHints="password"
         android:hint="@string/field_contraseña"
-
         android:inputType="textPassword"
+
+        android:maxLength="46"
         app:layout_constraintBottom_toTopOf="@id/register_button_registrarse" />
 
     <Button

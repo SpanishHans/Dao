@@ -33,10 +33,11 @@ class Tao : Fragment() {
         val toolbarUp = requireActivity().findViewById<Toolbar>(R.id.toolbar)
         val flechaDevolver = requireActivity().findViewById<LinearLayout>(R.id.flecha_devolver)
         toolbarText.text = "Lecciones"
-        toolbarText.typeface = Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
+        toolbarText.typeface =
+            Typeface.createFromAsset(requireContext().assets, "fonts/helvetica_neue_bold.ttf")
         toolbar.visibility = View.VISIBLE
         flechaDevolver.visibility = View.GONE
-        val callback = object : OnBackPressedCallback(true){
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         }
@@ -59,7 +60,7 @@ class Tao : Fragment() {
 
         binding.leccion2.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fl_wrapper,  indice)
+                replace(R.id.fl_wrapper, indice)
                 commit()
             }
         }

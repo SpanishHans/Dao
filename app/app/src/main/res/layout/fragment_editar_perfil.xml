@@ -93,8 +93,8 @@
                 android:backgroundTint="@color/black"
                 android:ems="10"
                 android:hint="Nuevo nombre de usuario"
-                android:maxLength="46"
                 android:inputType="text"
+                android:maxLength="46"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nombre_usuario" />
@@ -108,8 +108,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:maxLength="46"
                 android:hint="Contraseña"
+                android:maxLength="46"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nombre_usuario_editar" />
@@ -121,12 +121,12 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:maxLength="46"
                 android:autofillHints="password"
                 android:backgroundTint="@color/black"
                 android:ems="10"
                 android:hint="Nueva contraseña"
                 android:inputType="textPassword"
+                android:maxLength="46"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/contrasena_usuario" />
