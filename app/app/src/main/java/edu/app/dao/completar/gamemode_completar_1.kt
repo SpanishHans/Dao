@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.text.SpannableString
 import android.text.Spanned
 import android.view.WindowManager
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
@@ -46,7 +47,9 @@ class FragmentoCompletar : Fragment() {
             binding.textoEjCompletar5Input
         )
         val correctAnswer = listOf<String>("力波", "你好", "吗", "呢", "好")
+        val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
 
+        toolbar.visibility = View.GONE
         submitButton.setOnClickListener {
             continueButton.visibility = View.VISIBLE
             for (i in correctAnswer.indices) {
