@@ -100,7 +100,7 @@ en el logo de *Overleaf*.
 
 ---
 
-## Presentación (Canva)
+## Presentación del segundo corte (Canva)
 
 Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es importante 
 en el mundo actual. Esto último es mostrado desde un punto de vista académico y 
