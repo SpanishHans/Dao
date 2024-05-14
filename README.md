@@ -84,9 +84,7 @@ población ya ha sido experimentada con el idioma y ha podido saber qué complic
 tiene con el mismo idioma y cómo se pueden crear herramientas para facilitar este 
 aprendizaje.
 
-<a href='https://www.overleaf.com/read/jkggrzqzkrzp#812582'><img src='https://images.
-ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/
-overleaf_wide_colour_light_bg.png' height="50"></a>
+<a href='https://www.overleaf.com/read/jkggrzqzkrzp#812582'><img src='https://images.ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/overleaf_wide_colour_light_bg.png' height="50"></a>
 
 ---
 
@@ -98,9 +96,7 @@ También se realizaron bocetos acerca de posibles situaciones que presenten pers
 común con respecto al aprendizaje del idioma. Para leer el informe completo, haga click 
 en el logo de *Overleaf*.
 
-<a href='https://www.overleaf.com/read/wshxdmdcfspf#e8c83d'><img src='https://images.
-ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/
-overleaf_wide_colour_light_bg.png' height="50"></a>
+<a href='https://www.overleaf.com/read/wshxdmdcfspf#e8c83d'><img src='https://images.ctfassets.net/nrgyaltdicpt/6gsvc5Ogjmu04I4Miu0uGg/cb1d4391717d2ab8d5e42ede6fb0eef1/overleaf_wide_colour_light_bg.png' height="50"></a>
 
 ---
 
