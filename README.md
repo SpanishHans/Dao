@@ -7,7 +7,14 @@
    2. [Análisis de necesidades](#análisis-de-necesidades-latex---overleaf)
    3. [Storyboarding](#storyboarding-latex---overleaf)
    4. [Presentación](#presentación-canva)
-
+3. [Instalación de la aplicación](#instalación-de-la-aplicación)
+   1. [Linux](#linux)
+      1. [Basados en Debian](#debian)
+      2. [Fedora](#fedora)
+      3. [CentOS o RHEL](#centos-o-rhel)
+      4. [Arch](#arch)
+   2. [Windows](#windows)
+   3. [Mac](#mac)
 ---
 
 # DAO
@@ -57,14 +64,55 @@ Se introduce todo el tema de la aplicación, la finalidad de esta y porqué es i
 
 # Instalación de la aplicación
 
+Se necesita tener instalado de antes la suite de Android Studio y otras dependencias que se mostrarán a continuación.
 
+## Linux
+
+Se necesita tener preinstalado **git**, dependiendo de su distribución puede que ya lo tenga instalado, si no está seguro ejecute el comando
+
+```bash
+git --version
+```
+Si sale un error entonces debe instalar git, esto dependerá de su distribución, a continuación se muestran algunas
+
+### Debian
+
+```bash
+sudo apt update
+sudo apt install git 
+```
+
+### Fedora
+```bash
+sudo dnf install git
+```
+
+### CentOS o RHEL
+```bash
+sudo yum install git
+```
+
+### Arch
+```bash
+sudo pacman -S git
+```
+
+## Windows
+
+Los autores no piensan ayudar a ningún usuario de Windows, suerte con eso.
+
+## Mac
+
+Si no ayudamos a los de Windows mucho menos a los de Mac, de hecho, ojalá ni puedas ejecutar la aplicación.
+
+
+<img src="/ImagenesPreview/BuildNumber.png" width="400">
 
 ---
 
 
 ## Welcome To App
 
-<img src="/ImagenesPreview/BuildNumber.png" width="400">
 
 
 ---
