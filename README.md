@@ -192,7 +192,7 @@ de desarrollador.
 
 4. Abrir el proyecto en Android Studio y asegurarse de configurar el dispositivo (para 
 más información de cómo configurar un dispositivo para que Android Studio pueda ejecutar 
-una aplicación puede dar clic [aquí](https://developer.android.com/studio/run/device).
+una aplicación puede dar clic [aquí](https://developer.android.com/studio/run/device) ).
 
 5. En Android Studio dar clic en el botón **Run 'app'** o usar el atajo **Shift + F10**.
 
