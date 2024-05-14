@@ -27,7 +27,6 @@ class FragmentoCompletar : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentGamemodeCompletar1Binding.inflate(inflater, container, false)
-        contextParagraphTextView = binding.textoEjCompletar5Parte2
         submitButton = binding.botonSubmitCompletar
 
 
