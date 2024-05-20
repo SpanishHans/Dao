@@ -17,10 +17,16 @@ import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.replace
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import edu.app.dao.R
 import edu.app.dao.databinding.FragmentGamemodeCompletar1Binding
 import edu.app.dao.fragments.Kong
 import edu.app.dao.fragments.Muralla
+import edu.app.dao.funciones.GlobalData
 
 class FragmentoCompletar : Fragment() {
     private lateinit var binding: FragmentGamemodeCompletar1Binding
@@ -48,7 +54,9 @@ class FragmentoCompletar : Fragment() {
         )
         val correctAnswer = listOf<String>("力波", "你好", "吗", "呢", "好")
         val toolbar = requireActivity().findViewById<FrameLayout>(R.id.frame_layout_bar_buttom)
-
+        val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+        val refUsuariosTao: DatabaseReference =
+            database.getReference("Usuarios/${GlobalData.idCurrent}/victoriasKong")
         toolbar.visibility = View.GONE
         submitButton.setOnClickListener {
             continueButton.visibility = View.VISIBLE
@@ -62,6 +70,36 @@ class FragmentoCompletar : Fragment() {
                         ContextCompat.getColorStateList(requireContext(), R.color.red_incorrect)
                 }
             }
+            refUsuariosTao.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        val valorActual = dataSnapshot.getValue(Long::class.java)
+
+                        val nuevoValor = (valorActual ?: 0) + correctUser
+
+                        refUsuariosTao.setValue(nuevoValor)
+                            .addOnSuccessListener {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Aciertos sumados!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                            .addOnFailureListener {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Ha ocurrido un error!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(requireContext(), "Error: ${error}", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            })
             Toast.makeText(
                 requireContext(),
                 "Has completado correctamente $correctUser oraciones de ${correctAnswer.size}",
