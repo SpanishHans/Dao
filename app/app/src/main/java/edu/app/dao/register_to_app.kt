@@ -36,6 +36,7 @@ class RegisterToApp : AppCompatActivity() {
         // Oculta la barra de arriba que se ve feísima
         supportActionBar?.hide()
 
+        // Desactiva la opción de devolver en la aplicación
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
@@ -138,6 +139,7 @@ class RegisterToApp : AppCompatActivity() {
                     }
                 }
 
+                // Excepción de error en la base de datos
                 override fun onCancelled(databaseError: DatabaseError) {
                     Toast.makeText(
                         this@RegisterToApp,
