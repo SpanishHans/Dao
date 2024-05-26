@@ -13,20 +13,31 @@ import edu.app.dao.databinding.PerfilPicBinding
 import edu.app.dao.funciones.GlobalData
 
 class PerfilPic : AppCompatActivity() {
+    /*
+    Cambiar la foto de perfil del usuario
+     */
+
+    // Binding de la vista perfil_pic.xml
     private lateinit var binding: PerfilPicBinding
+
+    // Sirve para cambiar imagenes
     lateinit var imageUri: Uri
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         binding = PerfilPicBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Desactiva la opción de devolver en la aplicación
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         })
 
+        // Instancia de la referencia en la base de datos
         val storageReference = FirebaseStorage.getInstance().reference
 
+        // Carga a las partes de perfil_pic que sea de imagen.
         storageReference.child("images/${GlobalData.idCurrent}").downloadUrl.addOnSuccessListener { uri ->
             Glide.with(this@PerfilPic)
                 .load(uri)
@@ -54,14 +65,21 @@ class PerfilPic : AppCompatActivity() {
     }
 
     private fun uploadImage() {
+        /*
+            Mensaje mientras se está subiendo la imagen
+         */
         val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Subiendo imagen...")
         progressDialog.setCancelable(false)
         progressDialog.show()
 
+        // La imagen que se sube va a tener el ID que tiene el usuario en la base de datos.
         val fileName = "${GlobalData.idCurrent}"
+
+        // Se obtiene la referencia de la imagen en la base de datos
         val storageReference = FirebaseStorage.getInstance().getReference("images/$fileName")
 
+        // Coloca la imagen dentro de la base de datos en el directorio de images
         storageReference.putFile(imageUri).addOnSuccessListener {
             Toast.makeText(this@PerfilPic, "Imagen subida correctamente!", Toast.LENGTH_SHORT)
                 .show()
@@ -75,6 +93,9 @@ class PerfilPic : AppCompatActivity() {
     }
 
     private fun selectImage() {
+        /*
+            Abre la parte de seleccionar imagen dentro del dispositivo
+         */
         val intent = Intent()
         intent.type = "image/*"
         intent.action = Intent.ACTION_GET_CONTENT
@@ -82,6 +103,9 @@ class PerfilPic : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        /*
+            Cambia la imagen actual que está en la base de datos por la que subió el usuario de últimas.
+         */
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 100 && resultCode == RESULT_OK) {
