@@ -37,7 +37,8 @@
 8. [Perfil](#perfil)
    1. [Editar Perfil](#editar-perfil)
 9. [Licencia](#licencia)
-10. [Cierre/Despedida](#cierre)
+10. [Contacto](#contacto)
+11. [Cierre/Despedida](#cierre)
 ---
 
 # DAO
@@ -440,6 +441,13 @@ un formato libre **.flac** que ya se mencionó anteriormente.
 <p align="center">
 <img src="https://i.imgflip.com/6kaqvc.jpg" width = "400">
 </p>
+
+---
+
+# Contacto
+
+Si se presentan problemas con la aplicación o al momento de ejecutarse, se recomienda contactar al siguiente correo de uno
+de los autores: ludwig.alvaradob@utadeo.edu.co
 
 ---
 
