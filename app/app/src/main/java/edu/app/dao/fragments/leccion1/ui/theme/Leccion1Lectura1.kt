@@ -1,4 +1,6 @@
 /*
+    Copyright (C) 2024 Alvarado Ludwig & Martinez Juan José
+
     This file is part of Dao
 
     Dao is free software: you can redistribute it and/or modify it under the terms of the

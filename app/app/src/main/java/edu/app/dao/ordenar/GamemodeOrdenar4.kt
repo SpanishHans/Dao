@@ -1,4 +1,6 @@
 /*
+    Copyright (C) 2024 Alvarado Ludwig & Martinez Juan José
+
     This file is part of Dao
 
     Dao is free software: you can redistribute it and/or modify it under the terms of the
@@ -11,7 +13,7 @@
 
     You should have received a copy of the GNU General Public License along with this program. If
     not, see <https://www.gnu.org/licenses/>.
- */
+*/
 package edu.app.dao.ordenar
 
 import android.content.res.ColorStateList
