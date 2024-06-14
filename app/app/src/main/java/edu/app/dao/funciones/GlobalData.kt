@@ -1,7 +1,7 @@
 /*
-    Copyright (C) 2024 Alvarado Ludwig & Martinez Juan José
+    Copyright (C) 2024 Alvarado Ludwig & Martinez Juan José.
 
-    This file is part of Dao
+    This file is part of Dao.
 
     Dao is free software: you can redistribute it and/or modify it under the terms of the
     GNU General Public License as published by the Free Software Foundation, either version 3 of
@@ -13,7 +13,7 @@
 
     You should have received a copy of the GNU General Public License along with this program. If
     not, see <https://www.gnu.org/licenses/>.
-*/
+ */
 package edu.app.dao.funciones
 
 /*
