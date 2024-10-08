@@ -435,7 +435,7 @@ eletrónico, ambas imagenes también se pueden cambiar a preferencia del usuario
 # Licencia
 
 Ambos autores muestran posiciones ideológicas hacia el *Software Libre*, por eso mismo, 
-este proyecto esta bajo la licencia GPL-2.0, además, todos los archivos de audio tienen 
+este proyecto esta bajo la licencia GPL-3.0, además, todos los archivos de audio tienen 
 un formato libre **.flac** que ya se mencionó anteriormente.
 
 <p align="center">
